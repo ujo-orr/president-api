@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build: ./frontend
+    init: true
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-5173}:5173"
+    environment:
+      VITE_USE_POLLING: ${VITE_USE_POLLING:-false}
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/index.html:/app/index.html
+      - ./frontend/vite.config.ts:/app/vite.config.ts
+      - ./frontend/tsconfig.json:/app/tsconfig.json
+      - ./frontend/eslint.config.js:/app/eslint.config.js
