@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+
+/AGENTS.md
+/PROGRESS.md
+/docs/
+/capture/
+
+node_modules/
+dist/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
