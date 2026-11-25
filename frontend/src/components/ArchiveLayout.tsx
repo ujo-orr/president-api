@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation, useMatch } from 'react-router-dom'
+import { presidents } from '../data/presidents'
+import { PresidentSources } from './PresidentSources'
 
 export const archiveNotice = '해당 웹 페이지는 공공데이터를 최대한 활용하였으나, 점수를 매기는 과정에서 제작자의 주관이 들어갑니다.'
 
@@ -41,6 +43,8 @@ export function ArchiveHeader({ activePage }: { activePage?: 'chronology' | 'eva
 
 export function ArchiveLayout() {
   const { pathname, hash } = useLocation()
+  const presidentId = useMatch('/presidents/:id')?.params.id
+  const president = presidents.find(({ id }) => id === presidentId)
   const isHome = pathname === '/'
   const isChronology = isHome && hash === '#chronology'
   const previousPath = useRef(pathname)
@@ -75,7 +79,10 @@ export function ArchiveLayout() {
         <Outlet context={chronologyPosition} />
       </main>
       <footer className="site-footer container">
-        <p>{archiveNotice}</p>
+        <div className="site-footer-copy">
+          <p>{archiveNotice}</p>
+          {president && <PresidentSources person={president} />}
+        </div>
         <Link to="/evaluation-methods">평가 기준 및 출처</Link>
       </footer>
     </div>
