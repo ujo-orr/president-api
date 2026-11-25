@@ -1,3 +1,4 @@
+import { useViewTransitionState } from 'react-router-dom'
 import { formatPresidentialNumbers, formatRepublics, formatTermMonth } from '../data/presidents'
 import type { President } from '../types/archive'
 import { Arrow } from './ArchiveLayout'
@@ -5,10 +6,11 @@ import { PresidentPortrait } from './PresidentPortrait'
 
 export function PresidentProfile({ person }: { person: President }) {
   const quote = person.representativeQuote
+  const isTransitioning = useViewTransitionState(`/presidents/${person.id}`)
 
   return (
     <div className="details-top">
-      <section className="profile" aria-labelledby="profile-title">
+      <section className={isTransitioning ? 'profile transitioning' : 'profile'} aria-labelledby="profile-title">
         <PresidentPortrait key={person.id} person={person} />
         <div className="profile-copy">
           <h1 id="profile-title">{person.name}</h1>

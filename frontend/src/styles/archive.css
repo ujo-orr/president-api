@@ -85,14 +85,20 @@ img { display: block; max-width: 100%; }
   min-height: 0;
   container-type: size;
 }
-.chronology-navigation { min-width: 0; }
+.chronology-navigation {
+  --progress-height: 6px;
+  --progress-gap: clamp(10px, 2.7cqh, 22px);
+  --progress-bottom: 10px;
+  min-width: 0;
+}
 .chronology-scroll {
-  --rail-padding: clamp(6px, 2cqh, 16px);
+  --rail-top: clamp(15px, 3.2cqh, 26px);
+  --rail-bottom: clamp(6px, 1.5cqh, 12px);
   --year-gap: clamp(12px, 5cqh, 50px);
   --year-size: clamp(.9rem, 1.45vw, 1.25rem);
   min-width: 0;
   max-height: 100%;
-  padding: var(--rail-padding) 12px;
+  padding: var(--rail-top) 16px var(--rail-bottom);
   overflow: auto hidden;
   overscroll-behavior-inline: contain;
   touch-action: pan-x pinch-zoom;
@@ -100,12 +106,20 @@ img { display: block; max-width: 100%; }
   scrollbar-width: thin;
 }
 .chronology-progress {
+  appearance: none;
   display: block;
   width: min(180px, 50%);
-  height: 3px;
-  margin: 4px auto 10px;
-  accent-color: var(--focus);
+  height: var(--progress-height);
+  margin: var(--progress-gap) auto var(--progress-bottom);
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: #e6ebf1;
+  color: var(--focus);
 }
+.chronology-progress::-webkit-progress-bar { background: transparent; }
+.chronology-progress::-webkit-progress-value { border-radius: inherit; background: currentColor; }
+.chronology-progress::-moz-progress-bar { border-radius: inherit; background: currentColor; }
 .chronology-track {
   --gap: clamp(16px, 2vw, 30px);
   --card-width: clamp(280px, 29vw, 356px);
@@ -116,18 +130,31 @@ img { display: block; max-width: 100%; }
 .president-card {
   display: grid;
   grid-template-rows: minmax(0, 4fr) minmax(min-content, 1fr);
-  height: clamp(0px, calc(100cqh - 2 * var(--rail-padding) - var(--year-gap) - 1.25 * var(--year-size) - 51px), var(--card-max-height, 590px));
+  height: clamp(0px, calc(100cqh - var(--rail-top) - var(--rail-bottom) - var(--year-gap) - 1.25 * var(--year-size)
+    - var(--progress-gap) - var(--progress-height) - var(--progress-bottom) - 34px), var(--card-max-height, 590px));
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--surface);
   box-shadow: var(--card-shadow);
   text-decoration: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+  transition: border-color 200ms ease, box-shadow 200ms ease, translate 220ms cubic-bezier(.2, .7, .3, 1);
 }
 .president-card:focus-visible { outline-offset: -3px; }
 @media (hover: hover) {
-  .president-card:hover { border-color: #a3afbe; box-shadow: 0 4px 10px #20263018, 0 10px 24px #20263020; }
+  .president-cards > li:hover > .president-card {
+    border-color: #8f9bab;
+    box-shadow: 0 7px 16px #2026302e, 0 19px 36px #20263042;
+    translate: 0 -8px;
+  }
+}
+.president-card.transitioning, .profile.transitioning { view-transition-name: president-profile; }
+::view-transition-group(root) { animation-duration: 300ms; }
+::view-transition-group(president-profile) { animation-duration: 480ms; animation-timing-function: ease-in-out; }
+::view-transition-image-pair(president-profile) { animation: president-turn-and-zoom 480ms ease-in-out both; }
+@keyframes president-turn-and-zoom {
+  0%, 100% { rotate: 0deg; scale: 1; }
+  26% { rotate: -4deg; scale: 1.16; }
 }
 .portrait { min-width: 0; position: relative; display: grid; place-items: center; padding: 8px; overflow: hidden; background: var(--surface-muted); color: var(--muted); font-size: .76rem; text-align: center; }
 .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 27%; filter: grayscale(1); }
@@ -222,4 +249,6 @@ img { display: block; max-width: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
   .home-screen, .president-card { transition: none; }
+  .president-cards > li:hover > .president-card { translate: none; }
+  ::view-transition { display: none; }
 }

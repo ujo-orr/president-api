@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react'
-import type { KeyboardEvent } from 'react'
-import { Link } from 'react-router-dom'
+import { useLayoutEffect, useRef } from 'react'
+import type { KeyboardEvent, RefObject } from 'react'
+import { NavLink, useOutletContext } from 'react-router-dom'
 import { formatPresidentialNumbers, formatRepublics, presidents } from '../data/presidents'
 import { PresidentPortrait } from './PresidentPortrait'
 
@@ -8,12 +8,16 @@ export function PresidentChronology() {
   const section = useRef<HTMLElement>(null)
   const scrollRegion = useRef<HTMLDivElement>(null)
   const progressBar = useRef<HTMLProgressElement>(null)
+  const scrollPosition = useOutletContext<RefObject<number>>()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const chronology = section.current
     const rail = scrollRegion.current
     const progress = progressBar.current
     if (!chronology || !rail || !progress) return
+
+    // 화면 폭 변화에 대응하는 가로 위치 비율 복원
+    rail.scrollLeft = scrollPosition.current * (rail.scrollWidth - rail.clientWidth)
 
     // 이동 가능한 구간에서만 세로 휠을 가로 이동으로 전환
     const moveTrack = (event: WheelEvent) => {
@@ -43,11 +47,13 @@ export function PresidentChronology() {
     updateProgress()
 
     return () => {
+      const maxOffset = rail.scrollWidth - rail.clientWidth
+      if (maxOffset > 0) scrollPosition.current = rail.scrollLeft / maxOffset
       chronology.removeEventListener('wheel', moveTrack)
       rail.removeEventListener('scroll', updateProgress)
       observer.disconnect()
     }
-  }, [])
+  }, [scrollPosition])
 
   function navigateTrack(event: KeyboardEvent<HTMLElement>) {
     const rail = scrollRegion.current
@@ -82,14 +88,15 @@ export function PresidentChronology() {
             <ol className="president-cards">
               {presidents.map((person, index) => (
                 <li key={person.id}>
-                  <Link className="president-card" to={`/presidents/${person.id}`} aria-label={`${person.name} 대통령 기록 보기`}>
+                  <NavLink className="president-card" to={`/presidents/${person.id}`} viewTransition={typeof document.startViewTransition === 'function'}
+                    aria-label={`${person.name} 대통령 기록 보기`}>
                     <PresidentPortrait person={person} loading={index < 3 ? 'eager' : 'lazy'} />
                     <div className="card-text">
                       <h2>{person.name}</h2>
                       <p>{formatPresidentialNumbers(person.presidentialNumbers)}</p>
                       <p>{formatRepublics(person.republics)}</p>
                     </div>
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ol>
