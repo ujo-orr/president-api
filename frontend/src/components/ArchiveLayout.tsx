@@ -46,6 +46,7 @@ export function ArchiveLayout() {
   const previousPath = useRef(pathname)
   const wasChronology = useRef(isChronology)
   const main = useRef<HTMLElement>(null)
+  const chronologyPosition = useRef(0)
 
   // 경로 전환 시 본문 초점과 연대기 앵커 처리
   useEffect(() => {
@@ -71,7 +72,7 @@ export function ArchiveLayout() {
       }}>본문 바로가기</a>
       {!isHome && <ArchiveHeader activePage={pathname === '/evaluation-methods' ? 'evaluation' : undefined} />}
       <main className={isHome ? 'site-main site-main--home' : 'container site-main'} id="main" ref={main} tabIndex={-1}>
-        <Outlet />
+        <Outlet context={chronologyPosition} />
       </main>
       <footer className="site-footer container">
         <p>{archiveNotice}</p>

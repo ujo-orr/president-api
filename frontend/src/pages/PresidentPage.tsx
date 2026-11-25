@@ -14,7 +14,9 @@ export function PresidentPage() {
 
   return (
     <article className="details inner-page">
-      <Link className="back-link" to="/#chronology"><Arrow direction="left" /> 대통령 연대기</Link>
+      <Link className="back-link" to="/#chronology" viewTransition={typeof document.startViewTransition === 'function'}>
+        <Arrow direction="left" /> 대통령 연대기
+      </Link>
       <PresidentProfile person={person} />
       <section className="detail-panel details-timeline">
         <h2>재임 기간 타임라인</h2>
