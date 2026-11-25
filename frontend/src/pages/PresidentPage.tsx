@@ -53,7 +53,11 @@ export function PresidentPage() {
         <p>재임 중 주요 사건을 시간순으로 살펴볼 수 있는 영역입니다.</p>
       </section>
       {person.profileImage && (
-        <p className="media-credit">초상 사진 <a href={person.profileImage.source.originalUrl}>{person.profileImage.source.organization}</a></p>
+        <p className="media-credit">
+          초상 사진 <a href={person.profileImage.source.originalUrl}>{person.profileImage.source.organization}</a>
+          {' · '}<a href={person.profileImage.license.url}>{person.profileImage.license.name}</a>
+          {' · 화면 표시 시 흑백 처리 및 크롭'}
+        </p>
       )}
     </article>
   )

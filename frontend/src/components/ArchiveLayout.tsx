@@ -22,9 +22,29 @@ function ArchiveMark() {
   )
 }
 
+export function ArchiveHeader({ activePage }: { activePage?: 'chronology' | 'evaluation' }) {
+  return (
+    <header className="site-header container">
+      <Link className="brand" to="/" aria-label="대통령 아카이브 홈">
+        <ArchiveMark />
+        <span>대통령 아카이브</span>
+      </Link>
+      <nav className="site-nav" aria-label="주 메뉴">
+        <Link to="/#chronology" aria-current={activePage === 'chronology' ? 'page' : undefined}>대통령 연대기</Link>
+        <Link to="/evaluation-methods" aria-current={activePage === 'evaluation' ? 'page' : undefined}>
+          평가 기준·출처
+        </Link>
+      </nav>
+    </header>
+  )
+}
+
 export function ArchiveLayout() {
   const { pathname, hash } = useLocation()
+  const isHome = pathname === '/'
+  const isChronology = isHome && hash === '#chronology'
   const previousPath = useRef(pathname)
+  const wasChronology = useRef(isChronology)
   const main = useRef<HTMLElement>(null)
 
   // 경로 전환 시 본문 초점과 연대기 앵커 처리
@@ -32,30 +52,25 @@ export function ArchiveLayout() {
     if (hash) {
       const target = document.getElementById(hash.slice(1))
       target?.focus({ preventScroll: true })
-      target?.scrollIntoView({ block: 'start' })
-    } else if (previousPath.current !== pathname) {
+      if (isChronology) window.scrollTo(0, 0)
+      else target?.scrollIntoView({ block: 'start' })
+    } else if (previousPath.current !== pathname || wasChronology.current) {
       window.scrollTo(0, 0)
       main.current?.focus({ preventScroll: true })
     }
     previousPath.current = pathname
-  }, [hash, pathname])
+    wasChronology.current = isChronology
+  }, [hash, pathname, isChronology])
 
   return (
-    <div className="site-shell">
-      <a className="skip-link" href="#main">본문 바로가기</a>
-      <header className="site-header container">
-        <Link className="brand" to="/" aria-label="대통령 아카이브 홈">
-          <ArchiveMark />
-          <span>대통령 아카이브</span>
-        </Link>
-        <nav className="site-nav" aria-label="주 메뉴">
-          <Link to="/#chronology">대통령 연대기</Link>
-          <Link to="/evaluation-methods" aria-current={pathname === '/evaluation-methods' ? 'page' : undefined}>
-            평가 기준·출처
-          </Link>
-        </nav>
-      </header>
-      <main className="container site-main" id="main" ref={main} tabIndex={-1}>
+    <div className={isHome ? 'site-shell site-shell--home' : 'site-shell'}>
+      <a className="skip-link" href="#main" onClick={(event) => {
+        if (!isHome) return
+        event.preventDefault()
+        main.current?.focus({ preventScroll: true })
+      }}>본문 바로가기</a>
+      {!isHome && <ArchiveHeader activePage={pathname === '/evaluation-methods' ? 'evaluation' : undefined} />}
+      <main className={isHome ? 'site-main site-main--home' : 'container site-main'} id="main" ref={main} tabIndex={-1}>
         <Outlet />
       </main>
       <footer className="site-footer container">

@@ -18,7 +18,12 @@ export interface President {
   id: string
   name: string
   presidentialNumbers: number[]
-  profileImage: { path: string; source: DataSource } | null
+  republics: [start: number, end?: number]
+  profileImage: {
+    path: string
+    source: DataSource
+    license: { name: string; url: string }
+  } | null
   representativeQuote: { text: string; kind: 'speech' | 'slogan' | 'retrospective'; source: DataSource } | null
   terms: [PresidentialTerm, ...PresidentialTerm[]]
   sources: DataSource[]
