@@ -1,11 +1,12 @@
 import { useViewTransitionState } from 'react-router-dom'
+import { presidentParties } from '../data/partyAffiliations'
 import { formatPresidentialNumbers, formatRepublics, formatTermMonth } from '../data/presidents'
 import type { President } from '../types/archive'
-import { Arrow } from './ArchiveLayout'
 import { PresidentPortrait } from './PresidentPortrait'
 
 export function PresidentProfile({ person }: { person: President }) {
   const quote = person.representativeQuote
+  const affiliations = presidentParties[person.id]
   const isTransitioning = useViewTransitionState(`/presidents/${person.id}`)
 
   return (
@@ -37,14 +38,30 @@ export function PresidentProfile({ person }: { person: President }) {
             <dt>공화국</dt>
             <dd>{formatRepublics(person.republics)}</dd>
           </div>
+          <div className="profile-parties">
+            <dt>소속 정당</dt>
+            <dd>
+              {affiliations?.length ? (
+                <ol className="profile-party-list">
+                  {affiliations.map(({ group, sourceUrl, since, context }) => (
+                    <li key={sourceUrl}>
+                      <strong>
+                        {group.icon && <img src={'/images/parties/' + group.icon} alt="" width="22" height="22" />}
+                        {group.name}
+                      </strong>
+                      {since && <span><time dateTime={since}>{formatTermMonth(since)}</time>부터</span>}
+                      {context && <span>{context}</span>}
+                    </li>
+                  ))}
+                </ol>
+              ) : '확인 중'}
+            </dd>
+          </div>
         </dl>
         <div className="profile-quote">
           <h2>대표 발언</h2>
           {quote ? (
-            <figure>
-              <blockquote cite={quote.source.originalUrl}>“{quote.text}”</blockquote>
-              <figcaption><a href={quote.source.originalUrl}>{quote.source.title} 발췌 <Arrow /></a></figcaption>
-            </figure>
+            <blockquote cite={quote.source.originalUrl}>“{quote.text}”</blockquote>
           ) : (
             <p>대표 발언 확인 중</p>
           )}

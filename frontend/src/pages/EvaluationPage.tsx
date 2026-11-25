@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Arrow } from '../components/ArchiveLayout'
+import { ExternalLink } from '../components/ExternalLink'
 
 const sources = [
   { label: '행정안전부 대통령기록관', description: '인물 약력, 연설문 및 대통령 기록물', url: 'https://www.pa.go.kr/portal/search/base/search.do' },
@@ -25,7 +26,7 @@ export function EvaluationPage() {
           <ul className="source-list">
             {sources.map((source) => (
               <li key={source.url}>
-                <a href={source.url}>{source.label} <Arrow /></a>
+                <ExternalLink href={source.url}>{source.label}</ExternalLink>
                 <p>{source.description}</p>
               </li>
             ))}

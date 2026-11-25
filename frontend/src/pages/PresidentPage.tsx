@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { Arrow } from '../components/ArchiveLayout'
 import { PresidentProfile } from '../components/PresidentProfile'
+import { presidentCareers } from '../data/presidentCareers'
 import { presidents } from '../data/presidents'
 import { NotFoundPage } from './NotFoundPage'
 
@@ -12,19 +13,24 @@ export function PresidentPage() {
 
   if (!person) return <NotFoundPage presidentMissing />
 
+  const careers = presidentCareers[person.id]
+
   return (
     <article className="details inner-page">
       <Link className="back-link" to="/#chronology" viewTransition={typeof document.startViewTransition === 'function'}>
         <Arrow direction="left" /> 대통령 연대기
       </Link>
       <PresidentProfile person={person} />
-      <section className="detail-panel details-timeline">
-        <h2>재임 기간 타임라인</h2>
-        <p>선택한 대통령과 앞뒤 대통령의 재임 기간을 비교하는 영역입니다.</p>
-        {person.sources.map((source) => (
-          <a key={source.id} href={source.originalUrl}>대통령기록관 약력 <Arrow /></a>
-        ))}
-      </section>
+      {careers?.length > 0 && (
+        <section className="detail-panel details-career" aria-labelledby="president-career-heading">
+          <h2 id="president-career-heading">약력</h2>
+          <ul className="career-list">
+            {careers.map(({ years, title }) => (
+              <li key={title}><span>{years}</span>{title}</li>
+            ))}
+          </ul>
+        </section>
+      )}
       <div className="details-middle">
         <section className="detail-panel">
           <h2>영역별 평가</h2>
@@ -40,13 +46,6 @@ export function PresidentPage() {
         <h2>흥망성쇠 기록</h2>
         <p>재임 중 주요 사건을 시간순으로 살펴볼 수 있는 영역입니다.</p>
       </section>
-      {person.profileImage && (
-        <p className="media-credit">
-          초상 사진 <a href={person.profileImage.source.originalUrl}>{person.profileImage.source.organization}</a>
-          {' · '}<a href={person.profileImage.license.url}>{person.profileImage.license.name}</a>
-          {' · 화면 표시 시 흑백 처리 및 크롭'}
-        </p>
-      )}
     </article>
   )
 }
