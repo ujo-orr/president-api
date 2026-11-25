@@ -85,6 +85,7 @@ img { display: block; max-width: 100%; }
   min-height: 0;
   container-type: size;
 }
+.chronology-navigation { min-width: 0; }
 .chronology-scroll {
   --rail-padding: clamp(6px, 2cqh, 16px);
   --year-gap: clamp(12px, 5cqh, 50px);
@@ -98,6 +99,13 @@ img { display: block; max-width: 100%; }
   scrollbar-color: #b2bac6 var(--surface);
   scrollbar-width: thin;
 }
+.chronology-progress {
+  display: block;
+  width: min(180px, 50%);
+  height: 3px;
+  margin: 4px auto 10px;
+  accent-color: var(--focus);
+}
 .chronology-track {
   --gap: clamp(16px, 2vw, 30px);
   --card-width: clamp(280px, 29vw, 356px);
@@ -108,15 +116,19 @@ img { display: block; max-width: 100%; }
 .president-card {
   display: grid;
   grid-template-rows: minmax(0, 4fr) minmax(min-content, 1fr);
-  height: clamp(0px, calc(100cqh - 2 * var(--rail-padding) - var(--year-gap) - 1.25 * var(--year-size) - 34px), var(--card-max-height, 590px));
+  height: clamp(0px, calc(100cqh - 2 * var(--rail-padding) - var(--year-gap) - 1.25 * var(--year-size) - 51px), var(--card-max-height, 590px));
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--surface);
   box-shadow: var(--card-shadow);
   text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 .president-card:focus-visible { outline-offset: -3px; }
+@media (hover: hover) {
+  .president-card:hover { border-color: #a3afbe; box-shadow: 0 4px 10px #20263018, 0 10px 24px #20263020; }
+}
 .portrait { min-width: 0; position: relative; display: grid; place-items: center; padding: 8px; overflow: hidden; background: var(--surface-muted); color: var(--muted); font-size: .76rem; text-align: center; }
 .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 27%; filter: grayscale(1); }
 .card-text { display: grid; align-content: center; gap: 6px; padding-inline: 16px; text-align: center; }
@@ -137,20 +149,26 @@ img { display: block; max-width: 100%; }
 .back-link:hover { text-decoration: underline; }
 .back-link .arrow, .detail-panel a .arrow, .source-list .arrow { width: 17px; height: 17px; }
 .details-top, .details-middle { display: grid; gap: 16px; margin-bottom: 16px; }
-.details-top { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+.details-top { grid-template-columns: clamp(160px, 23vw, 248px) minmax(0, 1fr); }
 .profile, .detail-panel {
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   background: var(--surface);
   box-shadow: var(--card-shadow);
 }
-.profile { display: grid; grid-template-columns: minmax(92px, .8fr) minmax(0, 1fr); gap: 18px; padding: 10px; }
-.profile .portrait { min-height: 162px; border-radius: 10px; }
-.profile-copy { align-self: center; padding: 8px 4px 8px 0; }
+.profile { display: grid; align-content: start; align-self: start; overflow: hidden; }
+.profile .portrait { aspect-ratio: 4 / 5; }
+.profile-copy { padding: 14px 8px 16px; text-align: center; }
 .profile h1, .evaluation h1, .not-found h1 { font-size: clamp(1.9rem, 5vw, 2.65rem); line-height: 1.25; letter-spacing: -.055em; }
 .profile-number { margin-block: .35em; font-size: .93rem; font-weight: 700; }
-.profile-terms { color: var(--muted); font-size: .83rem; line-height: 1.65; }
-.quote-status { margin-top: .5rem; color: var(--muted); font-size: .82rem; }
+.detail-panel.profile-facts { display: grid; align-content: center; padding: clamp(22px, 4vw, 46px); }
+.profile-facts-list { display: grid; grid-template-columns: 2fr 1fr; gap: 14px 24px; margin: 0; }
+.profile-facts-list dt { margin-bottom: 6px; color: var(--muted); font-size: .86rem; font-weight: 650; }
+.profile-facts-list dd { margin: 0; font-weight: 700; line-height: 1.6; word-break: keep-all; }
+.profile-quote { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.profile-quote figure, .profile-quote blockquote { margin: 0; }
+.profile-quote blockquote { font-size: clamp(1rem, 2.05vw, 1.45rem); font-weight: 650; line-height: 1.6; word-break: keep-all; }
+.details-timeline { margin-bottom: 16px; }
 .details-middle, .evaluation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .detail-panel { min-height: 136px; padding: 20px; }
 .detail-panel h2, .evaluation h2 { margin-bottom: 10px; font-size: clamp(1.18rem, 2.4vw, 1.5rem); letter-spacing: -.04em; }
@@ -180,11 +198,21 @@ img { display: block; max-width: 100%; }
   .chronology-track { --gap: 16px; --card-width: clamp(220px, 69vw, 300px); }
   .president-card { --card-max-height: 440px; }
   .site-footer { flex-wrap: wrap; gap: 8px; }
-  .details-top, .details-middle, .evaluation-grid { grid-template-columns: 1fr; }
+  .details-top { grid-template-columns: clamp(112px, 33vw, 170px) minmax(0, 1fr); gap: 12px; }
+  .details-middle, .evaluation-grid { grid-template-columns: 1fr; }
   .detail-panel { min-height: 0; padding: 16px; }
-  .profile { gap: 12px; }
-  .profile .portrait { min-height: 130px; }
+  .detail-panel.profile-facts { padding: 14px; }
+  .profile-facts-list { grid-template-columns: 1fr; gap: 10px; }
+  .profile-facts-list dd { font-size: .88rem; }
+  .profile-quote { margin-top: 14px; padding-top: 12px; }
+  .profile-copy { padding: 8px 4px; }
+  .profile h1 { font-size: clamp(1.25rem, 6vw, 1.9rem); }
   .evaluation-grid { gap: 10px; }
+}
+
+@media (max-width: 340px) {
+  .details-top { grid-template-columns: minmax(0, 1fr); }
+  .profile { width: min(100%, 180px); justify-self: center; }
 }
 
 @media (max-height: 460px) {
@@ -193,5 +221,5 @@ img { display: block; max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-screen { transition: none; }
+  .home-screen, .president-card { transition: none; }
 }
