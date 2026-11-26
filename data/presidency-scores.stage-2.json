@@ -1,0 +1,866 @@
+{
+  "schemaVersion": 1,
+  "scoreAdjustmentConstant": 5,
+  "categories": {
+    "economy": "경제",
+    "foreignRelations": "대외 관계",
+    "laborSocial": "노동·사회 정책",
+    "securityDefense": "안보·국방",
+    "democracyRuleOfLaw": "민주주의·법치",
+    "culture": "문화 발전"
+  },
+  "presidents": {
+    "syngman-rhee": {
+      "name": "이승만",
+      "axes": {
+        "economy": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 9,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 5,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 4,
+          "positiveWeight": 4,
+          "negativeWeight": 14
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "yun-po-sun": {
+      "name": "윤보선",
+      "axes": {
+        "economy": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 2,
+          "negativeWeight": 2
+        },
+        "foreignRelations": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 2,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 2,
+          "negativeWeight": 2
+        },
+        "securityDefense": {
+          "score": null,
+          "status": "RESEARCH_PENDING",
+          "eventCount": 0,
+          "assessedEventCount": 0,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 6,
+          "negativeWeight": 3
+        },
+        "culture": {
+          "score": null,
+          "status": "RESEARCH_PENDING",
+          "eventCount": 0,
+          "assessedEventCount": 0,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "park-chung-hee": {
+      "name": "박정희",
+      "axes": {
+        "economy": {
+          "score": 7,
+          "status": "CALCULATED",
+          "eventCount": 5,
+          "assessedEventCount": 5,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 6,
+          "positiveWeight": 19,
+          "negativeWeight": 4
+        },
+        "foreignRelations": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 7,
+          "negativeWeight": 4
+        },
+        "laborSocial": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 4,
+          "positiveWeight": 8,
+          "negativeWeight": 6
+        },
+        "securityDefense": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 2,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 2,
+          "positiveWeight": 4,
+          "negativeWeight": 4
+        },
+        "democracyRuleOfLaw": {
+          "score": 0,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 0,
+          "negativeWeight": 10
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "choi-kyu-hah": {
+      "name": "최규하",
+      "axes": {
+        "economy": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 2,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": null,
+          "status": "UNASSESSED",
+          "eventCount": 1,
+          "assessedEventCount": 0,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": null,
+          "status": "RESEARCH_PENDING",
+          "eventCount": 0,
+          "assessedEventCount": 0,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": null,
+          "status": "RESEARCH_PENDING",
+          "eventCount": 0,
+          "assessedEventCount": 0,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 4,
+          "negativeWeight": 9
+        },
+        "culture": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 1,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "chun-doo-hwan": {
+      "name": "전두환",
+      "axes": {
+        "economy": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 2,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 4,
+          "negativeWeight": 7
+        },
+        "securityDefense": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 5,
+          "negativeWeight": 9
+        },
+        "culture": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 4,
+          "assessedEventCount": 4,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 4,
+          "positiveWeight": 8,
+          "negativeWeight": 4
+        }
+      }
+    },
+    "roh-tae-woo": {
+      "name": "노태우",
+      "axes": {
+        "economy": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 4,
+          "negativeWeight": 3
+        },
+        "foreignRelations": {
+          "score": 8,
+          "status": "CALCULATED",
+          "eventCount": 5,
+          "assessedEventCount": 5,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 5,
+          "positiveWeight": 19,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 8,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 2,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "kim-young-sam": {
+      "name": "김영삼",
+      "axes": {
+        "economy": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 2,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 3,
+          "positiveWeight": 7,
+          "negativeWeight": 4
+        },
+        "foreignRelations": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": null,
+          "status": "UNASSESSED",
+          "eventCount": 1,
+          "assessedEventCount": 0,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 4,
+          "assessedEventCount": 3,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 3,
+          "positiveWeight": 10,
+          "negativeWeight": 3
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "kim-dae-jung": {
+      "name": "김대중",
+      "axes": {
+        "economy": {
+          "score": 7,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 11,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 7,
+          "negativeWeight": 3
+        },
+        "securityDefense": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "roh-moo-hyun": {
+      "name": "노무현",
+      "axes": {
+        "economy": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 1,
+          "pendingEventCount": 2,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 5,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": null,
+          "status": "UNASSESSED",
+          "eventCount": 3,
+          "assessedEventCount": 0,
+          "pendingEventCount": 3,
+          "assessedImpactCount": 0,
+          "positiveWeight": 0,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "culture": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 3,
+          "negativeWeight": 3
+        }
+      }
+    },
+    "lee-myung-bak": {
+      "name": "이명박",
+      "axes": {
+        "economy": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 4,
+          "assessedEventCount": 3,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 4,
+          "positiveWeight": 9,
+          "negativeWeight": 4
+        },
+        "foreignRelations": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "securityDefense": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 4,
+          "assessedEventCount": 2,
+          "pendingEventCount": 2,
+          "assessedImpactCount": 3,
+          "positiveWeight": 4,
+          "negativeWeight": 2
+        },
+        "democracyRuleOfLaw": {
+          "score": 0,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 0,
+          "negativeWeight": 4
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "park-geun-hye": {
+      "name": "박근혜",
+      "axes": {
+        "economy": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 2,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 2,
+          "negativeWeight": 3
+        },
+        "laborSocial": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 4,
+          "negativeWeight": 4
+        },
+        "securityDefense": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 2,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 2,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 0,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 0,
+          "negativeWeight": 5
+        },
+        "culture": {
+          "score": 3,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 3,
+          "negativeWeight": 4
+        }
+      }
+    },
+    "moon-jae-in": {
+      "name": "문재인",
+      "axes": {
+        "economy": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 4,
+          "positiveWeight": 11,
+          "negativeWeight": 2
+        },
+        "securityDefense": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 6,
+          "assessedEventCount": 4,
+          "pendingEventCount": 4,
+          "assessedImpactCount": 4,
+          "positiveWeight": 5,
+          "negativeWeight": 4
+        },
+        "democracyRuleOfLaw": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 4,
+          "negativeWeight": 0
+        }
+      }
+    },
+    "yoon-suk-yeol": {
+      "name": "윤석열",
+      "axes": {
+        "economy": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        },
+        "foreignRelations": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 2,
+          "assessedEventCount": 2,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 2,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "laborSocial": {
+          "score": 5,
+          "status": "CALCULATED",
+          "eventCount": 4,
+          "assessedEventCount": 3,
+          "pendingEventCount": 1,
+          "assessedImpactCount": 3,
+          "positiveWeight": 7,
+          "negativeWeight": 3
+        },
+        "securityDefense": {
+          "score": 6,
+          "status": "CALCULATED",
+          "eventCount": 3,
+          "assessedEventCount": 3,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 3,
+          "positiveWeight": 7,
+          "negativeWeight": 0
+        },
+        "democracyRuleOfLaw": {
+          "score": 0,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 0,
+          "negativeWeight": 5
+        },
+        "culture": {
+          "score": 4,
+          "status": "CALCULATED",
+          "eventCount": 1,
+          "assessedEventCount": 1,
+          "pendingEventCount": 0,
+          "assessedImpactCount": 1,
+          "positiveWeight": 3,
+          "negativeWeight": 0
+        }
+      }
+    }
+  },
+  "evaluationMetadata": {
+    "evaluator": "AI (Codex)",
+    "evaluatedOn": "2026-11-26",
+    "ruleset": "chapter-05-source-based-v1",
+    "basis": "공식 통계와 역사 기록 우선, 필요시 당시 보도 교차 대조. 사건의 범위·지속 기간·중요도에 따른 1~5 가중치.",
+    "limitations": "선별된 사건에 대한 가중치 비율이며 AI 해석과 자료 범위에 따라 달라질 수 있음."
+  }
+}

@@ -3,7 +3,7 @@ import { Link, Outlet, useLocation, useMatch } from 'react-router-dom'
 import { presidents } from '../data/presidents'
 import { PresidentSources } from './PresidentSources'
 
-export const archiveNotice = '해당 웹 페이지는 공공데이터를 최대한 활용하였으나, 점수를 매기는 과정에서 제작자의 주관이 들어갑니다.'
+export const archiveNotice = '본 웹 페이지의 평가는 공공데이터와 역사적 기록을 바탕으로 AI를 활용하여 산출하였으며, 평가 기준과 자료의 선정에 따라 해석이 달라질 수 있습니다.'
 
 export function Arrow({ direction = 'right' }: { direction?: 'right' | 'down' | 'left' }) {
   return (
@@ -27,13 +27,13 @@ function ArchiveMark() {
 export function ArchiveHeader({ activePage }: { activePage?: 'chronology' | 'evaluation' }) {
   return (
     <header className="site-header container">
-      <Link className="brand" to="/" aria-label="대통령 아카이브 홈">
+      <Link className="brand" to="/#chronology" aria-label="대통령 아카이브 홈">
         <ArchiveMark />
         <span>대통령 아카이브</span>
       </Link>
       <nav className="site-nav" aria-label="주 메뉴">
         <Link to="/#chronology" aria-current={activePage === 'chronology' ? 'page' : undefined}>대통령 연대기</Link>
-        <Link to="/evaluation-methods" aria-current={activePage === 'evaluation' ? 'page' : undefined}>
+        <Link to="/evaluation-methods" state={{ fromArchive: true }} aria-current={activePage === 'evaluation' ? 'page' : undefined}>
           평가 기준·출처
         </Link>
       </nav>
@@ -83,7 +83,7 @@ export function ArchiveLayout() {
           <p>{archiveNotice}</p>
           {president && <PresidentSources person={president} />}
         </div>
-        <Link to="/evaluation-methods">평가 기준 및 출처</Link>
+        <Link to="/evaluation-methods" state={{ fromArchive: true }}>평가 기준 및 출처</Link>
       </footer>
     </div>
   )

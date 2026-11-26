@@ -1,12 +1,17 @@
 services:
   frontend:
-    build: ./frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
     init: true
     ports:
       - "127.0.0.1:${FRONTEND_PORT:-5173}:5173"
     environment:
       VITE_USE_POLLING: ${VITE_USE_POLLING:-false}
     volumes:
+      - ./data/presidency-scores.stage-2.json:/data/presidency-scores.stage-2.json:ro
+      - ./data/presidency-assessments.stage-2.json:/data/presidency-assessments.stage-2.json:ro
+      - ./data/historical-events.stage-1.json:/data/historical-events.stage-1.json:ro
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
       - ./frontend/index.html:/app/index.html

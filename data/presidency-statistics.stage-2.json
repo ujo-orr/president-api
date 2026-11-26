@@ -1,0 +1,859 @@
+{
+  "syngman-rhee": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 11,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 11,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 11,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 11,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 11,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "yun-po-sun": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 1,
+      "observationCount": 1,
+      "observedYears": [
+        1961
+      ],
+      "mean": 1077.10464,
+      "median": 1077.10464
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 1,
+      "observationCount": 1,
+      "observedYears": [
+        1961
+      ],
+      "mean": 17.926708,
+      "median": 17.926708
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 1,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 1,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 1,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "park-chung-hee": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 15,
+      "observationCount": 15,
+      "observedYears": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "mean": 2309.3141668666667,
+      "median": 2170.964697
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 15,
+      "observationCount": 15,
+      "observedYears": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "mean": 38.77253,
+      "median": 35.294964
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 15,
+      "observationCount": 5,
+      "observedYears": [
+        1969,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "mean": 3.9522,
+      "median": 3.808
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 15,
+      "observationCount": 4,
+      "observedYears": [
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "mean": 4.7825,
+      "median": 4.88
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 15,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "choi-kyu-hah": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 0,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 0,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 0,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 0,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 0,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "chun-doo-hwan": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 7,
+      "observationCount": 7,
+      "observedYears": [
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "mean": 5767.845470428571,
+      "median": 5712.639848
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 7,
+      "observationCount": 7,
+      "observedYears": [
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "mean": 58.30685314285714,
+      "median": 58.421573
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 7,
+      "observationCount": 7,
+      "observedYears": [
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "mean": 3.9372857142857143,
+      "median": 3.982
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 7,
+      "observationCount": 7,
+      "observedYears": [
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "mean": 4.4714285714285715,
+      "median": 4.11
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 7,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "roh-tae-woo": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "mean": 10086.56970875,
+      "median": 10145.710798
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "mean": 49.00371925,
+      "median": 48.7401165
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "mean": 2.42475,
+      "median": 2.421
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "mean": 3.1625,
+      "median": 3.095
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 1,
+      "observedYears": [
+        1990
+      ],
+      "mean": 10.0,
+      "median": 10.0
+    }
+  },
+  "kim-young-sam": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "mean": 14329.537214,
+      "median": 14409.3161415
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "mean": 51.6617395,
+      "median": 51.505093
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "mean": 2.25025,
+      "median": 2.2105
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "mean": 2.485,
+      "median": 2.455
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "kim-dae-jung": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "mean": 18100.46526525,
+      "median": 18111.7820805
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "mean": 59.7625725,
+      "median": 59.1612985
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "mean": 4.32,
+      "median": 3.881
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "mean": 2.1225,
+      "median": 2.12
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 1,
+      "observedYears": [
+        2000
+      ],
+      "mean": 9.2,
+      "median": 9.2
+    }
+  },
+  "roh-moo-hyun": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "mean": 22730.63152475,
+      "median": 22642.973659
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "mean": 68.44887275,
+      "median": 68.1510075
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "mean": 3.29225,
+      "median": 3.337
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "mean": 2.1025,
+      "median": 2.12
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 0,
+      "observedYears": [],
+      "mean": null,
+      "median": null
+    }
+  },
+  "lee-myung-bak": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "mean": 26742.61882975,
+      "median": 27008.2520345
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "mean": 93.5875915,
+      "median": 94.77257
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "mean": 3.12275,
+      "median": 3.158
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "mean": 2.1925,
+      "median": 2.18
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 3,
+      "observedYears": [
+        2010,
+        2011,
+        2012
+      ],
+      "mean": 4.4,
+      "median": 3.7
+    }
+  },
+  "park-geun-hye": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 3,
+      "observationCount": 3,
+      "observedYears": [
+        2014,
+        2015,
+        2016
+      ],
+      "mean": 30215.957080666667,
+      "median": 30171.790655
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 3,
+      "observationCount": 3,
+      "observedYears": [
+        2014,
+        2015,
+        2016
+      ],
+      "mean": 77.40738566666667,
+      "median": 75.388177
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 3,
+      "observationCount": 3,
+      "observedYears": [
+        2014,
+        2015,
+        2016
+      ],
+      "mean": 3.426,
+      "median": 3.546
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 3,
+      "observationCount": 3,
+      "observedYears": [
+        2014,
+        2015,
+        2016
+      ],
+      "mean": 2.15,
+      "median": 2.15
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 3,
+      "observationCount": 3,
+      "observedYears": [
+        2014,
+        2015,
+        2016
+      ],
+      "mean": 3.1,
+      "median": 3.2
+    }
+  },
+  "moon-jae-in": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "mean": 33589.51743625,
+      "median": 33356.1206375
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "mean": 71.7514605,
+      "median": 73.0772895
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "mean": 3.785,
+      "median": 3.785
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "mean": 2.315,
+      "median": 2.335
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 4,
+      "observationCount": 4,
+      "observedYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "mean": 2.375,
+      "median": 2.75
+    }
+  },
+  "yoon-suk-yeol": {
+    "gdpPerCapita": {
+      "unit": "2015년 불변 미국달러/명",
+      "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD?locations=KR",
+      "eligibleYearCount": 2,
+      "observationCount": 2,
+      "observedYears": [
+        2023,
+        2024
+      ],
+      "mean": 36698.0650195,
+      "median": 36698.0650195
+    },
+    "trade": {
+      "unit": "수출입/GDP, %",
+      "source": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS?locations=KR",
+      "eligibleYearCount": 2,
+      "observationCount": 2,
+      "observedYears": [
+        2023,
+        2024
+      ],
+      "mean": 83.450252,
+      "median": 83.450252
+    },
+    "unemployment": {
+      "unit": "노동력 대비 %, 국가 추정치",
+      "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS?locations=KR",
+      "eligibleYearCount": 2,
+      "observationCount": 2,
+      "observedYears": [
+        2023,
+        2024
+      ],
+      "mean": 2.7295,
+      "median": 2.7295
+    },
+    "defenseBudget": {
+      "unit": "국방예산/GDP, %",
+      "source": "https://www.mnd.go.kr/mnd/193/subview.do",
+      "eligibleYearCount": 2,
+      "observationCount": 1,
+      "observedYears": [
+        2023
+      ],
+      "mean": 2.37,
+      "median": 2.37
+    },
+    "growthRate": {
+      "unit": "%",
+      "source": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=4201&period=N&stts_cd=420101",
+      "eligibleYearCount": 2,
+      "observationCount": 2,
+      "observedYears": [
+        2023,
+        2024
+      ],
+      "mean": 1.85,
+      "median": 1.85
+    }
+  }
+}

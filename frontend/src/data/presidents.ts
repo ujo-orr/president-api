@@ -63,7 +63,13 @@ const profiles: President[] = [
       'syngman-rhee', '여러분이 나에게 맡기는 직책은 누구나 한사람의 힘으로 성공할 수는 없는 것입니다.',
       '초대 대통령 취임사', 'https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1310440&catid=c_pa02062&spMode=view',
     ),
-    terms: [{ id: 'rhee-1948', presidentId: 'syngman-rhee', startDate: '1948-07', endDate: '1960-04' }],
+    terms: [{
+      id: 'rhee-1948', presidentId: 'syngman-rhee', startDate: '1948-07', endDate: '1960-04',
+      endReason: {
+        kind: 'resignation', label: '하야', context: '4·19 혁명 이후',
+        source: { title: '대통령기록관 4·19 혁명과 이승만 사임서', originalUrl: 'https://www.pa.go.kr/portal/online_contents/instant_record/instantRecordDetail.do?seq=26' },
+      },
+    }],
     sources: [biography('01', '제1~3대 이승만 약력')],
   },
   {
@@ -86,7 +92,13 @@ const profiles: President[] = [
       'yun-po-sun', '우리는 새로운 외교정책과 새로운 외교체제를 갖추어 새로운 외교활동을 재출발하여야 하겠습니다.',
       '제4대 대통령 취임사', 'https://www.pa.go.kr/online_contents/inauguration/president04.jsp',
     ),
-    terms: [{ id: 'yun-1960', presidentId: 'yun-po-sun', startDate: '1960-08', endDate: '1962-03' }],
+    terms: [{
+      id: 'yun-1960', presidentId: 'yun-po-sun', startDate: '1960-08', endDate: '1962-03',
+      endReason: {
+        kind: 'resignation', label: '사임', context: '5·16 군사정변 이후',
+        source: { title: '국사편찬위원회 윤보선 사임 기록', originalUrl: 'https://db.history.go.kr/id/tcct_1962_03_22_0010' },
+      },
+    }],
     sources: [biography('04', '제4대 윤보선 약력')],
   },
   {
@@ -109,7 +121,17 @@ const profiles: President[] = [
       'park-chung-hee', '국헌을 준수하고 나의 신명을 조국과 민족앞에 바칠 것을 맹서하면서',
       '제5대 대통령 취임사', 'https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1305368&catid=c_pa02062&spMode=view',
     ),
-    terms: [{ id: 'park-1963', presidentId: 'park-chung-hee', startDate: '1963-12', endDate: '1979-10' }],
+    terms: [{
+      id: 'park-1963', presidentId: 'park-chung-hee', startDate: '1963-12', endDate: '1979-10',
+      startContext: {
+        event: '5·16 군사정변',
+        source: { title: '국사편찬위원회 5·16 군사정변 기록', originalUrl: 'https://db.history.go.kr/id/tcct_1961_05_16_0010' },
+      },
+      endReason: {
+        kind: 'death', cause: '총격',
+        source: { title: '국사편찬위원회 10·26 기록', originalUrl: 'https://db.history.go.kr/id/tcct_1979_10_26_0010' },
+      },
+    }],
     sources: [biography('05', '제5~9대 박정희 약력')],
   },
   {
@@ -122,7 +144,13 @@ const profiles: President[] = [
       'choi-kyu-hah', '국민 각계각층의 광범위한 의견을 듣기 위하여 그들과의 대화를 폭넓게 갖고자 하며',
       '제10대 대통령 취임사', 'https://www.pa.go.kr/online_contents/inauguration/president10.jsp',
     ),
-    terms: [{ id: 'choi-1979', presidentId: 'choi-kyu-hah', startDate: '1979-12', endDate: '1980-08' }],
+    terms: [{
+      id: 'choi-1979', presidentId: 'choi-kyu-hah', startDate: '1979-12', endDate: '1980-08',
+      endReason: {
+        kind: 'resignation', label: '사임', context: '신군부 집권 과정',
+        source: { title: '국사편찬위원회 최규하 사임과 신군부 집권 기록', originalUrl: 'https://db.history.go.kr/item/cons/level.do?levelId=cons_009_0010' },
+      },
+    }],
     sources: [biography('10', '제10대 최규하 약력')],
   },
   {
@@ -135,7 +163,13 @@ const profiles: President[] = [
       'chun-doo-hwan', '우선 참다운 민주역량의 축적은 우리의 당면과제 중의 하나입니다.',
       '제11대 대통령 취임사', 'https://www.pa.go.kr/online_contents/inauguration/president11.jsp',
     ),
-    terms: [{ id: 'chun-1980', presidentId: 'chun-doo-hwan', startDate: '1980-09', endDate: '1988-02' }],
+    terms: [{
+      id: 'chun-1980', presidentId: 'chun-doo-hwan', startDate: '1980-09', endDate: '1988-02',
+      startContext: {
+        event: '12·12 군사반란과 5·17 비상계엄 확대',
+        source: { title: '대법원 12·12 군사반란 및 5·18 내란 판결', originalUrl: 'https://www.law.go.kr/LSW/precInfoP.do?mode=0&precSeq=603883' },
+      },
+    }],
     sources: [biography('11', '제11~12대 전두환 약력')],
   },
   {
@@ -213,7 +247,13 @@ const profiles: President[] = [
       'park-geun-hye', '경제부흥과 국민행복, 문화융성을 이뤄낼 것입니다.',
       '제18대 대통령 취임사', 'https://www.korea.kr/news/policyNewsView.do?newsId=148756155', '대한민국 정책브리핑',
     ),
-    terms: [{ id: 'park-geun-2013', presidentId: 'park-geun-hye', startDate: '2013-02', endDate: '2017-03' }],
+    terms: [{
+      id: 'park-geun-2013', presidentId: 'park-geun-hye', startDate: '2013-02', endDate: '2017-03',
+      endReason: {
+        kind: 'impeachment',
+        source: { title: '헌법재판소 박근혜 탄핵 결정', originalUrl: 'https://law.go.kr/LSW/detcInfoP.do?detcSeq=54153' },
+      },
+    }],
     sources: [biography('18', '제18대 박근혜 약력')],
   },
   {
@@ -245,7 +285,13 @@ const profiles: President[] = [
       'yoon-suk-yeol', '국민이 진정한 주인인 나라',
       '제20대 대통령 취임사', 'https://gonggam.korea.kr/newsContentView.es?mid=a12501000000&section_id=NCCD_POLICY_TOTAL&news_id=EBC6D4014D394203E0540021F662AC5F', '정책주간지 K-공감',
     ),
-    terms: [{ id: 'yoon-2022', presidentId: 'yoon-suk-yeol', startDate: '2022-05', endDate: '2025-04' }],
+    terms: [{
+      id: 'yoon-2022', presidentId: 'yoon-suk-yeol', startDate: '2022-05', endDate: '2025-04',
+      endReason: {
+        kind: 'impeachment',
+        source: { title: '헌법재판소 윤석열 탄핵 결정', originalUrl: 'https://law.ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=4253958&cbIdx=1106' },
+      },
+    }],
     sources: [biography('20', '제20대 윤석열 약력')],
   },
 ]

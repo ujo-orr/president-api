@@ -1,4 +1,5 @@
 import { presidentParties } from '../data/partyAffiliations'
+import { factSources } from '../data/presidencyFacts'
 import { formatTermMonth } from '../data/presidents'
 import type { President } from '../types/archive'
 import { ExternalLink } from './ExternalLink'
@@ -15,6 +16,10 @@ export function PresidentSources({ person }: { person: President }) {
         {person.sources.map((source) => (
           <li key={source.id}><ExternalLink href={source.originalUrl}>{source.title}</ExternalLink></li>
         ))}
+        {person.terms.flatMap(({ id, startContext, endReason }) => [
+          startContext && <li key={id + '-start'}><ExternalLink href={startContext.source.originalUrl}>{startContext.source.title}</ExternalLink></li>,
+          endReason && <li key={id + '-end'}><ExternalLink href={endReason.source.originalUrl}>{endReason.source.title}</ExternalLink></li>,
+        ])}
         {affiliations?.map(({ group, sourceUrl, since, context }) => (
           <li key={sourceUrl}>
             <ExternalLink href={sourceUrl}>
@@ -31,6 +36,9 @@ export function PresidentSources({ person }: { person: President }) {
             <li>화면 표시 시 흑백 처리 및 크롭</li>
           </>
         )}
+        {factSources.map(({ title, url }) => (
+          <li key={url}><ExternalLink href={url}>{title}</ExternalLink></li>
+        ))}
       </ul>
     </div>
   )
