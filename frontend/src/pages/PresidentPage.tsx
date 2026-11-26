@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Arrow } from '../components/ArchiveLayout'
 import { PresidencyIndicators } from '../components/PresidencyIndicators'
@@ -5,6 +6,8 @@ import { PresidentProfile } from '../components/PresidentProfile'
 import { presidentCareers } from '../data/presidentCareers'
 import { presidents } from '../data/presidents'
 import { NotFoundPage } from './NotFoundPage'
+
+const PresidentTimeline = lazy(() => import('../components/PresidentTimeline'))
 
 export function PresidentPage() {
   const { id } = useParams()
@@ -31,9 +34,11 @@ export function PresidentPage() {
         </section>
       )}
       <PresidencyIndicators presidentId={person.id} />
-      <section className="detail-panel">
-        <h2>흥망성쇠 기록</h2>
-        <p>재임 중 주요 사건을 시간순으로 살펴볼 수 있는 영역입니다.</p>
+      <section className="detail-panel" aria-labelledby="president-timeline-heading">
+        <h2 id="president-timeline-heading">흥망성쇠 기록</h2>
+        <Suspense fallback={<p role="status">재임 기록을 불러오는 중입니다.</p>}>
+          <PresidentTimeline key={person.id} presidentName={person.name} />
+        </Suspense>
       </section>
     </article>
   )
