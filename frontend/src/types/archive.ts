@@ -12,6 +12,12 @@ export interface PresidentialTerm {
   // 공개 출처에 맞춘 월 정밀도
   startDate: string
   endDate: string
+  startContext?: { event: string; source: Pick<DataSource, 'title' | 'originalUrl'> }
+  endReason?: (
+    | { kind: 'impeachment' }
+    | { kind: 'death'; cause: string }
+    | { kind: 'resignation'; label: '하야' | '사임'; context: string }
+  ) & { source: Pick<DataSource, 'title' | 'originalUrl'> }
 }
 
 export interface President {

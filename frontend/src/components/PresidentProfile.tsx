@@ -1,8 +1,16 @@
 import { useViewTransitionState } from 'react-router-dom'
 import { presidentParties } from '../data/partyAffiliations'
 import { formatPresidentialNumbers, formatRepublics, formatTermMonth } from '../data/presidents'
-import type { President } from '../types/archive'
+import type { President, PresidentialTerm } from '../types/archive'
 import { PresidentPortrait } from './PresidentPortrait'
+
+function formatTermEndReason(reason: NonNullable<PresidentialTerm['endReason']>) {
+  switch (reason.kind) {
+    case 'impeachment': return '탄핵'
+    case 'death': return `사망(${reason.cause})`
+    case 'resignation': return `${reason.label}(${reason.context})`
+  }
+}
 
 export function PresidentProfile({ person }: { person: President }) {
   const quote = person.representativeQuote
@@ -29,6 +37,15 @@ export function PresidentProfile({ person }: { person: President }) {
                     <time dateTime={term.startDate}>{formatTermMonth(term.startDate)}</time>
                     {' ~ '}
                     <time dateTime={term.endDate}>{formatTermMonth(term.endDate)}</time>
+                    {term.endReason && (
+                      <>
+                        {' '}
+                        <strong className="term-end-reason">{formatTermEndReason(term.endReason)}</strong>
+                      </>
+                    )}
+                    {term.startContext && (
+                      <strong className="term-start-context">취임 배경 · {term.startContext.event}</strong>
+                    )}
                   </li>
                 ))}
               </ul>

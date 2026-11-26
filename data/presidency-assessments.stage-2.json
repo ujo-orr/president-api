@@ -1,0 +1,2174 @@
+{
+  "schemaVersion": 1,
+  "stage": 2,
+  "defaultAssessment": "UNASSESSED",
+  "confirmedAbsences": [],
+  "whitePaperPolicy": {
+    "scope": "북한 정권 및 북한군 관련 국방백서 표현",
+    "wordingRemovalAloneIsNegative": false,
+    "approvedCriteria": [
+      {
+        "id": "whitepaper-wording",
+        "basis": "WORDING_ADDED_OR_RETAINED",
+        "classification": "POSITIVE",
+        "description": "프로젝트 기준. 북한 정권과 북한군을 공식 문서에서 적으로 명시한 효과를 1점의 가중치로 평가하며, 대통령별 같은 문구의 반복은 1회만 집계."
+      }
+    ]
+  },
+  "evaluationMetadata": {
+    "evaluator": "AI (Codex)",
+    "evaluatedOn": "2026-11-26",
+    "ruleset": "chapter-05-source-based-v1",
+    "basis": "공식 통계와 역사 기록 우선, 필요시 당시 보도 교차 대조. 사건의 범위·지속 기간·중요도에 따른 1~5 가중치.",
+    "limitations": "선별된 사건에 대한 가중치 비율이며 AI 해석과 자료 범위에 따라 달라질 수 있음."
+  },
+  "assessments": [
+    {
+      "reviewId": "R001",
+      "eventId": "land-reform",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "impactId": "land-reform-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "소작농에게 농지 소유 기회 확대 · 전국 농업의 토지 소유 구조를 지속적으로 변경",
+      "interpretation": "소작농에게 농지 소유 기회 확대",
+      "weightReason": "전국 농업의 토지 소유 구조를 지속적으로 변경"
+    },
+    {
+      "reviewId": "R002",
+      "eventId": "land-reform",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "land-reform-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "경작 가구의 소유 안정성 확대 · 농촌 가구에 장기 영향, 전체 가구로 일반화는 어려움",
+      "interpretation": "경작 가구의 소유 안정성 확대",
+      "weightReason": "농촌 가구에 장기 영향, 전체 가구로 일반화는 어려움"
+    },
+    {
+      "reviewId": "R003",
+      "eventId": "mutual-defense",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "mutual-defense-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "미국과 제도화된 안보 협력 통로 확보 · 장기 양자조약으로 관계의 공식 기반 마련",
+      "interpretation": "미국과 제도화된 안보 협력 통로 확보",
+      "weightReason": "장기 양자조약으로 관계의 공식 기반 마련"
+    },
+    {
+      "reviewId": "R004",
+      "eventId": "mutual-defense",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "impactId": "mutual-defense-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "유사시 공동 대응의 조약상 근거 마련 · 국가 방위 전체에 적용되는 장기 제도",
+      "interpretation": "유사시 공동 대응의 조약상 근거 마련",
+      "weightReason": "국가 방위 전체에 적용되는 장기 제도"
+    },
+    {
+      "reviewId": "R005",
+      "eventId": "march-election",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "impactId": "march-election-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "정부·여당의 개입으로 자유로운 선거 훼손 · 전국 대통령·부통령 선거의 정당성에 직접 영향",
+      "interpretation": "정부·여당의 개입으로 자유로운 선거 훼손",
+      "weightReason": "전국 대통령·부통령 선거의 정당성에 직접 영향"
+    },
+    {
+      "reviewId": "R006",
+      "eventId": "amendment-four",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "amendment-four-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "부정선거와 시위 진압 책임을 심사할 근거 마련 · 책임 규명 중요성이 크나 특정 과거 사건으로 범위 한정",
+      "interpretation": "부정선거와 시위 진압 책임을 심사할 근거 마련",
+      "weightReason": "책임 규명 중요성이 크나 특정 과거 사건으로 범위 한정"
+    },
+    {
+      "reviewId": "R007",
+      "eventId": "amendment-four",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "impactId": "amendment-four-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "소급 처벌과 공민권 제한을 허용해 법적 예측 가능성 약화 · 기본권 쟁점이 크나 특별법 적용 대상에 한정",
+      "interpretation": "소급 처벌과 공민권 제한을 허용해 법적 예측 가능성 약화",
+      "weightReason": "기본권 쟁점이 크나 특별법 적용 대상에 한정"
+    },
+    {
+      "reviewId": "R008",
+      "eventId": "local-council",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "local-council-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "주민이 지방의원을 선택할 기회 제공 · 선거 범위가 넓지만 지방의회 선출에 한정된 시행",
+      "interpretation": "주민이 지방의원을 선택할 기회 제공",
+      "weightReason": "선거 범위가 넓지만 지방의회 선출에 한정된 시행"
+    },
+    {
+      "reviewId": "R009",
+      "eventId": "vietnam",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "impactId": "vietnam-benefit",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "파병 과정에서 한미 군사·외교 교섭이 구체화 · 특정 전쟁의 협력에 한정, 상대국 호감도 변화는 산정 제외",
+      "interpretation": "파병 과정에서 한미 군사·외교 교섭이 구체화",
+      "weightReason": "특정 전쟁의 협력에 한정, 상대국 호감도 변화는 산정 제외"
+    },
+    {
+      "reviewId": "R010",
+      "eventId": "vietnam",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "파병은 확인되나 국내 방위력과 파병 비용의 순효과를 이 근거에서 분리하기 어려움",
+      "interpretation": "파병은 확인되나 국내 방위력과 파병 비용의 순효과를 이 근거에서 분리하기 어려움"
+    },
+    {
+      "reviewId": "R011",
+      "eventId": "japan-treaties",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "japan-treaties-benefit",
+      "findingIndexes": [
+        1
+      ],
+      "rationale": "무상자금과 차관의 공적 조달 통로 확보 · 여러 해에 걸친 국가 차원의 재원, 실현 성장률은 제외",
+      "interpretation": "무상자금과 차관의 공적 조달 통로 확보",
+      "weightReason": "여러 해에 걸친 국가 차원의 재원, 실현 성장률은 제외"
+    },
+    {
+      "reviewId": "R012",
+      "eventId": "japan-treaties",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "impactId": "japan-treaties-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "한일 외교 관계의 정식 수립 · 장기적으로 양국 교류를 가능하게 하는 포괄적 제도 변화",
+      "interpretation": "한일 외교 관계의 정식 수립",
+      "weightReason": "장기적으로 양국 교류를 가능하게 하는 포괄적 제도 변화"
+    },
+    {
+      "reviewId": "R013",
+      "eventId": "japan-treaties",
+      "axisId": "foreignRelations",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "japan-treaties-harm",
+      "findingIndexes": [
+        2
+      ],
+      "rationale": "피해자 청구권 해석 분쟁이 외교 현안으로 남음 · 피해자 권리와 관련된 장기 분쟁, 경제협력 항목과 별개",
+      "interpretation": "피해자 청구권 해석 분쟁이 외교 현안으로 남음",
+      "weightReason": "피해자 권리와 관련된 장기 분쟁, 경제협력 항목과 별개"
+    },
+    {
+      "reviewId": "R014",
+      "eventId": "museum",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "museum-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "공공 현대미술 전시기관의 조직 근거 마련 · 지속적 문화 기반이나 해당 기관 및 예술 분야에 한정",
+      "interpretation": "공공 현대미술 전시기관의 조직 근거 마련",
+      "weightReason": "지속적 문화 기반이나 해당 기관 및 예술 분야에 한정"
+    },
+    {
+      "reviewId": "R015",
+      "eventId": "semaul",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "semaul-benefit",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "현물 지원과 생활 기반 공사로 농촌의 생산·이동 여건 개선 · 여러 지역에 시행됐으나 소득 증가분은 확인 범위 밖",
+      "interpretation": "현물 지원과 생활 기반 공사로 농촌의 생산·이동 여건 개선",
+      "weightReason": "여러 지역에 시행됐으나 소득 증가분은 확인 범위 밖"
+    },
+    {
+      "reviewId": "R016",
+      "eventId": "semaul",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "semaul-benefit",
+      "findingIndexes": [
+        1
+      ],
+      "rationale": "농촌 주민의 마을길과 주거 환경 개선 · 지역 생활여건을 직접 바꾼 다년 사업",
+      "interpretation": "농촌 주민의 마을길과 주거 환경 개선",
+      "weightReason": "지역 생활여건을 직접 바꾼 다년 사업"
+    },
+    {
+      "reviewId": "R017",
+      "eventId": "add",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "add-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국방 연구개발 전담 역량을 조직화 · 장기적으로 국방 기술을 지원하는 상설기관 개설",
+      "interpretation": "국방 연구개발 전담 역량을 조직화",
+      "weightReason": "장기적으로 국방 기술을 지원하는 상설기관 개설"
+    },
+    {
+      "reviewId": "R018",
+      "eventId": "jeon-taeil",
+      "axisId": "laborSocial",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "impactId": "jeon-taeil-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "평화시장 근로조건과 법 집행의 한계가 드러남 · 권리 침해 문제가 중대하나 관측 근거는 특정 노동 현장",
+      "interpretation": "평화시장 근로조건과 법 집행의 한계가 드러남",
+      "weightReason": "권리 침해 문제가 중대하나 관측 근거는 특정 노동 현장"
+    },
+    {
+      "reviewId": "R019",
+      "eventId": "yushin",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "impactId": "yushin-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국회 해산과 헌법 기능 정지로 대의제·권력 견제 훼손 · 전국 헌정질서를 직접 변경한 중대한 조치",
+      "interpretation": "국회 해산과 헌법 기능 정지로 대의제·권력 견제 훼손",
+      "weightReason": "전국 헌정질서를 직접 변경한 중대한 조치"
+    },
+    {
+      "reviewId": "R020",
+      "eventId": "emergency-repeal",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "emergency-repeal-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "긴급조치의 효력을 끝내 기본권 제한의 법적 근거 제거 · 전국적 효력이 있는 권리 회복 조치, 후속 피해구제는 제외",
+      "interpretation": "긴급조치의 효력을 끝내 기본권 제한의 법적 근거 제거",
+      "weightReason": "전국적 효력이 있는 권리 회복 조치, 후속 피해구제는 제외"
+    },
+    {
+      "reviewId": "R021",
+      "eventId": "national-security-committee",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "national-security-committee-harm",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "신군부 주도 기구에 정책 영향력이 집중됨 · 정책결정의 광범위한 이동, 존속 기간은 상대적으로 짧음",
+      "interpretation": "신군부 주도 기구에 정책 영향력이 집중됨",
+      "weightReason": "정책결정의 광범위한 이동, 존속 기간은 상대적으로 짧음"
+    },
+    {
+      "reviewId": "R022",
+      "eventId": "press-consolidation",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "impactId": "press-consolidation-harm",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "공권력에 따른 언론 자유 침해와 강제 해직 · 전국 언론 분야의 기본권에 구조적 영향",
+      "interpretation": "공권력에 따른 언론 자유 침해와 강제 해직",
+      "weightReason": "전국 언론 분야의 기본권에 구조적 영향"
+    },
+    {
+      "reviewId": "R023",
+      "eventId": "press-consolidation",
+      "axisId": "culture",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "press-consolidation-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "언론 생산 주체의 축소로 미디어 다양성이 제약됨 · 다수 매체와 종사자에 이어지는 지속적 제약",
+      "interpretation": "언론 생산 주체의 축소로 미디어 다양성이 제약됨",
+      "weightReason": "다수 매체와 종사자에 이어지는 지속적 제약"
+    },
+    {
+      "reviewId": "R024",
+      "eventId": "color-tv",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "impactId": "color-tv-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "컬러 방식의 방송 콘텐츠 이용 시작 · 매체 기술 변화의 지속성은 있으나 콘텐츠 다양성 증가는 미산정",
+      "interpretation": "컬러 방식의 방송 콘텐츠 이용 시작",
+      "weightReason": "매체 기술 변화의 지속성은 있으나 콘텐츠 다양성 증가는 미산정"
+    },
+    {
+      "reviewId": "R025",
+      "eventId": "labor-unions",
+      "axisId": "laborSocial",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "labor-unions-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "외부의 노조 조직 및 교섭 지원을 제한 · 노동조합 활동 전반에 재적용되는 법률상 제약",
+      "interpretation": "외부의 노조 조직 및 교섭 지원을 제한",
+      "weightReason": "노동조합 활동 전반에 재적용되는 법률상 제약"
+    },
+    {
+      "reviewId": "R026",
+      "eventId": "labor-unions",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "labor-unions-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "단결과 교섭 관련 외부 참여에 법적 제약 · 법률에 의한 지속적 집단적 권리 제약",
+      "interpretation": "단결과 교섭 관련 외부 참여에 법적 제약",
+      "weightReason": "법률에 의한 지속적 집단적 권리 제약"
+    },
+    {
+      "reviewId": "R027",
+      "eventId": "baseball",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "baseball-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "정규 프로 스포츠 관람·참여의 기반 확대 · 반복 운영되는 스포츠 제도이나 단일 종목에 집중",
+      "interpretation": "정규 프로 스포츠 관람·참여의 기반 확대",
+      "weightReason": "반복 운영되는 스포츠 제도이나 단일 종목에 집중"
+    },
+    {
+      "reviewId": "R028",
+      "eventId": "asia-games",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "impactId": "asia-games-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다수 아시아 국가의 체육 교류 기회 마련 · 국제 협력의 구체적 기회이나 단기 대회",
+      "interpretation": "다수 아시아 국가의 체육 교류 기회 마련",
+      "weightReason": "국제 협력의 구체적 기회이나 단기 대회"
+    },
+    {
+      "reviewId": "R029",
+      "eventId": "asia-games",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "asia-games-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다수 종목의 국제 스포츠 행사 국내 개최 · 참가와 종목의 범위가 넓지만 대회 기간 한정",
+      "interpretation": "다수 종목의 국제 스포츠 행사 국내 개최",
+      "weightReason": "참가와 종목의 범위가 넓지만 대회 기간 한정"
+    },
+    {
+      "reviewId": "R030",
+      "eventId": "min-wage",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "min-wage-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "최저 시간급을 처음으로 집행 · 지속적 임금 하한의 첫 시행, 당시 적용 업종이 제한됨",
+      "interpretation": "최저 시간급을 처음으로 집행",
+      "weightReason": "지속적 임금 하한의 첫 시행, 당시 적용 업종이 제한됨"
+    },
+    {
+      "reviewId": "R031",
+      "eventId": "seoul-olympics",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "seoul-olympics-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다자 체육 교류의 개최 성과 · 국제 범위는 크나 특정 행사이며 유치 성과는 제외",
+      "interpretation": "다자 체육 교류의 개최 성과",
+      "weightReason": "국제 범위는 크나 특정 행사이며 유치 성과는 제외"
+    },
+    {
+      "reviewId": "R032",
+      "eventId": "seoul-olympics",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "seoul-olympics-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "세계 규모 스포츠 행사 개최와 국내 관람·참여 기회 · 종목 및 참가 범위가 큰 행사, 영구 파급은 미산정",
+      "interpretation": "세계 규모 스포츠 행사 개최와 국내 관람·참여 기회",
+      "weightReason": "종목 및 참가 범위가 큰 행사, 영구 파급은 미산정"
+    },
+    {
+      "reviewId": "R033",
+      "eventId": "ussr",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "ussr-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "소련과 공식 협의·교류 관계 수립 · 지속적 양자 외교 채널, 수교 한 건 단위",
+      "interpretation": "소련과 공식 협의·교류 관계 수립",
+      "weightReason": "지속적 양자 외교 채널, 수교 한 건 단위"
+    },
+    {
+      "reviewId": "R034",
+      "eventId": "china",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "china-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "중국과 공식 외교 채널 수립 · 지속적 양자 외교 채널, 교역 성장분은 미산정",
+      "interpretation": "중국과 공식 외교 채널 수립",
+      "weightReason": "지속적 양자 외교 채널, 교역 성장분은 미산정"
+    },
+    {
+      "reviewId": "R035",
+      "eventId": "real-name",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "real-name-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "금융거래의 실제 명의 식별 기반 강화 · 다수 금융기관에 장기 적용되는 구조적 제도",
+      "interpretation": "금융거래의 실제 명의 식별 기반 강화",
+      "weightReason": "다수 금융기관에 장기 적용되는 구조적 제도"
+    },
+    {
+      "reviewId": "R036",
+      "eventId": "real-name",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "긴급명령 방식의 권리·절차 영향이나 실제 법 집행 개선의 근거가 부족함",
+      "interpretation": "긴급명령 방식의 권리·절차 영향이나 실제 법 집행 개선의 근거가 부족함"
+    },
+    {
+      "reviewId": "R037",
+      "eventId": "white1995",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "주적 용어 최초 등장 기록은 별개이며 정권과 군을 특정한 문구 기준과 동일시하기 어려움",
+      "interpretation": "주적 용어 최초 등장 기록은 별개이며 정권과 군을 특정한 문구 기준과 동일시하기 어려움"
+    },
+    {
+      "reviewId": "R038",
+      "eventId": "local-election",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "impactId": "local-election-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "주민이 지방자치단체장과 의회를 직접 선출 · 전국 지방 권력의 선출 구조를 지속적으로 변경",
+      "interpretation": "주민이 지방자치단체장과 의회를 직접 선출",
+      "weightReason": "전국 지방 권력의 선출 구조를 지속적으로 변경"
+    },
+    {
+      "reviewId": "R039",
+      "eventId": "oecd",
+      "axisId": "economy",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "가입 자체 외에 국내 경제제도의 시행 변화나 편익을 분리할 근거가 부족함",
+      "interpretation": "가입 자체 외에 국내 경제제도의 시행 변화나 편익을 분리할 근거가 부족함"
+    },
+    {
+      "reviewId": "R040",
+      "eventId": "oecd",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "oecd-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다자 경제정책 협의의 정규 참여권 확보 · 국제기구에서 지속적으로 작동하는 제도적 협력",
+      "interpretation": "다자 경제정책 협의의 정규 참여권 확보",
+      "weightReason": "국제기구에서 지속적으로 작동하는 제도적 협력"
+    },
+    {
+      "reviewId": "R041",
+      "eventId": "culture-law",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "culture-law-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "문화산업에 대한 정책 지원의 법적 기반 확립 · 산업 기반에 지속 영향, 경제 전반 실적은 미산정",
+      "interpretation": "문화산업에 대한 정책 지원의 법적 기반 확립",
+      "weightReason": "산업 기반에 지속 영향, 경제 전반 실적은 미산정"
+    },
+    {
+      "reviewId": "R042",
+      "eventId": "culture-law",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "culture-law-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "문화산업의 육성·지원 체계를 법제화 · 연속성이 있는 전국적 분야 정책, 실제 생산액은 제외",
+      "interpretation": "문화산업의 육성·지원 체계를 법제화",
+      "weightReason": "연속성이 있는 전국적 분야 정책, 실제 생산액은 제외"
+    },
+    {
+      "reviewId": "R043",
+      "eventId": "june-summit",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "june-summit-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "남북 최고위급 회담과 공동선언을 실제 성사 · 당사자 간 직접 교류 성과, 장기 합의 이행률은 미산정",
+      "interpretation": "남북 최고위급 회담과 공동선언을 실제 성사",
+      "weightReason": "당사자 간 직접 교류 성과, 장기 합의 이행률은 미산정"
+    },
+    {
+      "reviewId": "R044",
+      "eventId": "basic-livelihood",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "impactId": "basic-livelihood-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "저소득층 생활보장 급여의 제도적 기반 시행 · 전국 사회안전망에 계속 적용되는 핵심 법률",
+      "interpretation": "저소득층 생활보장 급여의 제도적 기반 시행",
+      "weightReason": "전국 사회안전망에 계속 적용되는 핵심 법률"
+    },
+    {
+      "reviewId": "R045",
+      "eventId": "zaytun",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "impactId": "zaytun-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "이라크 재건지원 협력을 실제 수행 · 특정 지역과 임무에 한정된 국제협력",
+      "interpretation": "이라크 재건지원 협력을 실제 수행",
+      "weightReason": "특정 지역과 임무에 한정된 국제협력"
+    },
+    {
+      "reviewId": "R046",
+      "eventId": "zaytun",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "해외 재건 임무로 국내 방위역량이 개선됐는지 근거 부족",
+      "interpretation": "해외 재건 임무로 국내 방위역량이 개선됐는지 근거 부족"
+    },
+    {
+      "reviewId": "R047",
+      "eventId": "white2004",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "위협 표현 확인, 문구 삭제 자체에는 감점 근거 없음",
+      "interpretation": "위협 표현 확인, 문구 삭제 자체에는 감점 근거 없음"
+    },
+    {
+      "reviewId": "R048",
+      "eventId": "screen-quota",
+      "axisId": "culture",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "impactId": "screen-quota-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "한국 영화에 보장된 의무 상영기회 축소 · 전국 극장에 지속 적용, 실제 흥행·제작량 감소는 미산정",
+      "interpretation": "한국 영화에 보장된 의무 상영기회 축소",
+      "weightReason": "전국 극장에 지속 적용, 실제 흥행·제작량 감소는 미산정"
+    },
+    {
+      "reviewId": "R049",
+      "eventId": "white2006",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "위협 표현 확인, 안보 성과와의 관계를 입증할 근거 없음",
+      "interpretation": "위협 표현 확인, 안보 성과와의 관계를 입증할 근거 없음"
+    },
+    {
+      "reviewId": "R050",
+      "eventId": "fixed-term",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "fixed-term-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "기간제 차별시정 제도를 도입해 보호수단 확대 · 지속적 법률이나 사업장별 적용 시점 차이 존재",
+      "interpretation": "기간제 차별시정 제도를 도입해 보호수단 확대",
+      "weightReason": "지속적 법률이나 사업장별 적용 시점 차이 존재"
+    },
+    {
+      "reviewId": "R051",
+      "eventId": "white2008",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "위협 표현 확인, 안보 성과와의 관계를 입증할 근거 없음",
+      "interpretation": "위협 표현 확인, 안보 성과와의 관계를 입증할 근거 없음"
+    },
+    {
+      "reviewId": "R052",
+      "eventId": "culture-voucher",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "culture-voucher-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "문화이용 지원 대상이 확대돼 생활 서비스 접근성 개선 · 수혜 규모의 확대가 확인되나 단일 사업",
+      "interpretation": "문화이용 지원 대상이 확대돼 생활 서비스 접근성 개선",
+      "weightReason": "수혜 규모의 확대가 확인되나 단일 사업"
+    },
+    {
+      "reviewId": "R053",
+      "eventId": "culture-voucher",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "culture-voucher-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "문화예술 이용 기회를 제공하는 바우처 수혜 확대 · 수혜 규모 증가가 확인된 반복적 문화 접근 정책",
+      "interpretation": "문화예술 이용 기회를 제공하는 바우처 수혜 확대",
+      "weightReason": "수혜 규모 증가가 확인된 반복적 문화 접근 정책"
+    },
+    {
+      "reviewId": "R054",
+      "eventId": "g20",
+      "axisId": "economy",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "회의 개최는 확인되나 국내 경제 효과를 특정할 근거 없음",
+      "interpretation": "회의 개최는 확인되나 국내 경제 효과를 특정할 근거 없음"
+    },
+    {
+      "reviewId": "R055",
+      "eventId": "g20",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "g20-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다자 경제정책 조정 회의를 주최 · 주요국이 참가한 구체적 협력이나 단일 회의",
+      "interpretation": "다자 경제정책 조정 회의를 주최",
+      "weightReason": "주요국이 참가한 구체적 협력이나 단일 회의"
+    },
+    {
+      "reviewId": "R056",
+      "eventId": "white2010",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 1,
+      "impactId": "explicit-threat-wording",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국방 공문서에서 북한 정권과 군을 위협 주체로 명시 · 문서 표현의 효과로 한정, 전력과 억지 효과는 미산정",
+      "interpretation": "국방 공문서에서 북한 정권과 군을 위협 주체로 명시",
+      "weightReason": "문서 표현의 효과로 한정, 전력과 억지 효과는 미산정",
+      "criterionId": "whitepaper-wording"
+    },
+    {
+      "reviewId": "R057",
+      "eventId": "us-fta",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "us-fta-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "관세 양허 시행으로 교역 제도가 실제 변경 · 광범위하고 장기적인 통상 제도, 총 순편익은 미산정",
+      "interpretation": "관세 양허 시행으로 교역 제도가 실제 변경",
+      "weightReason": "광범위하고 장기적인 통상 제도, 총 순편익은 미산정"
+    },
+    {
+      "reviewId": "R058",
+      "eventId": "us-fta",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "us-fta-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "미국과의 지속적 통상 협력 규칙 발효 · 장기 양자 협력, 앞선 정부의 서명과 구별",
+      "interpretation": "미국과의 지속적 통상 협력 규칙 발효",
+      "weightReason": "장기 양자 협력, 앞선 정부의 서명과 구별"
+    },
+    {
+      "reviewId": "R059",
+      "eventId": "white2012",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "같은 대통령 재임기 2010년 명시와 동일한 영향이라 중복 합산을 보류",
+      "interpretation": "같은 대통령 재임기 2010년 명시와 동일한 영향이라 중복 합산을 보류"
+    },
+    {
+      "reviewId": "R060",
+      "eventId": "culture-day",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "culture-day-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "할인·무료 이용을 통한 정기 문화 접근 기회 제공 · 반복 시행되나 실제 이용률과 장기 효과는 미산정",
+      "interpretation": "할인·무료 이용을 통한 정기 문화 접근 기회 제공",
+      "weightReason": "반복 시행되나 실제 이용률과 장기 효과는 미산정"
+    },
+    {
+      "reviewId": "R061",
+      "eventId": "basic-pension",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "basic-pension-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "노인가구에 기초연금 첫 지급 · 전국적 장기 제도이나 지급 대상과 급여 한도 존재",
+      "interpretation": "노인가구에 기초연금 첫 지급",
+      "weightReason": "전국적 장기 제도이나 지급 대상과 급여 한도 존재"
+    },
+    {
+      "reviewId": "R062",
+      "eventId": "white2014",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 1,
+      "impactId": "explicit-threat-wording",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국방백서에 북한 정권과 북한군을 적으로 명시하는 정책 유지 · 공식 문서의 표현 범위에 한정, 방위성과는 미산정",
+      "interpretation": "국방백서에 북한 정권과 북한군을 적으로 명시하는 정책 유지",
+      "weightReason": "공식 문서의 표현 범위에 한정, 방위성과는 미산정",
+      "criterionId": "whitepaper-wording"
+    },
+    {
+      "reviewId": "R063",
+      "eventId": "comfort-agreement",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "impactId": "comfort-agreement-benefit",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "양국 간 합의로 후속 지원 기구가 가동됨 · 특정 외교 현안의 한시적 집행에 한정",
+      "interpretation": "양국 간 합의로 후속 지원 기구가 가동됨",
+      "weightReason": "특정 외교 현안의 한시적 집행에 한정"
+    },
+    {
+      "reviewId": "R064",
+      "eventId": "comfort-agreement",
+      "axisId": "foreignRelations",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "impactId": "comfort-agreement-harm",
+      "findingIndexes": [
+        3
+      ],
+      "rationale": "양국 협의 과정에서 피해자의 의견을 충분히 수렴하지 못해 피해자 중심의 외교적 해결 절차에 한계를 남겼다. 피해자 권리와 외교적 해결의 정당성이 걸린 유의미한 영향이나 단일 협의 과정에 한정해 3점으로 평가했다.",
+      "interpretation": "양국 협의 과정에서 피해자의 의견을 충분히 수렴하지 못해 피해자 중심의 외교적 해결 절차에 한계를 남겼다.",
+      "weightReason": "피해자 권리와 외교적 해결의 정당성이 걸린 유의미한 영향이나 단일 협의 과정에 한정해 3점으로 평가했다."
+    },
+    {
+      "reviewId": "R065",
+      "eventId": "white2016",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "2014년판과 같은 표현이며 대통령 직무정지 중 발간돼 추가 점수 보류",
+      "interpretation": "2014년판과 같은 표현이며 대통령 직무정지 중 발간돼 추가 점수 보류"
+    },
+    {
+      "reviewId": "R066",
+      "eventId": "impeachment-park",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "impactId": "impeachment-park-harm",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "헌재가 파면에 이를 정도의 헌법·법률 위반을 확인 · 대통령 권한과 헌정질서에 대한 중대한 침해",
+      "interpretation": "헌재가 파면에 이를 정도의 헌법·법률 위반을 확인",
+      "weightReason": "대통령 권한과 헌정질서에 대한 중대한 침해"
+    },
+    {
+      "reviewId": "R067",
+      "eventId": "thaad",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "thaad-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "잔여 장비 배치로 미사일 방어 수단을 현장에 보완 · 구체적 배치가 확인됐으나 특정 체계와 임시 상태에 한정",
+      "interpretation": "잔여 장비 배치로 미사일 방어 수단을 현장에 보완",
+      "weightReason": "구체적 배치가 확인됐으나 특정 체계와 임시 상태에 한정"
+    },
+    {
+      "reviewId": "R068",
+      "eventId": "pyeongchang",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "pyeongchang-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다수 국가가 참가한 국제 체육 교류를 개최 · 국제 범위가 크지만 일회성, 이전 유치와 구별",
+      "interpretation": "다수 국가가 참가한 국제 체육 교류를 개최",
+      "weightReason": "국제 범위가 크지만 일회성, 이전 유치와 구별"
+    },
+    {
+      "reviewId": "R069",
+      "eventId": "pyeongchang",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "pyeongchang-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다종목 동계 스포츠 행사가 국내에서 열려 참여 기회 확대 · 대회 규모와 종목 범위가 크며 장기 경제효과 제외",
+      "interpretation": "다종목 동계 스포츠 행사가 국내에서 열려 참여 기회 확대",
+      "weightReason": "대회 규모와 종목 범위가 크며 장기 경제효과 제외"
+    },
+    {
+      "reviewId": "R070",
+      "eventId": "hours",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "hours-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "장시간 노동을 규율하는 상한을 적용 · 지속적 보호 제도이나 사업장 규모별 단계 적용",
+      "interpretation": "장시간 노동을 규율하는 상한을 적용",
+      "weightReason": "지속적 보호 제도이나 사업장 규모별 단계 적용"
+    },
+    {
+      "reviewId": "R071",
+      "eventId": "white2018",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "적의 정의 문구 변경 자체에는 감점 근거 없음",
+      "interpretation": "적의 정의 문구 변경 자체에는 감점 근거 없음"
+    },
+    {
+      "reviewId": "R072",
+      "eventId": "white2020",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "일반형 적 정의 유지 자체로 독립적 안보 성과를 확인하기 어려움",
+      "interpretation": "일반형 적 정의 유지 자체로 독립적 안보 성과를 확인하기 어려움"
+    },
+    {
+      "reviewId": "R073",
+      "eventId": "rcep",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "rcep-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "다자 통상협정 발효로 정해진 시장접근·원산지 규칙 적용 · 다수 교역 상대와 장기간 적용, 실제 생산 효과는 미산정",
+      "interpretation": "다자 통상협정 발효로 정해진 시장접근·원산지 규칙 적용",
+      "weightReason": "다수 교역 상대와 장기간 적용, 실제 생산 효과는 미산정"
+    },
+    {
+      "reviewId": "R074",
+      "eventId": "rcep",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "rcep-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "역내 다자 통상 규칙에 정식 참여 · 지속적인 국제 협력 체계 가동",
+      "interpretation": "역내 다자 통상 규칙에 정식 참여",
+      "weightReason": "지속적인 국제 협력 체계 가동"
+    },
+    {
+      "reviewId": "R075",
+      "eventId": "investment-credit",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "investment-credit-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국가전략기술 설비투자 비용을 줄이는 세액공제 확대 · 대상 투자에 실제 적용되나 산업 범위 제한, 유발투자 미산정",
+      "interpretation": "국가전략기술 설비투자 비용을 줄이는 세액공제 확대",
+      "weightReason": "대상 투자에 실제 적용되나 산업 범위 제한, 유발투자 미산정"
+    },
+    {
+      "reviewId": "R076",
+      "eventId": "parent-benefit",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "impactId": "parent-benefit-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "영아 양육 가구에 현금 급여 지급 · 전국에서 반복 지급하는 제도이나 영아 가구로 대상이 제한됨",
+      "interpretation": "영아 양육 가구에 현금 급여 지급",
+      "weightReason": "전국에서 반복 지급하는 제도이나 영아 가구로 대상이 제한됨"
+    },
+    {
+      "reviewId": "R077",
+      "eventId": "white2022",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 1,
+      "impactId": "explicit-threat-wording",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국방백서가 북한 정권과 군을 적으로 다시 명시 · 공식 문서의 표현 범위에 한정, 전력 변화는 미산정",
+      "interpretation": "국방백서가 북한 정권과 군을 적으로 다시 명시",
+      "weightReason": "공식 문서의 표현 범위에 한정, 전력 변화는 미산정",
+      "criterionId": "whitepaper-wording"
+    },
+    {
+      "reviewId": "R078",
+      "eventId": "ncg",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "ncg-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "한미 간 확장억제 정책 협의 통로를 실제 가동 · 반복 협의가 가능한 양자 틀이며 해당 의제에 한정",
+      "interpretation": "한미 간 확장억제 정책 협의 통로를 실제 가동",
+      "weightReason": "반복 협의가 가능한 양자 틀이며 해당 의제에 한정"
+    },
+    {
+      "reviewId": "R079",
+      "eventId": "ncg",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "ncg-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "확장억제 협의 절차를 실제 운영하기 시작 · 상설 협의의 제도적 가치, 실제 억지력 개선은 미산정",
+      "interpretation": "확장억제 협의 절차를 실제 운영하기 시작",
+      "weightReason": "상설 협의의 제도적 가치, 실제 억지력 개선은 미산정"
+    },
+    {
+      "reviewId": "R080",
+      "eventId": "heritage",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "impactId": "heritage-benefit",
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "국가유산 유형의 전문 행정체계 마련 · 지속 가능한 제도 개편이나 보존 성과 규모는 미산정",
+      "interpretation": "국가유산 유형의 전문 행정체계 마련",
+      "weightReason": "지속 가능한 제도 개편이나 보존 성과 규모는 미산정"
+    },
+    {
+      "reviewId": "R081",
+      "eventId": "martial-law",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "impactId": "martial-law-harm",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "비상계엄 선포로 국회의 기능과 기본권이 위협받음 · 지속 시간은 짧았으나 헌정기관 및 전국적 기본권에 대한 위험이 중대",
+      "interpretation": "비상계엄 선포로 국회의 기능과 기본권이 위협받음",
+      "weightReason": "지속 시간은 짧았으나 헌정기관 및 전국적 기본권에 대한 위험이 중대"
+    },
+    {
+      "axisId": "laborSocial",
+      "impactId": "semaul-administrative-coercion",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "interpretation": "일부 시행에서 주민 자율성이 제한됐다는 기록은 주거·생활환경 개선과 별개의 사회적 비용이다.",
+      "weightReason": "광범위한 사업의 운영상 문제지만 강제 동원의 범위와 지속 기간은 확정하지 않아 3점으로 평가했다.",
+      "eventId": "semaul",
+      "findingIndexes": [
+        2
+      ],
+      "rationale": "일부 시행에서 주민 자율성이 제한됐다는 기록은 주거·생활환경 개선과 별개의 사회적 비용이다. 광범위한 사업의 운영상 문제지만 강제 동원의 범위와 지속 기간은 확정하지 않아 3점으로 평가했다."
+    },
+    {
+      "eventId": "phong-nhi-civilian-harm",
+      "axisId": "securityDefense",
+      "impactId": "vietnam-civilian-protection-failure",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "interpretation": "법원이 인정한 군의 행위는 해외 군사 작전 중 민간인 보호 책임의 중대한 실패에 해당한다.",
+      "weightReason": "생명과 신체에 회복하기 어려운 피해가 있었으나 평가 범위는 판결이 확인한 사건으로 한정했다.",
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "법원이 인정한 군의 행위는 해외 군사 작전 중 민간인 보호 책임의 중대한 실패에 해당한다. 생명과 신체에 회복하기 어려운 피해가 있었으나 평가 범위는 판결이 확인한 사건으로 한정했다."
+    },
+    {
+      "eventId": "national-theatre-opening",
+      "axisId": "culture",
+      "impactId": "national-stage-capacity",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "공공 무대 예술을 위한 상설 기관 개관 · 전국 최초의 국립 공연기관을 설치한 장기적 제도 효과. 전쟁으로 인한 운영 중단과 이후 재개는 개관 자체와 구별",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "공공 무대 예술을 위한 상설 기관 개관",
+      "weightReason": "전국 최초의 국립 공연기관을 설치한 장기적 제도 효과. 전쟁으로 인한 운영 중단과 이후 재개는 개관 자체와 구별"
+    },
+    {
+      "eventId": "first-constitutional-amendment",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "presidential-direct-vote-right",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "유권자가 정·부통령을 직접 선택하도록 선출권을 넓힘 · 전국 단위 선출 제도의 변화. 강압적 개헌 절차와 대립되는 영향이라 별도 집계",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "유권자가 정·부통령을 직접 선택하도록 선출권을 넓힘",
+      "weightReason": "전국 단위 선출 제도의 변화. 강압적 개헌 절차와 대립되는 영향이라 별도 집계"
+    },
+    {
+      "eventId": "first-constitutional-amendment",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "first-amendment-procedure",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "rationale": "충분한 공고와 토론을 거치지 않아 국회 숙의와 헌법 개정 절차의 정당성을 훼손 · 헌법 차원의 침해. 별도의 1954년 정족수 및 임기 제한 훼손과 구별",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "충분한 공고와 토론을 거치지 않아 국회 숙의와 헌법 개정 절차의 정당성을 훼손",
+      "weightReason": "헌법 차원의 침해. 별도의 1954년 정족수 및 임기 제한 훼손과 구별"
+    },
+    {
+      "eventId": "second-constitutional-amendment",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "incumbent-term-limit-exception",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "rationale": "특정 재임자의 장기 집권을 막는 헌법상 견제 장치 약화 · 대통령 중임 제한의 인적 예외라는 헌정질서 영향. 같은 사건의 정족수 처리 문제를 추가 감점하지 않음",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "특정 재임자의 장기 집권을 막는 헌법상 견제 장치 약화",
+      "weightReason": "대통령 중임 제한의 인적 예외라는 헌정질서 영향. 같은 사건의 정족수 처리 문제를 추가 감점하지 않음"
+    },
+    {
+      "eventId": "unkra-postwar-reconstruction",
+      "axisId": "economy",
+      "impactId": "postwar-infrastructure-recovery",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "전쟁 피해 시설의 생산·교통 기능을 복구하는 데 기여 · 수년간 여러 산업과 전국 복구에 걸친 국제 재건 성과. 유엔과 한국 정부의 기여를 구별",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "전쟁 피해 시설의 생산·교통 기능을 복구하는 데 기여",
+      "weightReason": "수년간 여러 산업과 전국 복구에 걸친 국제 재건 성과. 유엔과 한국 정부의 기여를 구별"
+    },
+    {
+      "eventId": "unkra-postwar-reconstruction",
+      "axisId": "laborSocial",
+      "impactId": "postwar-social-facility-recovery",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "rationale": "주택·의료·교육시설 복구를 지원 · 사회 기반 시설의 직접 지원. 주거 및 보건 결과의 순효과는 산정하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "주택·의료·교육시설 복구를 지원",
+      "weightReason": "사회 기반 시설의 직접 지원. 주거 및 보건 결과의 순효과는 산정하지 않음"
+    },
+    {
+      "eventId": "chang-cabinet-construction",
+      "axisId": "economy",
+      "impactId": "construction-pilot-execution",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "지역 건설사업에 실제 현장 조직과 인력을 배치 · 사업 착수 확인에 한정. 정변 이전 완공 규모나 장기 성장 효과 미확인",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "지역 건설사업에 실제 현장 조직과 인력을 배치",
+      "weightReason": "사업 착수 확인에 한정. 정변 이전 완공 규모나 장기 성장 효과 미확인"
+    },
+    {
+      "eventId": "chang-cabinet-construction",
+      "axisId": "laborSocial",
+      "impactId": "technical-training-and-assignment",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "선발 인력에게 기술 교육과 현장 경험 제공 · 대상과 기간이 한정된 인력 양성. 윤보선 개인의 사업 지휘로 귀속하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "선발 인력에게 기술 교육과 현장 경험 제공",
+      "weightReason": "대상과 기간이 한정된 인력 양성. 윤보선 개인의 사업 지휘로 귀속하지 않음"
+    },
+    {
+      "eventId": "chang-korea-us-aid-agreement",
+      "axisId": "foreignRelations",
+      "impactId": "aid-agreement-institutional-channel",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "양자 원조 협력 절차를 정비 · 협정 체결은 확인되나 이후 원조의 순증 또는 협상 자율성에 미친 효과의 별도 산정은 어려움",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "양자 원조 협력 절차를 정비",
+      "weightReason": "협정 체결은 확인되나 이후 원조의 순증 또는 협상 자율성에 미친 효과의 별도 산정은 어려움"
+    },
+    {
+      "eventId": "chang-public-fares",
+      "axisId": "economy",
+      "impactId": "administered-bus-fares-pressure",
+      "classification": "NEGATIVE",
+      "weight": 2,
+      "rationale": "규제요금 인상으로 소비자 교통비 부담 증가 · 특정 요금 조정의 가격 영향. 전체 물가 상승을 단일 조치로 설명하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "규제요금 인상으로 소비자 교통비 부담 증가",
+      "weightReason": "특정 요금 조정의 가격 영향. 전체 물가 상승을 단일 조치로 설명하지 않음"
+    },
+    {
+      "eventId": "chang-public-fares",
+      "axisId": "laborSocial",
+      "impactId": "bus-affordability-hit",
+      "classification": "NEGATIVE",
+      "weight": 2,
+      "rationale": "시내·지방 버스 이용 부담 증가 · 요금표에서 직접 확인되는 이용자 부담. 교통공급 유지와 순복지 효과는 미산정",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "시내·지방 버스 이용 부담 증가",
+      "weightReason": "요금표에서 직접 확인되는 이용자 부담. 교통공급 유지와 순복지 효과는 미산정"
+    },
+    {
+      "eventId": "gyeongbu-highway-opening",
+      "axisId": "economy",
+      "impactId": "interregional-road-network",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "산업 거점과 주요 도시를 잇는 육상 연결망 구축 · 전국 물류망의 지속적 개선. 성장률 기여도와 순편익에는 별도 추정 필요",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "산업 거점과 주요 도시를 잇는 육상 연결망 구축",
+      "weightReason": "전국 물류망의 지속적 개선. 성장률 기여도와 순편익에는 별도 추정 필요"
+    },
+    {
+      "eventId": "heavy-industry-implementation",
+      "axisId": "economy",
+      "impactId": "heavy-industry-capacity",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "rationale": "중화학 제조업의 생산·수출 기반을 넓힘 · 산업구조에 장기 영향을 준 전국 규모 정책",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "중화학 제조업의 생산·수출 기반을 넓힘",
+      "weightReason": "산업구조에 장기 영향을 준 전국 규모 정책"
+    },
+    {
+      "eventId": "heavy-industry-implementation",
+      "axisId": "economy",
+      "impactId": "heavy-industry-capital-distortion",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "rationale": "지원 집중과 과잉·중복 투자로 자원 배분 비용 발생 · 정책 대상 산업과 금융에 걸친 누적 비용. 개별 기업 손실 전체를 귀속하지 않음",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "지원 집중과 과잉·중복 투자로 자원 배분 비용 발생",
+      "weightReason": "정책 대상 산업과 금융에 걸친 누적 비용. 개별 기업 손실 전체를 귀속하지 않음"
+    },
+    {
+      "eventId": "workplace-health-insurance",
+      "axisId": "laborSocial",
+      "impactId": "workplace-insurance-launch",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "사업장 근로자에 대한 제도적 의료비 위험 분담을 시작 · 지속적 사회보험 제도이지만 첫 적용 범위가 대규모 사업장에 한정",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "사업장 근로자에 대한 제도적 의료비 위험 분담을 시작",
+      "weightReason": "지속적 사회보험 제도이지만 첫 적용 범위가 대규모 사업장에 한정"
+    },
+    {
+      "eventId": "emergency-decree-nine",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "decree-expression-repression",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "rationale": "헌법 비판 표현과 정치 활동을 처벌해 기본권 제한 · 전국 단위에서 지속된 직접적 기본권 침해. 1972년 국회 해산과 구별되는 집행",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "헌법 비판 표현과 정치 활동을 처벌해 기본권 제한",
+      "weightReason": "전국 단위에서 지속된 직접적 기본권 침해. 1972년 국회 해산과 구별되는 집행"
+    },
+    {
+      "eventId": "second-five-year-plan-execution",
+      "axisId": "economy",
+      "impactId": "export-development-program",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "rationale": "정부의 수출·산업 지원을 다년 계획으로 실행 · 계획의 물적 다년 집행 범위를 반영. 경부고속도로와 중화학 전환의 효과는 이 행에서 제외",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "정부의 수출·산업 지원을 다년 계획으로 실행",
+      "weightReason": "계획의 물적 다년 집행 범위를 반영. 경부고속도로와 중화학 전환의 효과는 이 행에서 제외"
+    },
+    {
+      "eventId": "choi-color-tv-sales",
+      "axisId": "economy",
+      "impactId": "color-receiver-market-opening",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "컬러 수상기 국내 판매 통로를 열어 이전에 제한된 시장을 허용 · 특정 제품 시장에 한정된 진입 규제 완화. 판매 규모의 순효과는 미확인",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "컬러 수상기 국내 판매 통로를 열어 이전에 제한된 시장을 허용",
+      "weightReason": "특정 제품 시장에 한정된 진입 규제 완화. 판매 규모의 순효과는 미확인"
+    },
+    {
+      "eventId": "choi-color-tv-sales",
+      "axisId": "culture",
+      "impactId": "color-receiver-access",
+      "classification": "POSITIVE",
+      "weight": 1,
+      "rationale": "가정에서 컬러 수상기를 구입할 제도적 통로가 열림 · 시판 허용의 제한적 효과. 실제 컬러 방송 접근과 시청률을 이 시기에 귀속하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "가정에서 컬러 수상기를 구입할 제도적 통로가 열림",
+      "weightReason": "시판 허용의 제한적 효과. 실제 컬러 방송 접근과 시청률을 이 시기에 귀속하지 않음"
+    },
+    {
+      "eventId": "choi-middle-east-visit",
+      "axisId": "foreignRelations",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "정상 방문은 확인되지만 이후에 실제 시행된 에너지 협력이나 실질 교섭 성과는 확인 범위에 없다."
+    },
+    {
+      "eventId": "gwangju-military-repression",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "military-repression-gwangju-rights",
+      "classification": "NEGATIVE",
+      "weight": 5,
+      "rationale": "계엄 권력에 의한 시민 생명·신체 침해와 집회권 억압 · 시민 피해가 중대하며 헌정질서에 직접 영향. 최규하 개인의 지휘나 책임을 이 점수로 단정하지 않으며 국보위 설치에 따른 권력 집중과 구별",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "계엄 권력에 의한 시민 생명·신체 침해와 집회권 억압",
+      "weightReason": "시민 피해가 중대하며 헌정질서에 직접 영향. 최규하 개인의 지휘나 책임을 이 점수로 단정하지 않으며 국보위 설치에 따른 권력 집중과 구별"
+    },
+    {
+      "eventId": "economic-stabilization-policy-1980s",
+      "axisId": "economy",
+      "impactId": "stabilization-macro-policy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "rationale": "물가 안정에 기여한 경제안정화 정책을 실시 · 국가 단위 다년 정책이나 3저의 독립 기여를 분리할 수 없어 효과의 과잉 귀속을 피함",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "물가 안정에 기여한 경제안정화 정책을 실시",
+      "weightReason": "국가 단위 다년 정책이나 3저의 독립 기여를 분리할 수 없어 효과의 과잉 귀속을 피함"
+    },
+    {
+      "eventId": "economic-stabilization-policy-1980s",
+      "axisId": "laborSocial",
+      "impactId": "stabilization-household-burden",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "rationale": "임금 억제와 긴축으로 노동자와 서민의 생활 부담 확대 · 전국적 여파는 있었지만 관측된 모든 불평등을 정책에 귀속하지 않음",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "임금 억제와 긴축으로 노동자와 서민의 생활 부담 확대",
+      "weightReason": "전국적 여파는 있었지만 관측된 모든 불평등을 정책에 귀속하지 않음"
+    },
+    {
+      "eventId": "fair-trade-system-implementation",
+      "axisId": "economy",
+      "impactId": "competition-rules-launch",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "시장지배력 남용과 불공정거래 규율의 법적 기반 시행 · 전국 시장을 대상으로 지속되는 제도. 집행 강도와 실효성은 별개",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "시장지배력 남용과 불공정거래 규율의 법적 기반 시행",
+      "weightReason": "전국 시장을 대상으로 지속되는 제도. 집행 강도와 실효성은 별개"
+    },
+    {
+      "eventId": "june-uprising-direct-election",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "restored-presidential-direct-election",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "rationale": "유권자가 대통령을 직접 선출하도록 권력 구성 방식이 변경됨 · 전국 헌정질서의 장기 변화. 시민·야당·여당 등 공동 결과이며 전두환 개인 공적으로 귀속하지 않음",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "유권자가 대통령을 직접 선출하도록 권력 구성 방식이 변경됨",
+      "weightReason": "전국 헌정질서의 장기 변화. 시민·야당·여당 등 공동 결과이며 전두환 개인 공적으로 귀속하지 않음"
+    },
+    {
+      "eventId": "k1-development-contract",
+      "axisId": "securityDefense",
+      "impactId": "armored-equipment-development",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "rationale": "기갑 장비 개발 계획을 계약·시제개발 단계로 이행 · 특정 분야의 실질적 집행 성과. 이전 정부의 사업 개시와 이후 전력화 효과를 포함하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "기갑 장비 개발 계획을 계약·시제개발 단계로 이행",
+      "weightReason": "특정 분야의 실질적 집행 성과. 이전 정부의 사업 개시와 이후 전력화 효과를 포함하지 않음"
+    },
+    {
+      "eventId": "universal-health-insurance",
+      "axisId": "laborSocial",
+      "impactId": "universal-insurance-coverage",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "rationale": "도시지역 주민에 대한 적용을 통해 전국적 의료보험 사각지대 축소 · 보건보장의 전국적·장기 구조 변화. 앞선 정부의 최초 시행을 이 행에서 중복 평가하지 않음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "도시지역 주민에 대한 적용을 통해 전국적 의료보험 사각지대 축소",
+      "weightReason": "보건보장의 전국적·장기 구조 변화. 앞선 정부의 최초 시행을 이 행에서 중복 평가하지 않음"
+    },
+    {
+      "eventId": "local-councils-restored",
+      "axisId": "democracyRuleOfLaw",
+      "impactId": "local-assembly-electoral-restoration",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "지방 대표기관을 주민이 직접 선출하는 제도 회복 · 전국 규모의 주민 대표 선출이며 단체장 선거는 아직 포함되지 않았음",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "지방 대표기관을 주민이 직접 선출하는 제도 회복",
+      "weightReason": "전국 규모의 주민 대표 선출이며 단체장 선거는 아직 포함되지 않았음"
+    },
+    {
+      "eventId": "inter-korean-basic-agreement",
+      "axisId": "foreignRelations",
+      "impactId": "inter-korean-cooperation-framework",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "남북 당국이 대화·교류·협력의 제도적 틀을 발효 · 당국 간 광범위한 합의. 이후 이행 수준은 별개",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "남북 당국이 대화·교류·협력의 제도적 틀을 발효",
+      "weightReason": "당국 간 광범위한 합의. 이후 이행 수준은 별개"
+    },
+    {
+      "eventId": "inter-korean-basic-agreement",
+      "axisId": "securityDefense",
+      "impactId": "inter-korean-nonaggression-framework",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "불가침과 위험 완화를 위한 공식 틀을 마련 · 합의 발효 확인 범위. 실제 군사적 위협·억지력 변화까지 인정하지 않음",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "불가침과 위험 완화를 위한 공식 틀을 마련",
+      "weightReason": "합의 발효 확인 범위. 실제 군사적 위협·억지력 변화까지 인정하지 않음"
+    },
+    {
+      "eventId": "un-membership-koreas",
+      "axisId": "foreignRelations",
+      "impactId": "un-permanent-forum-participation",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "rationale": "대한민국이 유엔 의사결정에 정회원으로 참여할 제도적 지위 획득 · 활용 범위가 넓고 지속되는 다자외교 변화. 한소·한중 수교와는 별개",
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "대한민국이 유엔 의사결정에 정회원으로 참여할 제도적 지위 획득",
+      "weightReason": "활용 범위가 넓고 지속되는 다자외교 변화. 한소·한중 수교와는 별개"
+    },
+    {
+      "eventId": "hanahoe-clearing",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 5,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "군 사조직의 정치 개입 기반을 약화시켜 민주적 문민통제를 강화했다. · 국가 차원의 군 통수 구조에 장기적인 영향을 미친 조치다.",
+      "interpretation": "군 사조직의 정치 개입 기반을 약화시켜 민주적 문민통제를 강화했다.",
+      "weightReason": "국가 차원의 군 통수 구조에 장기적인 영향을 미친 조치다.",
+      "impactId": "hanahoe-clearing-benefit"
+    },
+    {
+      "eventId": "employment-insurance-launch",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "실직에 대응하는 보험 기반이 마련됐다. · 장기적 사회안전망의 전국 도입이지만 초기 적용 사업장이 제한됐다.",
+      "interpretation": "실직에 대응하는 보험 기반이 마련됐다.",
+      "weightReason": "장기적 사회안전망의 전국 도입이지만 초기 적용 사업장이 제한됐다.",
+      "impactId": "employment-insurance-launch-benefit"
+    },
+    {
+      "eventId": "labor-bills-overnight",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "중대한 입법에서 야당과 공개 숙의가 배제됐다. · 국가 차원의 노동 입법 절차에 실질적 영향을 줬으나 재개정으로 이어졌다.",
+      "interpretation": "중대한 입법에서 야당과 공개 숙의가 배제됐다.",
+      "weightReason": "국가 차원의 노동 입법 절차에 실질적 영향을 줬으나 재개정으로 이어졌다.",
+      "impactId": "labor-bills-overnight-harm"
+    },
+    {
+      "eventId": "imf-stabilization-agreement",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "긴급 국제 유동성 지원을 확보하는 통로를 열었다. · 국가적 위기에서 중요한 조치였으나 후속 회복 성과와 위기의 원인 전체까지 이 사건에 귀속하지 않는다.",
+      "interpretation": "긴급 국제 유동성 지원을 확보하는 통로를 열었다.",
+      "weightReason": "국가적 위기에서 중요한 조치였으나 후속 회복 성과와 위기의 원인 전체까지 이 사건에 귀속하지 않는다.",
+      "impactId": "imf-stabilization-agreement-benefit"
+    },
+    {
+      "eventId": "imf-stabilization-agreement",
+      "axisId": "economy",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "impactId": "pre-bailout-financial-oversight-gaps",
+      "findingIndexes": [
+        1,
+        2
+      ],
+      "interpretation": "구제금융 이전 국내 금융감독과 부실기업 처리의 한계가 위험 억제를 어렵게 했다.",
+      "weightReason": "금융시장 전체에 관련된 대응 실패지만, 외부 충격과 차입 구조 등 복합 원인도 확인돼 위기 전체를 귀속하지 않았다.",
+      "rationale": "지원 협정 체결의 긍정 평가와 구분하여, 근거에 명시된 감독·외환 대응의 한계만 4점의 부정 영향으로 평가했다."
+    },
+    {
+      "eventId": "film-prior-review-ruling",
+      "axisId": "culture",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "영화 표현과 공개의 자유에 대한 사전 제약이 해소되는 계기가 됐다. · 전국에 적용된 제도 변화지만 영화 분야의 독립기관 판단이다.",
+      "interpretation": "영화 표현과 공개의 자유에 대한 사전 제약이 해소되는 계기가 됐다.",
+      "weightReason": "전국에 적용된 제도 변화지만 영화 분야의 독립기관 판단이다.",
+      "impactId": "film-prior-review-ruling-benefit"
+    },
+    {
+      "eventId": "nhrc-launch",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "기본권 침해를 다루는 상설 제도적 통로가 마련됐다. · 여러 영역에서 지속적으로 운영되는 전국 제도다.",
+      "interpretation": "기본권 침해를 다루는 상설 제도적 통로가 마련됐다.",
+      "weightReason": "여러 영역에서 지속적으로 운영되는 전국 제도다.",
+      "impactId": "nhrc-launch-benefit"
+    },
+    {
+      "eventId": "imf-early-repayment",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "국가 위기대응 차입을 조기 상환해 긴급 차입 관계를 정리했다. · 국가 경제 전반에 중요한 이행 성과이며 일자리·성장률 회복의 모든 원인을 설명하지 않는다.",
+      "interpretation": "국가 위기대응 차입을 조기 상환해 긴급 차입 관계를 정리했다.",
+      "weightReason": "국가 경제 전반에 중요한 이행 성과이며 일자리·성장률 회복의 모든 원인을 설명하지 않는다.",
+      "impactId": "imf-early-repayment-benefit"
+    },
+    {
+      "eventId": "national-broadband-expansion",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "디지털 경제활동에 필요한 통신망 이용 기반이 확대됐다. · 전국적 기반이 오래 사용됐으나 성과를 정부 단독 몫으로 보지 않는다.",
+      "interpretation": "디지털 경제활동에 필요한 통신망 이용 기반이 확대됐다.",
+      "weightReason": "전국적 기반이 오래 사용됐으나 성과를 정부 단독 몫으로 보지 않는다.",
+      "impactId": "national-broadband-expansion-benefit"
+    },
+    {
+      "eventId": "first-yeonpyeong-response",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "해군이 군사적 침범에 실제로 대응해 상대 함정의 철수에 이르렀다. · 서해 특정 해역의 실질적 방어 결과이며 북한의 도발 발생 자체는 평가하지 않는다.",
+      "interpretation": "해군이 군사적 침범에 실제로 대응해 상대 함정의 철수에 이르렀다.",
+      "weightReason": "서해 특정 해역의 실질적 방어 결과이며 북한의 도발 발생 자체는 평가하지 않는다.",
+      "impactId": "first-yeonpyeong-response-benefit"
+    },
+    {
+      "eventId": "chile-fta-effect",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "양국 시장접근의 제도적 기회를 만들었다. · 한 교역 상대와의 장기 제도이며 품목별 효과와 전체 무역 순편익은 미산정이다.",
+      "interpretation": "양국 시장접근의 제도적 기회를 만들었다.",
+      "weightReason": "한 교역 상대와의 장기 제도이며 품목별 효과와 전체 무역 순편익은 미산정이다.",
+      "impactId": "chile-fta-effect-benefit"
+    },
+    {
+      "eventId": "chile-fta-effect",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "양국간 공식 통상 협력의 제도적 기반을 가동했다. · 첫 FTA라는 제도적 의미가 있으나 한 상대국과의 양자 협정이다.",
+      "interpretation": "양국간 공식 통상 협력의 제도적 기반을 가동했다.",
+      "weightReason": "첫 FTA라는 제도적 의미가 있으나 한 상대국과의 양자 협정이다.",
+      "impactId": "chile-fta-effect-benefit"
+    },
+    {
+      "eventId": "truth-reconciliation-commission-launch",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "국가 폭력·인권침해의 진상 규명을 위한 제도적 통로를 실제로 마련했다. · 전국적이고 적용 범위가 넓지만 조사 이후 구제 완료까지 동일한 성과로 산정하지 않는다.",
+      "interpretation": "국가 폭력·인권침해의 진상 규명을 위한 제도적 통로를 실제로 마련했다.",
+      "weightReason": "전국적이고 적용 범위가 넓지만 조사 이후 구제 완료까지 동일한 성과로 산정하지 않는다.",
+      "impactId": "truth-reconciliation-commission-launch-benefit"
+    },
+    {
+      "eventId": "administrative-city-groundbreaking",
+      "axisId": "economy",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "착공은 확인했으나 해당 재임 중 지역 격차와 투자 순편익에 미친 영향을 분리할 수 없어 보류했다.",
+      "interpretation": "착공은 확인했으나 해당 재임 중 지역 격차와 투자 순편익에 미친 영향을 분리할 수 없어 보류했다."
+    },
+    {
+      "eventId": "comprehensive-property-tax-launch",
+      "axisId": "economy",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "시장 안정 효과와 조세 부담의 분배를 충분히 분리할 수 없어 경제 효과를 보류했다.",
+      "interpretation": "시장 안정 효과와 조세 부담의 분배를 충분히 분리할 수 없어 경제 효과를 보류했다."
+    },
+    {
+      "eventId": "four-rivers-implementation",
+      "axisId": "economy",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "대규모 공공투입 대비 사후 분석에서 계상된 편익이 낮았다. · 전국적 사업과 장기 비용을 반영했다. 홍수 예방 누락 때문에 확정된 전체 순효과로 해석하지 않는다.",
+      "interpretation": "대규모 공공투입 대비 사후 분석에서 계상된 편익이 낮았다.",
+      "weightReason": "전국적 사업과 장기 비용을 반영했다. 홍수 예방 누락 때문에 확정된 전체 순효과로 해석하지 않는다.",
+      "impactId": "four-rivers-implementation-harm"
+    },
+    {
+      "eventId": "four-rivers-implementation",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "findingIndexes": [
+        2
+      ],
+      "rationale": "친수 공간과 용수 활용 편익이 사후 분석에서 확인됐다. · 특정 용도의 추정 편익이며 큰 비용이나 수질에 대한 별도 검토를 상쇄한다고 보지 않는다.",
+      "interpretation": "친수 공간과 용수 활용 편익이 사후 분석에서 확인됐다.",
+      "weightReason": "특정 용도의 추정 편익이며 큰 비용이나 수질에 대한 별도 검토를 상쇄한다고 보지 않는다.",
+      "impactId": "four-rivers-implementation-benefit"
+    },
+    {
+      "eventId": "civilian-surveillance-opm",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "행정기관이 사찰 권한을 남용해 시민 기본권과 공직 중립성을 훼손했다. · 정부기관의 조직적 권한 남용으로 중요도가 높다. 대통령 개인의 지시는 귀속하지 않았다.",
+      "interpretation": "행정기관이 사찰 권한을 남용해 시민 기본권과 공직 중립성을 훼손했다.",
+      "weightReason": "정부기관의 조직적 권한 남용으로 중요도가 높다. 대통령 개인의 지시는 귀속하지 않았다.",
+      "impactId": "civilian-surveillance-opm-harm"
+    },
+    {
+      "eventId": "global-crisis-dollar-swap",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "급격한 외화 유동성 제약에 대응할 수단이 확보됐다. · 큰 외부 충격에 대한 단기 유동성 조치이며 중앙은행의 이행이다.",
+      "interpretation": "급격한 외화 유동성 제약에 대응할 수단이 확보됐다.",
+      "weightReason": "큰 외부 충격에 대한 단기 유동성 조치이며 중앙은행의 이행이다.",
+      "impactId": "global-crisis-dollar-swap-benefit"
+    },
+    {
+      "eventId": "yeonpyeong-shelling-response",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "인명 피해와 장비 제약 속에서 국군이 실제 군사 대응을 수행한 점을 긍정으로 판단했다. · 특정 교전에서의 직접 대응이다. 피격·불발 자체를 정비 실패로 추정하지 않았다.",
+      "interpretation": "인명 피해와 장비 제약 속에서 국군이 실제 군사 대응을 수행한 점을 긍정으로 판단했다.",
+      "weightReason": "특정 교전에서의 직접 대응이다. 피격·불발 자체를 정비 실패로 추정하지 않았다.",
+      "impactId": "yeonpyeong-shelling-response-benefit"
+    },
+    {
+      "eventId": "china-fta-effect",
+      "axisId": "economy",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "주요 교역 상대국과의 시장접근 제도를 장기적으로 변경했다. · 적용 범위가 넓은 무역 제도이며 산업별 손익과 전체 효과는 따로 검토해야 한다.",
+      "interpretation": "주요 교역 상대국과의 시장접근 제도를 장기적으로 변경했다.",
+      "weightReason": "적용 범위가 넓은 무역 제도이며 산업별 손익과 전체 효과는 따로 검토해야 한다.",
+      "impactId": "china-fta-effect-benefit"
+    },
+    {
+      "eventId": "thaad-deployment-decision",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "공동 방어체계 도입을 위한 결정을 확정했다. · 특정 장비의 정책 결정이며 실제 장비 배치 성과는 별도다.",
+      "interpretation": "공동 방어체계 도입을 위한 결정을 확정했다.",
+      "weightReason": "특정 장비의 정책 결정이며 실제 장비 배치 성과는 별도다.",
+      "impactId": "thaad-deployment-decision-benefit"
+    },
+    {
+      "eventId": "arts-funding-blacklist",
+      "axisId": "culture",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "분야 여러 곳에서 공적 지원 접근과 예술 표현의 다양성을 훼손했다. · 수년에 걸친 여러 기관의 구조적 제한이며 법치 분야에서 동일한 영향을 다시 산입하지 않았다.",
+      "interpretation": "분야 여러 곳에서 공적 지원 접근과 예술 표현의 다양성을 훼손했다.",
+      "weightReason": "수년에 걸친 여러 기관의 구조적 제한이며 법치 분야에서 동일한 영향을 다시 산입하지 않았다.",
+      "impactId": "arts-funding-blacklist-harm"
+    },
+    {
+      "eventId": "sewol-rescue-operation",
+      "axisId": "laborSocial",
+      "classification": "NEGATIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "국가기관의 현장 구조 기능에서 확인된 부작위는 생명 보호에 큰 피해를 줬다. · 대규모 인명에 영향을 준 공적 구조 실패이며 기관 현장 책임과 대통령 개인의 법적 책임을 구분했다.",
+      "interpretation": "국가기관의 현장 구조 기능에서 확인된 부작위는 생명 보호에 큰 피해를 줬다.",
+      "weightReason": "대규모 인명에 영향을 준 공적 구조 실패이며 기관 현장 책임과 대통령 개인의 법적 책임을 구분했다.",
+      "impactId": "sewol-rescue-operation-harm"
+    },
+    {
+      "eventId": "covid-testing-response",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "확진자를 찾아 격리하고 역학조사를 수행하는 공중보건 역량이 확대됐다. · 전국적이고 상당 기간 지속된 체계다. 전체 사망률·방역 비용의 인과는 분리했다.",
+      "interpretation": "확진자를 찾아 격리하고 역학조사를 수행하는 공중보건 역량이 확대됐다.",
+      "weightReason": "전국적이고 상당 기간 지속된 체계다. 전체 사망률·방역 비용의 인과는 분리했다.",
+      "impactId": "covid-testing-response-benefit"
+    },
+    {
+      "eventId": "residential-lease-reform",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "갱신 보호 대상 임차인에게 계약 연장과 주거비 예측의 권리를 부여했다. · 전국 제도이나 보호 범위가 정해져 있으며 전체 전세 가격 변동은 미산정이다.",
+      "interpretation": "갱신 보호 대상 임차인에게 계약 연장과 주거비 예측의 권리를 부여했다.",
+      "weightReason": "전국 제도이나 보호 범위가 정해져 있으며 전체 전세 가격 변동은 미산정이다.",
+      "impactId": "residential-lease-reform-benefit"
+    },
+    {
+      "eventId": "residential-lease-reform",
+      "axisId": "laborSocial",
+      "classification": "NEGATIVE",
+      "weight": 2,
+      "impactId": "renewal-landlord-contract-discretion",
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "갱신요구권은 임대인이 갱신 또는 계약 조건을 자유롭게 정할 수 있는 범위를 제한했다.",
+      "weightReason": "헌법재판소가 주거 안정의 합헌적 수단으로 판단했으며 계약상 확인되는 제한 범위만 평가했다.",
+      "rationale": "임차인 보호와 별개로 적용 대상 계약에서 임대인의 선택 범위가 좁아진 효과를 2점의 부정 영향으로 평가했다. 시장 가격의 인과는 미평가다."
+    },
+    {
+      "eventId": "voting-age-eighteen",
+      "axisId": "democracyRuleOfLaw",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "rationale": "새 연령 집단이 전국 선거에 참여할 권리를 얻었다. · 선거권 범위를 지속적으로 확대했지만 해당 연령 집단에 한정된다.",
+      "interpretation": "새 연령 집단이 전국 선거에 참여할 권리를 얻었다.",
+      "weightReason": "선거권 범위를 지속적으로 확대했지만 해당 연령 집단에 한정된다.",
+      "impactId": "voting-age-eighteen-benefit"
+    },
+    {
+      "eventId": "camp-david-trilateral-implementation",
+      "axisId": "foreignRelations",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "양자 핵 협의와 구별되는 한미일 제도적 협력 수준을 높였다. · 3국이 여러 정책 분야에서 협의하는 지속적 틀을 마련했다.",
+      "interpretation": "양자 핵 협의와 구별되는 한미일 제도적 협력 수준을 높였다.",
+      "weightReason": "3국이 여러 정책 분야에서 협의하는 지속적 틀을 마련했다.",
+      "impactId": "camp-david-trilateral-implementation-benefit"
+    },
+    {
+      "eventId": "camp-david-trilateral-implementation",
+      "axisId": "securityDefense",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        1
+      ],
+      "rationale": "미사일 경보정보를 공유하는 체계가 실제로 가동됐다. · 특정 경보 기능의 구체적 개선이며 억지 효과 전부는 알 수 없다.",
+      "interpretation": "미사일 경보정보를 공유하는 체계가 실제로 가동됐다.",
+      "weightReason": "특정 경보 기능의 구체적 개선이며 억지 효과 전부는 알 수 없다.",
+      "impactId": "camp-david-trilateral-implementation-benefit"
+    },
+    {
+      "eventId": "medical-expansion-care-disruption",
+      "axisId": "laborSocial",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "필수·지역의료 인력 확충 목적과 별개로 정책 이행 과정에서 진료 연속성이 훼손됐다. · 의료 접근에 유의미한 피해가 보고됐으나 집단행동과 정부 대응의 책임을 구분하고 전국 피해 규모와 인과비중을 단정하지 않는다.",
+      "interpretation": "필수·지역의료 인력 확충 목적과 별개로 정책 이행 과정에서 진료 연속성이 훼손됐다.",
+      "weightReason": "의료 접근에 유의미한 피해가 보고됐으나 집단행동과 정부 대응의 책임을 구분하고 전국 피해 규모와 인과비중을 단정하지 않는다.",
+      "impactId": "medical-expansion-care-disruption-harm"
+    },
+    {
+      "eventId": "childcare-leave-reform",
+      "axisId": "laborSocial",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "일하는 양육자의 법정 돌봄 제도 접근성이 늘었다. · 특정 근로·돌봄 제도에 지속 적용되며 대통령 개인의 직접 집행으로 평가하지 않는다.",
+      "interpretation": "일하는 양육자의 법정 돌봄 제도 접근성이 늘었다.",
+      "weightReason": "특정 근로·돌봄 제도에 지속 적용되며 대통령 개인의 직접 집행으로 평가하지 않는다.",
+      "impactId": "childcare-leave-reform-benefit"
+    },
+    {
+      "eventId": "pension-amendment-passage",
+      "axisId": "laborSocial",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "findingIndexes": [
+        0,
+        1
+      ],
+      "rationale": "국회 의결은 확인되지만 실질 시행은 평가 대상 재임일 밖에 있어 점수를 부여하지 않았다.",
+      "interpretation": "국회 의결은 확인되지만 실질 시행은 평가 대상 재임일 밖에 있어 점수를 부여하지 않았다."
+    },
+    {
+      "eventId": "changrindo-coastal-artillery",
+      "axisId": "securityDefense",
+      "impactId": "changrindo-armistice-protest",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "rationale": "직접 피격이 확인되지 않은 해상 사격훈련에 군 통신선으로 위반 책임을 문제 삼고 재발 방지를 요구했다. 확전 위험을 늘리지 않고 합의 위반에 공식 대응한 단일 조치로 범위가 제한된다.",
+      "findingIndexes": [
+        0,
+        2,
+        3
+      ],
+      "interpretation": "군 통신선을 이용한 공식 항의와 위반 책임 명시",
+      "weightReason": "한 차례의 긴장 관리 조치로 범위가 제한되고 장기 재발 방지 성과는 확인되지 않음"
+    },
+    {
+      "eventId": "changrindo-coastal-artillery",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "rationale": "음향 포착부터 특정·공개까지 시차가 있었지만, 합의 위반을 사전에 확인하고도 공개를 늦췄거나 대응 기회를 잃었다는 근거는 부족하다.",
+      "findingIndexes": [
+        1,
+        3
+      ]
+    },
+    {
+      "eventId": "dmz-gp-shooting-2020",
+      "axisId": "securityDefense",
+      "impactId": "dmz-gp-equipment-readiness",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "rationale": "대응 장비가 실제로 불발돼 해당 초소의 초기 대응 수단에 장애가 생겼다. 최전방 대비태세에 유의미한 단일 사건이며 대응 시간 전체를 고장에 돌리거나 대통령 개인에게 귀속시키지 않는다.",
+      "findingIndexes": [
+        0,
+        1,
+        3
+      ],
+      "interpretation": "최전방 초소의 원격 사격 장비 불발과 대응 지연",
+      "weightReason": "장비 가용성은 실제 대응과 장병 안전에 중요한 요소이나 한 초소 사건이며 인명 피해가 보고되지 않음"
+    },
+    {
+      "eventId": "dmz-gp-shooting-2020",
+      "axisId": "securityDefense",
+      "classification": "UNASSESSED",
+      "weight": null,
+      "rationale": "대응사격의 정전협정 적합성과 북측 사격의 고의성에서 기관 간 설명이 일치하지 않는다. 대응사격 자체나 사후 점검의 장기 효과에는 별도 평가를 부여하지 않았다.",
+      "findingIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "eventId": "chung-eui-yong-military-agreement-remarks",
+      "axisId": "securityDefense",
+      "impactId": "military-agreement-risk-communication",
+      "classification": "NEGATIVE",
+      "weight": 1,
+      "rationale": "실제 피격을 포함한 사건의 심각성과 합의 존속 판단을 공개 설명에서 충분히 분리하지 못했고 외교부도 부적절한 표현이라고 인정했다. 같은 날 위반 책임에 관한 공식 입장을 재확인한 공개 설명의 문제로 한정한다.",
+      "findingIndexes": [
+        0,
+        1,
+        2
+      ],
+      "interpretation": "정부 안보 설명에서 위반의 심각성과 합의 유지 판단이 혼재",
+      "weightReason": "당일 해명한 단일 발언이며 장병 사기와 정책 집행의 실질 변화는 확인되지 않음"
+    },
+    {
+      "eventId": "yeonpyeong-shelling-response",
+      "axisId": "securityDefense",
+      "impactId": "yeonpyeong-pre-contact-equipment-availability",
+      "classification": "NEGATIVE",
+      "weight": 2,
+      "findingIndexes": [
+        2
+      ],
+      "interpretation": "앞선 훈련 중 불발로 가용 장비가 줄어들어 초기 방어 수단의 일부가 제한됐다.",
+      "weightReason": "적 포격 피해를 제외한 장비 한 대의 일시 가용성 저하만 확인되므로 제한적 영향으로 판단했다.",
+      "rationale": "군의 실제 대응사격과 구분해 한 대의 훈련 중 불발에 따른 가용성 저하를 2점의 부정 영향으로 평가했다. 정비 과실과 전반적 피해 규모를 이 원인에 귀속하지 않았다."
+    },
+    {
+      "eventId": "roh-housing-construction",
+      "axisId": "economy",
+      "impactId": "roh-housing-construction-supply",
+      "classification": "POSITIVE",
+      "weight": 4,
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "대규모 주택 공급을 실제로 늘렸다.",
+      "weightReason": "전국에 걸친 다년 공급으로 범위가 컸다. 공급량과 집값의 인과 전체는 평가에서 제외했다.",
+      "rationale": "대규모 주택 공급을 실제로 늘렸다. 전국에 걸친 다년 공급으로 범위가 컸다. 공급량과 집값의 인과 전체는 평가에서 제외했다."
+    },
+    {
+      "eventId": "roh-housing-construction",
+      "axisId": "economy",
+      "impactId": "roh-housing-construction-supply-pressure",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "집중 건설기에 자재와 노동 수급이 압박을 받았다.",
+      "weightReason": "경제 부문에 유의미했으나 공급 확대 과정의 비용으로 범위를 한정했다.",
+      "rationale": "집중 건설기에 자재와 노동 수급이 압박을 받았다. 경제 부문에 유의미했으나 공급 확대 과정의 비용으로 범위를 한정했다."
+    },
+    {
+      "eventId": "roh-housing-construction",
+      "axisId": "laborSocial",
+      "impactId": "roh-housing-construction-housing-access",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "영구임대 등 실수요층 대상 주택 공급을 시행했다.",
+      "weightReason": "주거 지원의 접근성에 직접 작용했지만 대상별 실현 효과는 분리해 측정하지 못했다.",
+      "rationale": "영구임대 등 실수요층 대상 주택 공급을 시행했다. 주거 지원의 접근성에 직접 작용했지만 대상별 실현 효과는 분리해 측정하지 못했다."
+    },
+    {
+      "eventId": "worker-dispatch-framework",
+      "axisId": "laborSocial",
+      "impactId": "worker-dispatch-framework-indirect-employment",
+      "classification": "NEGATIVE",
+      "weight": 3,
+      "findingIndexes": [
+        0
+      ],
+      "interpretation": "대상 업무에서 사용사업주가 근로자를 직접 고용하지 않고 인력을 사용하는 통로가 제도화됐다.",
+      "weightReason": "고용 관계에 지속적으로 영향을 주는 법적 변화지만 실제 일자리 감소 규모는 확인 범위에 없다.",
+      "rationale": "대상 업무에서 사용사업주가 근로자를 직접 고용하지 않고 인력을 사용하는 통로가 제도화됐다. 고용 관계에 지속적으로 영향을 주는 법적 변화지만 실제 일자리 감소 규모는 확인 범위에 없다."
+    },
+    {
+      "eventId": "worker-dispatch-framework",
+      "axisId": "laborSocial",
+      "impactId": "worker-dispatch-framework-dispatch-safeguards",
+      "classification": "POSITIVE",
+      "weight": 2,
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "파견사업의 허가와 허용 범위를 법으로 정했다.",
+      "weightReason": "허용된 파견 관계에서 적용되는 보호 틀이며 현장 준수나 안정 효과는 별도 확인이 필요하다.",
+      "rationale": "파견사업의 허가와 허용 범위를 법으로 정했다. 허용된 파견 관계에서 적용되는 보호 틀이며 현장 준수나 안정 효과는 별도 확인이 필요하다."
+    },
+    {
+      "eventId": "arts-education-foundation",
+      "axisId": "culture",
+      "impactId": "arts-education-foundation-institutional-access",
+      "classification": "POSITIVE",
+      "weight": 3,
+      "findingIndexes": [
+        1
+      ],
+      "interpretation": "학교와 사회의 문화예술교육을 지원하는 제도와 집행 기관이 작동했다.",
+      "weightReason": "특정 문화 분야를 지속적으로 지원하는 제도이며 이용자별 성과는 미산정이다.",
+      "rationale": "학교와 사회의 문화예술교육을 지원하는 제도와 집행 기관이 작동했다. 특정 문화 분야를 지속적으로 지원하는 제도이며 이용자별 성과는 미산정이다."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+*
+!frontend/
+!frontend/**
+frontend/node_modules/
+frontend/dist/
+frontend/.env*
+frontend/npm-debug.log*
+!data/
+data/*
+!data/presidency-scores.stage-2.json
+!data/presidency-assessments.stage-2.json
+!data/historical-events.stage-1.json
