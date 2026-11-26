@@ -124,7 +124,7 @@ const profiles: President[] = [
     terms: [{
       id: 'park-1963', presidentId: 'park-chung-hee', startDate: '1963-12', endDate: '1979-10',
       startContext: {
-        event: '5·16 군사정변',
+        events: ['5·16 군사정변'],
         source: { title: '국사편찬위원회 5·16 군사정변 기록', originalUrl: 'https://db.history.go.kr/id/tcct_1961_05_16_0010' },
       },
       endReason: {
@@ -166,7 +166,7 @@ const profiles: President[] = [
     terms: [{
       id: 'chun-1980', presidentId: 'chun-doo-hwan', startDate: '1980-09', endDate: '1988-02',
       startContext: {
-        event: '12·12 군사반란과 5·17 비상계엄 확대',
+        events: ['12·12 군사반란', '5·17 비상계엄 확대'],
         source: { title: '대법원 12·12 군사반란 및 5·18 내란 판결', originalUrl: 'https://www.law.go.kr/LSW/precInfoP.do?mode=0&precSeq=603883' },
       },
     }],

@@ -15,6 +15,7 @@ function formatTermEndReason(reason: NonNullable<PresidentialTerm['endReason']>)
 export function PresidentProfile({ person }: { person: President }) {
   const quote = person.representativeQuote
   const affiliations = presidentParties[person.id]
+  const startEvents = person.terms.flatMap((term) => term.startContext?.event ?? [])
   const isTransitioning = useViewTransitionState(`/presidents/${person.id}`)
 
   return (
@@ -43,9 +44,6 @@ export function PresidentProfile({ person }: { person: President }) {
                         <strong className="term-end-reason">{formatTermEndReason(term.endReason)}</strong>
                       </>
                     )}
-                    {term.startContext && (
-                      <strong className="term-start-context">취임 배경 · {term.startContext.event}</strong>
-                    )}
                   </li>
                 ))}
               </ul>
@@ -55,6 +53,12 @@ export function PresidentProfile({ person }: { person: President }) {
             <dt>공화국</dt>
             <dd>{formatRepublics(person.republics)}</dd>
           </div>
+          {startEvents.length > 0 && (
+            <div className="profile-start-context">
+              <dt>취임 배경</dt>
+              <dd className="term-start-context">{startEvents.join(', ')}</dd>
+            </div>
+          )}
           <div className="profile-parties">
             <dt>소속 정당</dt>
             <dd>
