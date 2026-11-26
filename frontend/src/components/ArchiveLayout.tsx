@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link, Outlet, useLocation, useMatch } from 'react-router-dom'
+import { Link, Outlet, useLocation, useMatch, useViewTransitionState } from 'react-router-dom'
 import { presidents } from '../data/presidents'
 import { PresidentSources } from './PresidentSources'
 
@@ -24,16 +24,24 @@ function ArchiveMark() {
   )
 }
 
-export function ArchiveHeader({ activePage }: { activePage?: 'chronology' | 'evaluation' }) {
+export function ArchiveHeader({ activePage, isPresidentDetail }: {
+  activePage?: 'chronology' | 'evaluation'
+  isPresidentDetail?: boolean
+}) {
+  const supportsTransitions = typeof document.startViewTransition === 'function'
+  const animateToChronology = supportsTransitions && (isPresidentDetail || activePage === 'evaluation')
+
   return (
     <header className="site-header container">
-      <Link className="brand" to="/#chronology" aria-label="대통령 아카이브 홈">
+      <Link className="brand" to="/#chronology" viewTransition={animateToChronology} aria-label="대통령 아카이브 홈">
         <ArchiveMark />
         <span>대통령 아카이브</span>
       </Link>
       <nav className="site-nav" aria-label="주 메뉴">
-        <Link to="/#chronology" aria-current={activePage === 'chronology' ? 'page' : undefined}>대통령 연대기</Link>
-        <Link to="/evaluation-methods" state={{ fromArchive: true }} aria-current={activePage === 'evaluation' ? 'page' : undefined}>
+        <Link to="/#chronology" viewTransition={animateToChronology} aria-current={activePage === 'chronology' ? 'page' : undefined}>대통령 연대기</Link>
+        <Link to="/evaluation-methods" state={{ fromArchive: true }}
+          viewTransition={supportsTransitions && activePage === 'chronology'}
+          aria-current={activePage === 'evaluation' ? 'page' : undefined}>
           평가 기준·출처
         </Link>
       </nav>
@@ -47,6 +55,12 @@ export function ArchiveLayout() {
   const president = presidents.find(({ id }) => id === presidentId)
   const isHome = pathname === '/'
   const isChronology = isHome && hash === '#chronology'
+  const isEvaluation = pathname === '/evaluation-methods'
+  const transitioningChronology = useViewTransitionState('/#chronology')
+  const transitioningEvaluation = useViewTransitionState('/evaluation-methods')
+  const pageSlide = transitioningChronology && transitioningEvaluation
+    ? isChronology ? 'left' : 'right'
+    : undefined
   const previousPath = useRef(pathname)
   const wasChronology = useRef(isChronology)
   const main = useRef<HTMLElement>(null)
@@ -68,13 +82,13 @@ export function ArchiveLayout() {
   }, [hash, pathname, isChronology])
 
   return (
-    <div className={isHome ? 'site-shell site-shell--home' : 'site-shell'}>
+    <div className={isHome ? 'site-shell site-shell--home' : 'site-shell'} data-page-slide={pageSlide}>
       <a className="skip-link" href="#main" onClick={(event) => {
         if (!isHome) return
         event.preventDefault()
         main.current?.focus({ preventScroll: true })
       }}>본문 바로가기</a>
-      {!isHome && <ArchiveHeader activePage={pathname === '/evaluation-methods' ? 'evaluation' : undefined} />}
+      {!isHome && <ArchiveHeader activePage={isEvaluation ? 'evaluation' : undefined} isPresidentDetail={Boolean(president)} />}
       <main className={isHome ? 'site-main site-main--home' : 'container site-main'} id="main" ref={main} tabIndex={-1}>
         <Outlet context={chronologyPosition} />
       </main>
@@ -83,7 +97,6 @@ export function ArchiveLayout() {
           <p>{archiveNotice}</p>
           {president && <PresidentSources person={president} />}
         </div>
-        <Link to="/evaluation-methods" state={{ fromArchive: true }}>평가 기준 및 출처</Link>
       </footer>
     </div>
   )

@@ -15,7 +15,7 @@ function formatTermEndReason(reason: NonNullable<PresidentialTerm['endReason']>)
 export function PresidentProfile({ person }: { person: President }) {
   const quote = person.representativeQuote
   const affiliations = presidentParties[person.id]
-  const startEvents = person.terms.flatMap((term) => term.startContext?.event ?? [])
+  const startEvents = person.terms.flatMap((term) => term.startContext?.events ?? [])
   const isTransitioning = useViewTransitionState(`/presidents/${person.id}`)
 
   return (

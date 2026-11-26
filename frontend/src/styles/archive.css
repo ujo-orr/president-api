@@ -155,6 +155,16 @@ img { display: block; max-width: 100%; }
 }
 ::view-transition-old(root) { animation: archive-fade-out 320ms ease-in both; }
 ::view-transition-new(root) { animation: archive-fade-in 320ms ease-in 320ms both; }
+:root:has(.site-shell[data-page-slide="right"]) { --archive-slide-distance: 100%; }
+:root:has(.site-shell[data-page-slide="left"]) { --archive-slide-distance: -100%; }
+:root:has(.site-shell[data-page-slide])::view-transition-old(root) {
+  animation: archive-slide-out 400ms ease-in-out both;
+  mix-blend-mode: normal;
+}
+:root:has(.site-shell[data-page-slide])::view-transition-new(root) {
+  animation: archive-slide-in 400ms ease-in-out both;
+  mix-blend-mode: normal;
+}
 ::view-transition-image-pair(president-profile) {
   isolation: auto;
   transform-style: preserve-3d;
@@ -168,6 +178,8 @@ img { display: block; max-width: 100%; }
 ::view-transition-new(president-profile) { transform: rotateY(180deg); }
 @keyframes archive-fade-out { to { opacity: 0; } }
 @keyframes archive-fade-in { from { opacity: 0; } }
+@keyframes archive-slide-out { to { transform: translateX(calc(-1 * var(--archive-slide-distance))); } }
+@keyframes archive-slide-in { from { transform: translateX(var(--archive-slide-distance)); } }
 @keyframes president-card-flip {
   from { transform: perspective(1150px) rotateY(0deg); }
   to { transform: perspective(1150px) rotateY(180deg); }
@@ -185,11 +197,10 @@ img { display: block; max-width: 100%; }
 .chronology-years li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #929daa; z-index: 1; }
 .chronology-years li:not(:last-child)::after { content: ""; position: absolute; top: 4px; inset-inline-start: 50%; width: calc(100% + var(--gap)); height: 1px; background: #b8c0cb; }
 
-.site-footer { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-block: 16px 21px; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 16px 21px; }
 .site-shell--home .site-footer { flex: none; padding-block: 8px 10px; }
 .site-footer-copy { min-width: 0; }
 .site-footer-copy p { color: var(--muted); font-size: .78rem; line-height: 1.65; word-break: keep-all; }
-.site-footer > a { font-size: .83rem; font-weight: 650; white-space: nowrap; }
 .president-sources {
   display: flex;
   align-items: baseline;
@@ -271,8 +282,7 @@ img { display: block; max-width: 100%; }
 .presidency-score-list { margin: 0; padding: 0; list-style: none; }
 .presidency-score-list li { display: flex; justify-content: space-between; gap: 12px; padding-block: 8px; border-bottom: 1px solid var(--line); font-size: .87rem; font-weight: 650; }
 .presidency-score-list strong { white-space: nowrap; font-size: .94rem; font-variant-numeric: tabular-nums; }
-.event-chart-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin: 16px 0 4px; }
-.event-chart-filter { display: flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 700; }
+.event-chart-filter { display: flex; align-items: center; gap: 8px; margin: 16px 0 4px; font-size: .85rem; font-weight: 700; }
 .event-chart-filter select {
   min-height: 44px;
   max-width: 100%;
@@ -283,7 +293,6 @@ img { display: block; max-width: 100%; }
   color: var(--text);
   font: inherit;
 }
-.detail-panel .event-chart-legend { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: .78rem; }
 .event-positive { color: #275c4e; }
 .event-negative { color: #a5202e; }
 .event-list { position: relative; display: grid; gap: 10px; margin-top: 16px; padding-inline-start: 20px; }
@@ -372,7 +381,6 @@ img { display: block; max-width: 100%; }
   .chronology-scroll { margin-inline: -8px; }
   .chronology-track { --gap: 16px; --card-width: clamp(220px, 69vw, 300px); }
   .president-card { --card-max-height: 440px; }
-  .site-footer { flex-wrap: wrap; gap: 8px; }
   .details-top { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .profile { width: min(100%, clamp(180px, 48vw, 240px)); justify-self: center; }
   .details-middle, .evaluation-grid { grid-template-columns: 1fr; }

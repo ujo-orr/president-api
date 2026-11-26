@@ -17,19 +17,12 @@ export default function PresidentTimeline({ presidentName }: { presidentName: st
   return (
     <div className="event-chart">
       <p>재임 중 사건을 기록된 날짜순으로 보여줍니다. 사건 사이의 간격은 경과 시간을 나타내지 않습니다.</p>
-      <div className="event-chart-tools">
-        <div className="event-chart-filter">
-          <label htmlFor={filterId}>평가 분야</label>
-          <select id={filterId} value={axisId} onChange={(event) => setAxisId(event.target.value)}>
-            <option value="">전체 분야</option>
-            {scoreCategories.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
-          </select>
-        </div>
-        <p className="event-chart-legend">
-          <span className="event-negative">− 부정 가중치</span>
-          <span className="event-positive">+ 긍정 가중치</span>
-          <span>양쪽 눈금 0~{timelineWeightLimit}</span>
-        </p>
+      <div className="event-chart-filter">
+        <label htmlFor={filterId}>평가 분야</label>
+        <select id={filterId} value={axisId} onChange={(event) => setAxisId(event.target.value)}>
+          <option value="">전체 분야</option>
+          {scoreCategories.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
+        </select>
       </div>
       <p>{category
         ? '선택한 분야의 가중치를 합산한 AI 평가입니다.'
