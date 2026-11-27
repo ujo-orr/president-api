@@ -12,6 +12,8 @@ CATEGORIES = {"HISTORICAL_EVENT", "POLITICAL_CONTROVERSY", "CRIMINAL_CASE",
               "CONSTITUTIONAL_CASE", "NATIONAL_INCIDENT", "PUBLIC_STATEMENT"}
 STATUSES = {"CONVICTED_FINAL", "ACQUITTED_FINAL", "TRIAL_IN_PROGRESS", "UNDER_INVESTIGATION",
             "NO_PROSECUTION_RIGHT", "NOT_INDICTED", "PROSECUTION_DEFERRED", "NOT_APPLICABLE", "UNKNOWN"}
+EVENT_TYPES = {"POLICY", "DIPLOMATIC"}
+IMPACT_FIELDS = ("positiveImpacts", "negativeImpacts", "governmentResponses")
 
 
 def prepare(events):
@@ -31,6 +33,20 @@ def prepare(events):
         date.fromisoformat(when + {4: "-01-01", 7: "-01", 10: ""}[precision])
         urls = key_by(doc["sources"], "url")
         require(urls and all(urlsplit(u).scheme == "https" and urlsplit(u).hostname for u in urls), eid)
+        event_type = doc.get("eventType")
+        require(event_type is None or (
+            doc["category"] == "HISTORICAL_EVENT" and event_type in EVENT_TYPES
+        ), f"{eid}: eventType")
+        for field in IMPACT_FIELDS:
+            items = doc.get(field, []) if field == "governmentResponses" else doc[field]
+            require(isinstance(items, list), f"{eid}: {field}")
+            if field == "governmentResponses" and items:
+                require(doc["category"] == "NATIONAL_INCIDENT", f"{eid}: {field}")
+            for item in items:
+                require(isinstance(item["text"], str) and item["text"].strip()
+                        and item["sourceUrl"] in urls, f"{eid}: {field}")
+        for perspective in doc["perspectives"]:
+            require(perspective["speaker"].strip() and perspective["claim"].strip(), eid)
         for item in doc["perspectives"] + doc["legalDecisions"]:
             require(item["sourceUrl"] in urls, eid)
         for ruling in doc["legalDecisions"]:

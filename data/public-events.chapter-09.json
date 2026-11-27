@@ -29,7 +29,20 @@
         "responsibility": "농림부와 농지위원회가 농지개혁법에 따른 분배를 시행했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "소작농 등 실제 경작자가 농지를 분배받아 자기 농지를 경작할 수 있게 됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=300"
+      }
+    ],
+    "negativeImpacts": [
+      {
+        "text": "한국전쟁 등의 영향으로 분배받은 농지의 대금 상환은 1969년에야 마무리됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=300"
+      }
+    ],
+    "eventType": "POLICY"
   },
   {
     "id": "first-constitutional-amendment",
@@ -61,7 +74,14 @@
         "responsibility": "정부가 개헌안을 제출했고 국회가 표결했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "대통령과 부통령을 국회에서 선출하던 방식에서 국민이 직접 선출하는 방식으로 바뀌었다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0049272225&flag=2&page=156&sort="
+      }
+    ],
+    "negativeImpacts": []
   },
   {
     "id": "second-constitutional-amendment",
@@ -94,7 +114,14 @@
         "responsibility": "여당인 자유당이 개헌을 추진했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "중임 제한을 초대 대통령에게 적용하지 않는 예외가 생겼다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/rule/sub2_03.do"
+      }
+    ]
   },
   {
     "id": "march-election",
@@ -127,7 +154,14 @@
         "responsibility": "정부·여당 및 선거 행정 조직의 개입이 기록돼 있다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "사전투표, 공개투표, 야당 참관인 배제 등의 수법이 동원됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/419/sub01.do"
+      }
+    ]
   },
   {
     "id": "yushin",
@@ -159,7 +193,14 @@
         "responsibility": "박정희 대통령이 국회 해산과 비상계엄을 발표했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "국회가 해산돼 의정 활동이 중단됐고, 새 헌법은 통일주체국민회의의 대통령 간접선거를 도입했다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=102"
+      }
+    ]
   },
   {
     "id": "seoul-olympics",
@@ -191,7 +232,14 @@
         "responsibility": "노태우 재임 중 개막했다. 서울의 개최지 선정은 1981년이었다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "국가기록원에 따르면 서울 대회에는 161개국이 참가해 당시 올림픽 사상 최다 참가국을 기록했다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/internationalSport/seoulOpen.do"
+      }
+    ],
+    "negativeImpacts": []
   },
   {
     "id": "real-name",
@@ -223,7 +271,15 @@
         "responsibility": "김영삼 대통령이 긴급재정경제명령을 발령했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "금융기관 거래에 실명 확인이 의무화돼 가명·무기명 금융거래에 제도적 제한이 생겼다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=319"
+      }
+    ],
+    "negativeImpacts": [],
+    "eventType": "POLICY"
   },
   {
     "id": "imf-stabilization-agreement",
@@ -255,7 +311,15 @@
         "responsibility": "정부가 IMF와 지원 협정을 체결했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "금융·기업·노동·공공 부문 구조개혁이 지원 조건에 포함됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=322"
+      }
+    ],
+    "eventType": "DIPLOMATIC"
   },
   {
     "id": "imf-early-repayment",
@@ -279,6 +343,10 @@
       {
         "title": "IMF 차관 전액 조기 상환",
         "url": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=322"
+      },
+      {
+        "title": "IMF · 2001년 한국 경제 연례협의",
+        "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn0209"
       }
     ],
     "links": [
@@ -288,7 +356,15 @@
         "responsibility": "김대중 정부가 이전 정부에서 도입한 IMF 차관의 상환을 마쳤다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "IMF는 2001년 8월 한국이 해당 차관의 조기 상환을 완료했다고 확인했다.",
+        "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn0209"
+      }
+    ],
+    "negativeImpacts": [],
+    "eventType": "POLICY"
   },
   {
     "id": "june-summit",
@@ -320,7 +396,15 @@
         "responsibility": "김대중 대통령이 평양에서 김정일 국방위원장과 공동선언을 채택했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "분단 이후 처음으로 남북 정상이 공동 합의를 채택했고, 경제협력과 사회·문화 교류, 인도적 문제 해결을 합의문에 담았다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=608"
+      }
+    ],
+    "negativeImpacts": [],
+    "eventType": "DIPLOMATIC"
   },
   {
     "id": "g20",
@@ -352,7 +436,15 @@
         "responsibility": "정부가 서울 정상회의를 주최하고 참여국들이 공동 의제를 논의했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "G20 정상회의에서 개발 협력 방향을 담은 서울 개발 컨센서스가 채택됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=511"
+      }
+    ],
+    "negativeImpacts": [],
+    "eventType": "DIPLOMATIC"
   },
   {
     "id": "residential-lease-reform",
@@ -365,7 +457,13 @@
     "verifiedFacts": [
       "임차인의 1회 계약갱신요구권과 차임 증액 제한을 규정했다."
     ],
-    "perspectives": [],
+    "perspectives": [
+      {
+        "speaker": "헌법소원 청구인들",
+        "claim": "계약 갱신과 임대료 인상을 제한한 조항이 임대인의 계약의 자유와 재산권을 침해한다고 주장했다.",
+        "sourceUrl": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=1007188&cbIdx=1195"
+      }
+    ],
     "legalStatus": "NOT_APPLICABLE",
     "legalDecisions": [],
     "quote": null,
@@ -375,6 +473,10 @@
       {
         "title": "주택임대차 계약갱신요구권 시행",
         "url": "https://law.go.kr/LSW/lsRvsRsnListP.do?chrClsCd=010102&lsId=001248"
+      },
+      {
+        "title": "헌법재판소 · 계약갱신요구권 및 차임증액 제한 결정",
+        "url": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=1007188&cbIdx=1195"
       }
     ],
     "links": [
@@ -384,7 +486,20 @@
         "responsibility": "국회가 주택임대차보호법을 개정하고 정부가 공포했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "임차인은 일정한 요건을 충족하면 한 차례 계약 갱신을 요구할 수 있게 됐다. 계약 갱신 때 임대료 증액에도 법정 상한이 적용된다.",
+        "sourceUrl": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=1007188&cbIdx=1195"
+      }
+    ],
+    "negativeImpacts": [
+      {
+        "text": "임대인은 법에서 정한 사유가 없으면 갱신 요구를 거절할 수 없고, 계약 갱신 시 차임이나 보증금 증액도 일정 한도로 제한된다.",
+        "sourceUrl": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=1007188&cbIdx=1195"
+      }
+    ],
+    "eventType": "POLICY"
   },
   {
     "id": "jeju-43",
@@ -416,7 +531,14 @@
         "responsibility": "경찰 발포와 무장봉기는 취임 전이었다. 이승만 정부 수립 후 제주에 계엄이 선포됐고 진압이 이어졌다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "토벌대의 강경 진압과 무장대의 공격 과정에서 민간인 희생이 발생했다.",
+        "sourceUrl": "https://jeju43peace.or.kr/kor/sub01_01_01.do"
+      }
+    ]
   },
   {
     "id": "may-16-coup",
@@ -453,7 +575,14 @@
         "responsibility": "박정희는 군인으로 정변을 주도했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "장면 내각이 무너지고 국가재건최고회의가 통치 권한을 행사하면서 제2공화국의 내각책임제 운영이 중단됐다.",
+        "sourceUrl": "https://www.archives.go.kr/archivesdata/upFile/palgan/20060415171815921.pdf"
+      }
+    ]
   },
   {
     "id": "chang-cabinet-construction",
@@ -485,7 +614,10 @@
         "responsibility": "내각책임제 아래 장면 내각이 추진했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [],
+    "eventType": "POLICY"
   },
   {
     "id": "buma-uprising",
@@ -517,7 +649,9 @@
         "responsibility": "유신체제 아래 부산·마산 시민과 학생들이 일으킨 항쟁이다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "three-party-merger",
@@ -554,7 +688,9 @@
         "responsibility": "김영삼은 통일민주당 총재로 참여했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "seongsu-collapse",
@@ -586,7 +722,20 @@
         "responsibility": "김영삼 재임 중 발생한 재난이다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "검찰 조사에서 설계도와 다른 시공과 용접 불량이 확인됐다. 개통 이후 안전점검과 보수도 미흡했다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/bigAccident.do"
+      }
+    ],
+    "governmentResponses": [
+      {
+        "text": "김영삼 대통령이 대국민 담화를 발표했고, 이후 시설물 안전관리를 제도화하는 특별법이 제정됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/bigAccident.do"
+      }
+    ]
   },
   {
     "id": "sampoong-collapse",
@@ -618,7 +767,20 @@
         "responsibility": "김영삼 재임 중 발생한 재난이다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "붕괴 위험을 알리는 균열이 생겼는데도 백화점 측은 영업을 계속했고, 붕괴 직전에야 고객 대피를 시작했다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/bigAccident.do"
+      }
+    ],
+    "governmentResponses": [
+      {
+        "text": "사고 뒤 건물 안전 점검이 실시되고 119중앙구조대가 설치됐다.",
+        "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/bigAccident.do"
+      }
+    ]
   },
   {
     "id": "second-yeonpyeong",
@@ -650,7 +812,9 @@
         "responsibility": "해군이 서해 북방한계선에서 북한 경비정에 대응했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "itaewon-disaster",
@@ -682,7 +846,15 @@
         "responsibility": "윤석열 대통령이 다음 날 관계기관 회의를 열어 대응을 논의했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [],
+    "governmentResponses": [
+      {
+        "text": "정부가 중앙재난안전대책본부를 가동하고 국가 애도기간을 지정했다.",
+        "sourceUrl": "https://m.korea.kr/briefing/pressReleaseView.do?newsId=156533574&pWise=sub&pWiseSub=J1"
+      }
+    ]
   },
   {
     "id": "beef-import-negotiation",
@@ -695,7 +867,18 @@
     "verifiedFacts": [
       "추가협상 이후 수출 작업장의 30개월 미만 연령 검증과 수출증명서 요건을 정부가 설명했다."
     ],
-    "perspectives": [],
+    "perspectives": [
+      {
+        "speaker": "헌법소원 청구인들",
+        "claim": "완화된 수입위생조건이 광우병 위험으로부터 생명과 신체를 보호할 국가의 의무에 어긋난다고 주장했다.",
+        "sourceUrl": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=941501&cbIdx=1106"
+      },
+      {
+        "speaker": "정부",
+        "claim": "추가협상에서 미국 정부의 30개월 미만 연령 검증을 받지 않은 제품을 반송할 수 있도록 합의했다고 설명했다.",
+        "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148681004"
+      }
+    ],
     "legalStatus": "NOT_APPLICABLE",
     "legalDecisions": [],
     "quote": null,
@@ -705,6 +888,10 @@
       {
         "title": "정부 · 쇠고기 추가협상 질의응답",
         "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148681004"
+      },
+      {
+        "title": "헌법재판소 · 미국산 쇠고기 수입위생조건 헌법소원",
+        "url": "https://ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=941501&cbIdx=1106"
       }
     ],
     "links": [
@@ -714,7 +901,9 @@
         "responsibility": "한국 정부가 미국 측과 수입 검역조건을 협의했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "nuclear-plan-briefing",
@@ -752,7 +941,9 @@
         "responsibility": "문재인 정부 산업통상자원부의 설명이다. 대통령의 문건 전달 여부는 이 자료로 확인되지 않는다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "west-sea-shooting",
@@ -790,7 +981,9 @@
         "responsibility": "국방부와 합참이 당시 파악한 사항을 발표했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-syngman-rhee",
@@ -835,7 +1028,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-yun-po-sun",
@@ -876,7 +1071,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-park-chung-hee",
@@ -921,7 +1118,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-choi-kyu-hah",
@@ -962,7 +1161,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-chun-doo-hwan",
@@ -1003,7 +1204,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-roh-tae-woo",
@@ -1044,7 +1247,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-kim-young-sam",
@@ -1089,7 +1294,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-kim-dae-jung",
@@ -1130,7 +1337,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-roh-moo-hyun",
@@ -1171,7 +1380,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-lee-myung-bak",
@@ -1216,7 +1427,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-park-geun-hye",
@@ -1261,7 +1474,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-moon-jae-in",
@@ -1306,7 +1521,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inaugural-yoon-suk-yeol",
@@ -1351,7 +1568,9 @@
         "responsibility": "취임식에서 대통령이 직접 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "nobel-lecture",
@@ -1392,7 +1611,9 @@
         "responsibility": "김대중 대통령이 수상자로 연설했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "jeju-apology",
@@ -1433,7 +1654,9 @@
         "responsibility": "노무현 대통령이 제주를 방문해 국가권력의 잘못에 대해 사과했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "fta-statement",
@@ -1446,7 +1669,13 @@
     "verifiedFacts": [
       "노무현 대통령은 협정의 경제적 효과에 대한 기대를 표했다."
     ],
-    "perspectives": [],
+    "perspectives": [
+      {
+        "speaker": "조지 W. 부시 미국 대통령",
+        "claim": "협상이 타결된 한미 자유무역협정이 양국의 협력 관계를 강화할 것이라고 평가했다.",
+        "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148621839"
+      }
+    ],
     "legalStatus": "NOT_APPLICABLE",
     "legalDecisions": [],
     "quote": {
@@ -1474,7 +1703,9 @@
         "responsibility": "경제부총리의 협상 타결 보고를 받은 뒤 말한 내용으로, 청와대 대변인이 전했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "roh-impeachment",
@@ -1520,7 +1751,9 @@
         "responsibility": "국회가 소추하고 헌법재판소가 대통령의 직무상 헌법·법률 위반을 심판했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "impeachment-park",
@@ -1566,7 +1799,9 @@
         "responsibility": "국회가 소추하고 헌법재판소가 대통령의 직무상 헌법·법률 위반을 심판했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "martial-law",
@@ -1612,7 +1847,9 @@
         "responsibility": "국회가 소추하고 헌법재판소가 대통령의 직무상 헌법·법률 위반을 심판했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "december-12",
@@ -1689,7 +1926,9 @@
         "responsibility": "취임 전 신군부에 참여했고 이후 형사재판을 받았다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "gwangju-military-repression",
@@ -1766,7 +2005,9 @@
         "responsibility": "취임 전 신군부에 참여했고 이후 형사재판을 받았다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "samcheong",
@@ -1803,7 +2044,14 @@
         "responsibility": "수용 시작은 취임 전이고 수용·교육은 전두환 재임기까지 이어졌다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "민간인을 군부대에 수용한 과정에서 사망자와 부상자가 발생했다.",
+        "sourceUrl": "https://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F70616c67616e2F32303138303431395f303031342e706466"
+      }
+    ]
   },
   {
     "id": "park-jong-cheol",
@@ -1835,7 +2083,9 @@
         "responsibility": "재임 중 경찰 수사 과정에서 발생했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "roh-investigation-closure",
@@ -1885,7 +2135,9 @@
         "responsibility": "퇴임 후 수사를 받았으며 본인에 대한 기소와 형사판결은 없었다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "das-embezzlement",
@@ -1948,7 +2200,9 @@
         "responsibility": "퇴임 후 이명박 본인이 피고인으로 확정판결을 받았다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "pyeongchang",
@@ -1980,7 +2234,9 @@
         "responsibility": "문재인 정부 시기 열린 국제대회에서 양측 선수단이 공동입장했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "mine-hospital-visit",
@@ -2021,7 +2277,9 @@
         "responsibility": "대통령 취임 전 새정치민주연합 대표로 방문했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "marine-search",
@@ -2057,7 +2315,20 @@
         "responsibility": "재임 중 수색작전에서 장병이 순직했다. 이후 외압 의혹에 관한 특검 기소가 있었으며 기소는 검찰 측 주장이다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "해병대는 사고 당시 수변 실종자 수색에 적용할 구명조끼 착용 등 구체적인 대민지원 지침이 없었다고 밝혔다.",
+        "sourceUrl": "https://m.korea.kr/news/policyNewsView.do?newsId=156582017"
+      }
+    ],
+    "governmentResponses": [
+      {
+        "text": "해병대는 위험 상황별 안전대책과 현장 조치 요령을 보완 중이라고 발표했다.",
+        "sourceUrl": "https://m.korea.kr/news/policyNewsView.do?newsId=156582017"
+      }
+    ]
   },
   {
     "id": "arts-funding-blacklist",
@@ -2104,7 +2375,14 @@
         "responsibility": "청와대와 관계기관이 문화예술 지원 대상 선별에 관여했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [
+      {
+        "text": "문화예술인이 정치적 견해 등을 이유로 정부 지원 심사에서 배제됐다.",
+        "sourceUrl": "https://law.go.kr/LSW/detcInfoP.do?detcSeq=162711"
+      }
+    ]
   },
   {
     "id": "sewol-rescue-operation",
@@ -2156,7 +2434,9 @@
         "responsibility": "정부의 사고 구호조치에 관한 헌법소원이다. 판단 대상은 정부였다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "four-rivers-weirs",
@@ -2199,7 +2479,9 @@
         "responsibility": "환경부의 재검토 대상은 문재인 정부에서 결정한 보 처리방안이었다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "north-remittance",
@@ -2288,7 +2570,9 @@
         "responsibility": "김대중 재임 중 발생했다. 아래 상고심의 피고인은 국정원·은행·기업 관계자였다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inspection-interference",
@@ -2351,7 +2635,9 @@
         "responsibility": "문재인 정부 민정수석실 관계자의 직무가 대상이다. 문재인은 이 판결의 피고인이 아니다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "union-officials-judgment",
@@ -2444,7 +2730,9 @@
         "responsibility": "일부 공소사실의 행위 시기가 재임 기간과 겹친다. 문재인과 정부는 이 판결의 피고인이 아니다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "inheokdang-retrial",
@@ -2593,7 +2881,9 @@
         "responsibility": "박정희 정부 당시 수사와 군법회의를 거쳐 사형이 집행됐다. 재심 피고인은 당시 사형을 선고받은 이들이다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "emergency-repeal",
@@ -2625,7 +2915,10 @@
         "responsibility": "최규하 대통령이 긴급조치 해제를 공고했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": [],
+    "eventType": "POLICY"
   },
   {
     "id": "camp-david-summit",
@@ -2648,6 +2941,10 @@
       {
         "title": "한미일 정상회의 공동성명 전문",
         "url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=148920085"
+      },
+      {
+        "title": "외교부 · 캠프 데이비드 정상회의 1주년 한미일 정상 공동성명",
+        "url": "https://www.mofa.go.kr/us-ko/brd/m_4492/view.do?seq=1347966"
       }
     ],
     "links": [
@@ -2657,7 +2954,15 @@
         "responsibility": "윤석열 대통령이 미국·일본 정상과 공동성명을 발표했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [
+      {
+        "text": "1주년 공동성명에 따르면 한미일이 다영역 훈련 프리덤 에지를 처음 시행하고 3국 안보협력 프레임워크에 서명했다.",
+        "sourceUrl": "https://www.mofa.go.kr/us-ko/brd/m_4492/view.do?seq=1347966"
+      }
+    ],
+    "negativeImpacts": [],
+    "eventType": "DIPLOMATIC"
   },
   {
     "id": "kim-hong-up-judgment",
@@ -2707,7 +3012,9 @@
         "responsibility": "김대중 전 대통령의 차남 김홍업이 피고인이다. 대통령 본인에 대한 판결이 아니다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "roh-funds-apology",
@@ -2752,7 +3059,9 @@
         "responsibility": "퇴임 후 본인 재임기에 조성한 자금에 대해 사과했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   },
   {
     "id": "four-rivers-ceremony",
@@ -2793,6 +3102,8 @@
         "responsibility": "이명박 대통령이 기공식에서 사업 추진 이유를 밝혔다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T00:24:00+09:00"
+    "lastVerifiedAt": "2026-11-28T00:24:00+09:00",
+    "positiveImpacts": [],
+    "negativeImpacts": []
   }
 ]
