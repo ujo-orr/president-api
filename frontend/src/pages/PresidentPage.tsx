@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 import { Arrow } from '../components/ArchiveLayout'
+import { PresidentEvents } from '../components/PresidentEvents'
 import { PresidencyIndicators } from '../components/PresidencyIndicators'
 import { PresidentProfile } from '../components/PresidentProfile'
 import { presidentCareers } from '../data/presidentCareers'
@@ -39,6 +40,7 @@ export function PresidentPage() {
           <PresidentTimeline key={person.id} presidentName={person.name} />
         </Suspense>
       </section>
+      <PresidentEvents key={person.id} presidentId={person.id} />
     </article>
   )
 }
