@@ -1,9 +1,11 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLoaderData, useLocation } from 'react-router-dom'
 import { ArchiveHeader, Arrow } from '../components/ArchiveLayout'
 import { PresidentChronology } from '../components/PresidentChronology'
 import { TaegeukgiBackdrop } from '../components/TaegeukgiBackdrop'
+import type { loadChronology } from '../data/presidentApi'
 
 export function HomePage() {
+  const presidents = useLoaderData<typeof loadChronology>()
   const { hash } = useLocation()
   const isChronology = hash === '#chronology'
 
@@ -19,7 +21,7 @@ export function HomePage() {
       </section>
       <div className="home-screen home-screen--chronology" inert={!isChronology}>
         <ArchiveHeader activePage="chronology" />
-        <PresidentChronology />
+        <PresidentChronology presidents={presidents} />
       </div>
     </div>
   )

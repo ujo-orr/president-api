@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { Link, Outlet, useLocation, useMatch, useViewTransitionState } from 'react-router-dom'
-import { presidents } from '../data/presidents'
+import { Link, Outlet, useLocation, useRouteLoaderData, useViewTransitionState } from 'react-router-dom'
+import type { loadPresident } from '../data/presidentApi'
 import { PresidentSources } from './PresidentSources'
 
 export const archiveNotice = '본 웹 페이지의 평가는 공공데이터와 역사적 기록을 바탕으로 AI를 활용하여 산출하였으며, 평가 기준과 자료의 선정에 따라 해석이 달라질 수 있습니다.'
@@ -51,8 +51,7 @@ export function ArchiveHeader({ activePage, isPresidentDetail }: {
 
 export function ArchiveLayout() {
   const { pathname, hash } = useLocation()
-  const presidentId = useMatch('/presidents/:id')?.params.id
-  const president = presidents.find(({ id }) => id === presidentId)
+  const president = useRouteLoaderData<typeof loadPresident>('president')
   const isHome = pathname === '/'
   const isChronology = isHome && hash === '#chronology'
   const isEvaluation = pathname === '/evaluation-methods'

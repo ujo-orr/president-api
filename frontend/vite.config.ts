@@ -15,6 +15,7 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 5173,
     strictPort: true,
+    proxy: { '/api': process.env.PRESIDENT_API_TARGET || 'http://127.0.0.1:8080' },
     fs: { allow: [searchForWorkspaceRoot(frontendRoot), ...dataFiles] },
     watch: process.env.VITE_USE_POLLING === 'true' ? { usePolling: true } : undefined,
   },

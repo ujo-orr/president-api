@@ -4,7 +4,9 @@
 
 ## 현재 개발 단계
 
-챕터 7 / 13에서 흥망성쇠 기록과 육각형 레이더 차트에 스크롤 애니메이션을 추가했습니다. 화면에 들어온 사건의 긍정·부정 막대는 0.8초간 좌우로 펼쳐지고, 레이더 도형은 1초간 중심에서 각 점수 위치까지 커집니다. 움직임 줄이기를 설정하면 두 그래프를 완성된 상태로 표시합니다.
+챕터 8 / 13에서 대통령 13명의 프로필을 MySQL로 옮기고 Spring Boot REST API를 연대기, 상세, 평가 근거 화면에 연결했습니다. 상세 페이지에서 육각형 레이더 차트의 6개 분야 점수와 흥망성쇠 기록을 볼 수 있습니다.
+
+챕터 7 / 13에서 추가한 흥망성쇠 기록과 육각형 레이더 차트의 스크롤 애니메이션도 유지합니다. 화면에 들어온 사건의 긍정·부정 막대는 0.8초간 좌우로 펼쳐지고, 레이더 도형은 1초간 중심에서 각 점수 위치까지 커집니다. 움직임 줄이기를 설정하면 두 그래프를 완성된 상태로 표시합니다.
 
 | 현재 기술 | 버전 |
 | --- | --- |
@@ -12,18 +14,20 @@
 | TypeScript / Vite | 5.9.3 / 8.3.8 |
 | Vite React 플러그인 / ESLint | 6.3.0 / 9.39.1 |
 | 개발용 컨테이너 Node.js | 24.22.3 LTS (Debian Bookworm Slim) |
+| 백엔드 Java / Spring Boot | 21 / 3.5.16 |
+| 데이터베이스 | MySQL 8.4 |
 
 ## Windows 및 Mac 실행 방법
 
-Docker Desktop을 실행하고 프로젝트 루트에서 작업합니다. Windows PowerShell에서는 `Copy-Item .env.example .env`, Mac 터미널에서는 `cp .env.example .env`로 처음 한 번 설정 파일을 만듭니다. `.env`가 이미 있으면 기존 설정을 사용합니다.
+Docker Desktop을 실행하고 프로젝트 루트에서 작업합니다. Windows PowerShell에서는 `Copy-Item .env.example .env`, Mac 터미널에서는 `cp .env.example .env`로 처음 한 번 설정 파일을 만듭니다. `.env`가 이미 있으면 기존 설정을 유지하고 빠진 항목을 추가합니다. MySQL을 처음 실행하기 전에 `MYSQL_PASSWORD`와 `MYSQL_ROOT_PASSWORD`에 서로 다른 개발용 비밀번호를 입력합니다.
 
 ```sh
-docker compose up -d --build
+docker compose up -d --build --wait
 docker compose ps
-docker compose logs frontend
+docker compose logs backend
 ```
 
-브라우저에서 [http://127.0.0.1:5173](http://127.0.0.1:5173)에 접속합니다. 다른 호스트 포트가 필요하면 `.env`에서 `FRONTEND_PORT`를 설정하고 `docker compose up -d`를 다시 실행합니다. 파일 변경이 자동 반영되지 않을 때는 `.env`의 `VITE_USE_POLLING`을 `true`로 바꾸고 컨테이너를 다시 생성합니다.
+브라우저에서 [프론트엔드](http://127.0.0.1:5173)에 접속합니다. 다른 호스트 포트가 필요하면 `.env`에서 `FRONTEND_PORT` 또는 `API_PORT`를 설정하고 `docker compose up -d --wait`를 다시 실행합니다. Vite의 파일 변경 자동 반영이 필요할 때는 `VITE_USE_POLLING`을 설정할 수 있습니다. 프론트엔드를 호스트에서 `npm run dev`로 실행하면 `http://127.0.0.1:8080`의 API에 연결합니다. 호스트의 API 포트를 바꾼 경우 프론트엔드 실행 환경에 `PRESIDENT_API_TARGET`을 지정합니다.
 
 ```sh
 docker compose exec frontend npm run build
@@ -31,9 +35,19 @@ docker compose exec frontend npm run lint
 docker compose down
 ```
 
-소스와 Vite 설정의 변경은 컨테이너에 바로 반영됩니다. npm 패키지를 추가하거나 버전을 바꾼 뒤에는 `docker compose up -d --build`로 다시 빌드합니다. 잠금 파일은 `frontend`에서 `npm install --package-lock-only`로 만들고 Git에 포함합니다. Docker는 잠금 파일이 있으면 `npm ci`를 사용합니다.
+프론트엔드 소스와 Vite 설정은 컨테이너에 바로 반영됩니다. 백엔드 코드, npm 의존성 또는 Maven 의존성을 변경한 뒤에는 `docker compose up -d --build --wait`로 다시 빌드합니다. Flyway는 백엔드 시작 시 MySQL 스키마와 초기 데이터를 적용합니다. 개발 DB는 `mysql-data` 볼륨에 남습니다. `.env`의 초기 계정 설정은 새 DB를 만들 때 적용됩니다.
 
-다른 컴퓨터에서는 `git pull`로 코드를 가져온 뒤 `.env`를 준비하고 같은 명령을 실행합니다. `.env`, `docs`, `capture`는 필요에 따라 별도로 이동합니다. npm 의존성과 Docker 컨테이너는 각 환경에서 생성합니다. 향후 MySQL을 추가하면 데이터 이전은 별도 백업과 복원으로 진행합니다.
+다른 컴퓨터에서는 `git pull`로 코드를 가져온 뒤 `.env`를 준비하고 같은 명령을 실행합니다. 이후 추가한 DB 자료를 이전하려면 별도로 백업하고 복원합니다.
+
+## 읽기 전용 API
+
+| 요청 | 응답 |
+| --- | --- |
+| `GET /api/presidents` | 첫 취임순 대통령 프로필 13건 |
+| `GET /api/presidents/{id}` | 대통령 한 명의 프로필. 알 수 없는 ID는 404 |
+| `GET /actuator/health` | 백엔드와 DB 연결 상태 |
+
+Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 포트에서는 [API 목록](http://127.0.0.1:8080/api/presidents)과 [백엔드 상태](http://127.0.0.1:8080/actuator/health)를 직접 확인할 수 있습니다.
 
 ## 프로젝트 구조
 
@@ -41,12 +55,11 @@ docker compose down
 | --- | --- |
 | `frontend/src/components` | 공통 화면과 초상 사진 표시 |
 | `frontend/src/pages` | 홈, 대통령 상세, 평가 기준과 출처, 404 화면 |
-| `frontend/src/data` · `frontend/src/types` | 초기 재임 자료와 API 연동을 고려한 타입 |
+| `frontend/src/data` · `frontend/src/types` | REST API 연결, 평가·사건 자료와 데이터 타입 |
 | `frontend/src/styles` | 공통 색상, 카드, 반응형 레이아웃 |
-| `frontend/Dockerfile` · `compose.yaml` | 프론트엔드 개발용 컨테이너 |
+| `backend` | Java REST API, MySQL 조회, Flyway 마이그레이션 |
+| `compose.yaml` | 프론트엔드, 백엔드, MySQL 개발환경 |
 | `docs` · `capture` | 개인 개발 기록과 실행 화면 캡처 |
-
-Spring Boot와 MySQL은 챕터 8에서 도입합니다. 운영 환경에서 상세 경로를 직접 열거나 새로고침할 수 있도록 배포 단계에 SPA 경로 처리를 추가합니다.
 
 ## 개발 로드맵
 

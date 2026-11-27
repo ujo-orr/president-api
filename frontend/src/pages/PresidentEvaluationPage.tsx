@@ -1,17 +1,16 @@
-import { useParams } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import historicalEvents from '../../../data/historical-events.stage-1.json'
 import evaluationData from '../../../data/presidency-assessments.stage-2.json'
 import { EvaluationBackLink } from '../components/EvaluationBackLink'
 import { ExternalLink } from '../components/ExternalLink'
-import { presidents } from '../data/presidents'
+import type { loadPresident } from '../data/presidentApi'
 import { getPresidencyScores } from '../data/presidencyScores'
 import { NotFoundPage } from './NotFoundPage'
 
 const eventsById = new Map(historicalEvents.events.map((event) => [event.id, event]))
 
 export function PresidentEvaluationPage() {
-  const { id } = useParams()
-  const person = presidents.find((candidate) => candidate.id === id)
+  const person = useLoaderData<typeof loadPresident>()
 
   if (!person) return <NotFoundPage presidentMissing />
 

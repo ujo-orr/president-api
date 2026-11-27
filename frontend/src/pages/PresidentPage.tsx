@@ -1,17 +1,16 @@
 import { lazy, Suspense } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import { Arrow } from '../components/ArchiveLayout'
 import { PresidencyIndicators } from '../components/PresidencyIndicators'
 import { PresidentProfile } from '../components/PresidentProfile'
 import { presidentCareers } from '../data/presidentCareers'
-import { presidents } from '../data/presidents'
+import type { loadPresident } from '../data/presidentApi'
 import { NotFoundPage } from './NotFoundPage'
 
 const PresidentTimeline = lazy(() => import('../components/PresidentTimeline'))
 
 export function PresidentPage() {
-  const { id } = useParams()
-  const person = presidents.find((candidate) => candidate.id === id)
+  const person = useLoaderData<typeof loadPresident>()
 
   if (!person) return <NotFoundPage presidentMissing />
 

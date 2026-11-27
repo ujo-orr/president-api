@@ -1,0 +1,766 @@
+INSERT INTO presidents (id, first_term_start, profile) VALUES
+    ('syngman-rhee', '1948-07', '{
+  "id": "syngman-rhee",
+  "name": "이승만",
+  "presidentialNumbers": [
+    1,
+    2,
+    3
+  ],
+  "republics": [
+    1
+  ],
+  "profileImage": {
+    "path": "/images/syngman-rhee.jpg",
+    "source": {
+      "id": "portrait-rhee",
+      "organization": "대한민국 국가기록원",
+      "title": "이승만 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rhee_Syng-Man_in_1948.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "여러분이 나에게 맡기는 직책은 누구나 한사람의 힘으로 성공할 수는 없는 것입니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-syngman-rhee",
+      "organization": "행정안전부 대통령기록관",
+      "title": "초대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1310440&catid=c_pa02062&spMode=view",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "rhee-1948",
+      "presidentId": "syngman-rhee",
+      "startDate": "1948-07",
+      "endDate": "1960-04",
+      "endReason": {
+        "kind": "resignation",
+        "label": "하야",
+        "context": "4·19 혁명 이후",
+        "source": {
+          "title": "대통령기록관 4·19 혁명과 이승만 사임서",
+          "originalUrl": "https://www.pa.go.kr/portal/online_contents/instant_record/instantRecordDetail.do?seq=26"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-01",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제1~3대 이승만 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history01.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('yun-po-sun', '1960-08', '{
+  "id": "yun-po-sun",
+  "name": "윤보선",
+  "presidentialNumbers": [
+    4
+  ],
+  "republics": [
+    2
+  ],
+  "profileImage": {
+    "path": "/images/yun-po-sun.jpg",
+    "source": {
+      "id": "portrait-yun",
+      "organization": "Wikimedia Commons (촬영자 미상)",
+      "title": "윤보선 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Yun_Bo-seon.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "퍼블릭 도메인",
+      "url": "https://commons.wikimedia.org/wiki/File:Yun_Bo-seon.jpg#Licensing"
+    }
+  },
+  "representativeQuote": {
+    "text": "우리는 새로운 외교정책과 새로운 외교체제를 갖추어 새로운 외교활동을 재출발하여야 하겠습니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-yun-po-sun",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제4대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president04.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "yun-1960",
+      "presidentId": "yun-po-sun",
+      "startDate": "1960-08",
+      "endDate": "1962-03",
+      "endReason": {
+        "kind": "resignation",
+        "label": "사임",
+        "context": "5·16 군사정변 이후",
+        "source": {
+          "title": "국사편찬위원회 윤보선 사임 기록",
+          "originalUrl": "https://db.history.go.kr/id/tcct_1962_03_22_0010"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-04",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제4대 윤보선 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history04.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('park-chung-hee', '1963-12', '{
+  "id": "park-chung-hee",
+  "name": "박정희",
+  "presidentialNumbers": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "republics": [
+    3,
+    4
+  ],
+  "profileImage": {
+    "path": "/images/park-chung-hee.jpg",
+    "source": {
+      "id": "portrait-park",
+      "organization": "Korea.net / 해외문화홍보원",
+      "title": "박정희 대통령 초상 사진 (3×4)",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Park_Chung_Hee_(%EB%B0%95%EC%A0%95%ED%9D%AC)_Presidential_Portrait_(3x4).jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "CC BY-SA 2.0",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    }
+  },
+  "representativeQuote": {
+    "text": "국헌을 준수하고 나의 신명을 조국과 민족앞에 바칠 것을 맹서하면서",
+    "kind": "speech",
+    "source": {
+      "id": "speech-park-chung-hee",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제5대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1305368&catid=c_pa02062&spMode=view",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "park-1963",
+      "presidentId": "park-chung-hee",
+      "startDate": "1963-12",
+      "endDate": "1979-10",
+      "startContext": {
+        "events": [
+          "5·16 군사정변"
+        ],
+        "source": {
+          "title": "국사편찬위원회 5·16 군사정변 기록",
+          "originalUrl": "https://db.history.go.kr/id/tcct_1961_05_16_0010"
+        }
+      },
+      "endReason": {
+        "kind": "death",
+        "cause": "총격",
+        "source": {
+          "title": "국사편찬위원회 10·26 기록",
+          "originalUrl": "https://db.history.go.kr/id/tcct_1979_10_26_0010"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-05",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제5~9대 박정희 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history05.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('choi-kyu-hah', '1979-12', '{
+  "id": "choi-kyu-hah",
+  "name": "최규하",
+  "presidentialNumbers": [
+    10
+  ],
+  "republics": [
+    4
+  ],
+  "profileImage": {
+    "path": "/images/choi-kyu-hah.jpg",
+    "source": {
+      "id": "portrait-choi-kyu-hah",
+      "organization": "Korea.net / 해외문화홍보원",
+      "title": "최규하 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Presidents_of_the_Republic_Of_Korea_(4261836786)_Choi.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "CC BY-SA 2.0",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    }
+  },
+  "representativeQuote": {
+    "text": "국민 각계각층의 광범위한 의견을 듣기 위하여 그들과의 대화를 폭넓게 갖고자 하며",
+    "kind": "speech",
+    "source": {
+      "id": "speech-choi-kyu-hah",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제10대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president10.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "choi-1979",
+      "presidentId": "choi-kyu-hah",
+      "startDate": "1979-12",
+      "endDate": "1980-08",
+      "endReason": {
+        "kind": "resignation",
+        "label": "사임",
+        "context": "신군부 집권 과정",
+        "source": {
+          "title": "국사편찬위원회 최규하 사임과 신군부 집권 기록",
+          "originalUrl": "https://db.history.go.kr/item/cons/level.do?levelId=cons_009_0010"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-10",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제10대 최규하 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history10.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('chun-doo-hwan', '1980-09', '{
+  "id": "chun-doo-hwan",
+  "name": "전두환",
+  "presidentialNumbers": [
+    11,
+    12
+  ],
+  "republics": [
+    4,
+    5
+  ],
+  "profileImage": {
+    "path": "/images/chun-doo-hwan.jpg",
+    "source": {
+      "id": "portrait-chun-doo-hwan",
+      "organization": "Korea.net / 해외문화홍보원",
+      "title": "전두환 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Chun_Doo-hwan_(%EC%A0%84%EB%91%90%ED%99%98)_Presidential_Portrait_(3x4).jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "CC BY-SA 2.0",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    }
+  },
+  "representativeQuote": {
+    "text": "우선 참다운 민주역량의 축적은 우리의 당면과제 중의 하나입니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-chun-doo-hwan",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제11대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president11.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "chun-1980",
+      "presidentId": "chun-doo-hwan",
+      "startDate": "1980-09",
+      "endDate": "1988-02",
+      "startContext": {
+        "events": [
+          "12·12 군사반란",
+          "5·17 비상계엄 확대"
+        ],
+        "source": {
+          "title": "대법원 12·12 군사반란 및 5·18 내란 판결",
+          "originalUrl": "https://www.law.go.kr/LSW/precInfoP.do?mode=0&precSeq=603883"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-11",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제11~12대 전두환 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history11.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('roh-tae-woo', '1988-02', '{
+  "id": "roh-tae-woo",
+  "name": "노태우",
+  "presidentialNumbers": [
+    13
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/roh-tae-woo.jpg",
+    "source": {
+      "id": "portrait-roh-tae-woo",
+      "organization": "Korea.net / 해외문화홍보원",
+      "title": "노태우 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Roh_Tae-woo_(%EB%85%B8%ED%83%9C%EC%9A%B0_)_Presidential_Potraits.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "CC BY-SA 2.0",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    }
+  },
+  "representativeQuote": {
+    "text": "어느 누구라도 할 수 있는 ‘보통사람들의 시대’가 왔습니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-roh-tae-woo",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제13대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president13.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "roh-tae-1988",
+      "presidentId": "roh-tae-woo",
+      "startDate": "1988-02",
+      "endDate": "1993-02"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-13",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제13대 노태우 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history13.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('kim-young-sam', '1993-02', '{
+  "id": "kim-young-sam",
+  "name": "김영삼",
+  "presidentialNumbers": [
+    14
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/kim-young-sam.jpg",
+    "source": {
+      "id": "portrait-kim-young-sam",
+      "organization": "대한민국 국가기록원",
+      "title": "김영삼 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Kim_Young-sam_presidential_portrait_(3x4_cropped).jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "저는 신한국 창조의 꿈을 가슴 깊이 품고 있습니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-kim-young-sam",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제14대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1307797&catid=c_pa02062&spMode=view",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "kim-young-1993",
+      "presidentId": "kim-young-sam",
+      "startDate": "1993-02",
+      "endDate": "1998-02"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-14",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제14대 김영삼 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history14.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('kim-dae-jung', '1998-02', '{
+  "id": "kim-dae-jung",
+  "name": "김대중",
+  "presidentialNumbers": [
+    15
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/kim-dae-jung.jpg",
+    "source": {
+      "id": "portrait-kim-dae-jung",
+      "organization": "대한민국 국가기록원",
+      "title": "김대중 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Kim_Dae-jung_presidential_portrait_(3x4).jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "국민정부는 어떠한 정치보복도 하지 않겠습니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-kim-dae-jung",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제15대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president15.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "kim-dae-1998",
+      "presidentId": "kim-dae-jung",
+      "startDate": "1998-02",
+      "endDate": "2003-02"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-15",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제15대 김대중 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history15.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('roh-moo-hyun', '2003-02', '{
+  "id": "roh-moo-hyun",
+  "name": "노무현",
+  "presidentialNumbers": [
+    16
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/roh-moo-hyun.jpg",
+    "source": {
+      "id": "portrait-roh-moo-hyun",
+      "organization": "대한민국 국가기록원",
+      "title": "노무현 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Roh_Moo-hyun_presidential_portrait.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "원칙과 신뢰, 공정과 투명, 대화와 타협, 분권과 자율",
+    "kind": "speech",
+    "source": {
+      "id": "speech-roh-moo-hyun",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제16대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/online_contents/inauguration/president16.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "roh-moo-2003",
+      "presidentId": "roh-moo-hyun",
+      "startDate": "2003-02",
+      "endDate": "2008-02"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-16",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제16대 노무현 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history16.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('lee-myung-bak', '2008-02', '{
+  "id": "lee-myung-bak",
+  "name": "이명박",
+  "presidentialNumbers": [
+    17
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/lee-myung-bak.jpg",
+    "source": {
+      "id": "portrait-lee-myung-bak",
+      "organization": "대한민국 국가기록원",
+      "title": "이명박 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Lee_Myung-bak_presidential_portrait.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "우리는 ‘이념의 시대’를 넘어 ‘실용의 시대’로 나가야 합니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-lee-myung-bak",
+      "organization": "대한민국 정책브리핑",
+      "title": "제17대 대통령 취임사",
+      "originalUrl": "https://www.korea.kr/briefing/speechView.do?newsId=132013693",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "lee-2008",
+      "presidentId": "lee-myung-bak",
+      "startDate": "2008-02",
+      "endDate": "2013-02"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-17",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제17대 이명박 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history17.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('park-geun-hye', '2013-02', '{
+  "id": "park-geun-hye",
+  "name": "박근혜",
+  "presidentialNumbers": [
+    18
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/park-geun-hye.png",
+    "source": {
+      "id": "portrait-park-geun-hye",
+      "organization": "대한민국 국가기록원",
+      "title": "박근혜 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Park_Geun-hye_presidential_portrait_(cropped).png",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "경제부흥과 국민행복, 문화융성을 이뤄낼 것입니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-park-geun-hye",
+      "organization": "대한민국 정책브리핑",
+      "title": "제18대 대통령 취임사",
+      "originalUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148756155",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "park-geun-2013",
+      "presidentId": "park-geun-hye",
+      "startDate": "2013-02",
+      "endDate": "2017-03",
+      "endReason": {
+        "kind": "impeachment",
+        "source": {
+          "title": "헌법재판소 박근혜 탄핵 결정",
+          "originalUrl": "https://law.go.kr/LSW/detcInfoP.do?detcSeq=54153"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-18",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제18대 박근혜 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history18.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('moon-jae-in', '2017-05', '{
+  "id": "moon-jae-in",
+  "name": "문재인",
+  "presidentialNumbers": [
+    19
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/moon-jae-in.jpg",
+    "source": {
+      "id": "portrait-moon-jae-in",
+      "organization": "대한민국 정부",
+      "title": "문재인 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:President_Moon_Jae_In.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "공공누리 제1유형",
+      "url": "https://www.kogl.or.kr/info/licenseType1.do"
+    }
+  },
+  "representativeQuote": {
+    "text": "기회는 평등할 것입니다. 과정은 공정할 것입니다. 결과는 정의로울 것입니다.",
+    "kind": "speech",
+    "source": {
+      "id": "speech-moon-jae-in",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제19대 대통령 취임사",
+      "originalUrl": "https://www.pa.go.kr/research/contents/speech/index.jsp?artid=1401691&catid=c_pa02062&spMode=view",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "moon-2017",
+      "presidentId": "moon-jae-in",
+      "startDate": "2017-05",
+      "endDate": "2022-05"
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-19",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제19대 문재인 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history19.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}'),
+
+    ('yoon-suk-yeol', '2022-05', '{
+  "id": "yoon-suk-yeol",
+  "name": "윤석열",
+  "presidentialNumbers": [
+    20
+  ],
+  "republics": [
+    6
+  ],
+  "profileImage": {
+    "path": "/images/yoon-suk-yeol.jpg",
+    "source": {
+      "id": "portrait-yoon-suk-yeol",
+      "organization": "대한민국 대통령실",
+      "title": "윤석열 대통령 초상 사진",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:South_Korea_President_Yoon_Suk_Yeol_portrait.jpg",
+      "verifiedAt": "2026-11-25"
+    },
+    "license": {
+      "name": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  },
+  "representativeQuote": {
+    "text": "국민이 진정한 주인인 나라",
+    "kind": "speech",
+    "source": {
+      "id": "speech-yoon-suk-yeol",
+      "organization": "정책주간지 K-공감",
+      "title": "제20대 대통령 취임사",
+      "originalUrl": "https://gonggam.korea.kr/newsContentView.es?mid=a12501000000&section_id=NCCD_POLICY_TOTAL&news_id=EBC6D4014D394203E0540021F662AC5F",
+      "verifiedAt": "2026-11-25"
+    }
+  },
+  "terms": [
+    {
+      "id": "yoon-2022",
+      "presidentId": "yoon-suk-yeol",
+      "startDate": "2022-05",
+      "endDate": "2025-04",
+      "endReason": {
+        "kind": "impeachment",
+        "source": {
+          "title": "헌법재판소 윤석열 탄핵 결정",
+          "originalUrl": "https://law.ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=4253958&cbIdx=1106"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "biography-20",
+      "organization": "행정안전부 대통령기록관",
+      "title": "제20대 윤석열 약력",
+      "originalUrl": "https://www.pa.go.kr/online_contents/president/history20.jsp",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}');
