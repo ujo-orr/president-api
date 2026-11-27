@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import { scoreCategories } from '../data/presidencyScores'
 import { getPresidencyTimeline, timelineWeightLimit } from '../data/presidencyTimeline'
+import { useChartReveal } from '../hooks/useChartReveal'
 import { ExternalLink } from './ExternalLink'
 
 function formatEventDate(value: string) {
@@ -8,14 +9,21 @@ function formatEventDate(value: string) {
   return `${year}년${month ? ` ${month}월` : ''}${day ? ` ${day}일` : ''}`
 }
 
+function finishEventReveal(summary: Element | null) {
+  if (summary?.hasAttribute('data-chart-reveal')) {
+    summary.setAttribute('data-chart-reveal', 'finished')
+  }
+}
+
 export default function PresidentTimeline({ presidentName }: { presidentName: string }) {
   const [axisId, setAxisId] = useState('')
+  const chartRef = useChartReveal<HTMLDivElement>('.event-summary', axisId)
   const filterId = useId()
   const category = scoreCategories.find(({ id }) => id === axisId)
   const events = getPresidencyTimeline(presidentName, axisId, category?.label)
 
   return (
-    <div className="event-chart">
+    <div className="event-chart" ref={chartRef}>
       <p>재임 중 사건을 기록된 날짜순으로 보여줍니다. 사건 사이의 간격은 경과 시간을 나타내지 않습니다.</p>
       <div className="event-chart-filter">
         <label htmlFor={filterId}>평가 분야</label>
@@ -32,10 +40,21 @@ export default function PresidentTimeline({ presidentName }: { presidentName: st
       {events.length > 0 ? (
         <ol className="event-list" aria-label="재임 중 사건">
           {events.map(({ id, date, name, categories, role, findings, sources, positive, negative }) => (
-            <li key={id} className="event-row">
+            <li key={id} className="event-row" onAnimationEnd={(event) => {
+              if (event.animationName === 'event-reading-progress') {
+                finishEventReveal(event.currentTarget.querySelector('.event-summary'))
+              }
+            }}>
+              <span className="event-progress" aria-hidden="true" />
               <time dateTime={date}>{formatEventDate(date)}</time>
               <details className="event-details">
-                <summary className="event-summary">
+                <summary
+                  className="event-summary"
+                  onClick={(event) => finishEventReveal(event.currentTarget)}
+                  onFocus={(event) => {
+                    if (event.currentTarget.matches(':focus-visible')) finishEventReveal(event.currentTarget)
+                  }}
+                >
                   <span className="event-name">{name}</span>
                   {positive || negative ? (
                     <span className="event-impact">
