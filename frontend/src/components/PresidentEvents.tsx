@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { fetchPresidentEvents } from '../data/presidentApi'
-import type { EventCategory, LegalDecision, LegalStatus, PresidentEvent } from '../types/presidentEvent'
+import type { EventCategory, EventImpact, LegalDecision, LegalStatus, PresidentEvent } from '../types/presidentEvent'
 import { ExternalLink } from './ExternalLink'
 
 const categories: Record<EventCategory, string> = {
@@ -40,6 +40,32 @@ function DetailField({ label, children }: { label: string; children: ReactNode }
   return <div><h4>{label}</h4>{children}</div>
 }
 
+const impactHeadings = {
+  POLICY: ['긍정적 효과', '부정적 효과 및 한계'],
+  DIPLOMATIC: ['성과', '한계 및 비판'],
+  NATIONAL_INCIDENT: ['확인된 효과', '대응 과정의 문제점'],
+  HISTORICAL_EVENT: ['역사적 의의', '영향 및 한계'],
+} as const
+
+function SourcedImpacts({ label, items, sources }: {
+  label: string
+  items: EventImpact[] | null | undefined
+  sources: PresidentEvent['sources']
+}) {
+  if (!items?.length) return null
+
+  return (
+    <DetailField label={label}>
+      <ul>{items.map(({ text, sourceUrl }) => (
+        <li key={`${sourceUrl}:${text}`}>
+          <p>{text}</p>
+          <ExternalLink href={sourceUrl}>{sources.find((source) => source.url === sourceUrl)?.title ?? '원문 출처'}</ExternalLink>
+        </li>
+      ))}</ul>
+    </DetailField>
+  )
+}
+
 function EventCard({ event }: { event: PresidentEvent }) {
   const { background, verifiedFacts, perspectives, responsibility, legalDecisions, quote, socialImpact, followUp, sources } = event
   const outcomes = legalDecisions.filter((decision) => decision.kind === 'CONSTITUTIONAL' || decision.result === event.legalStatus)
@@ -49,6 +75,9 @@ function EventCard({ event }: { event: PresidentEvent }) {
   const status = legalLabels[event.legalStatus]
   const needsSubject = event.legalStatus === 'CONVICTED_FINAL' || event.legalStatus === 'ACQUITTED_FINAL'
   const showStatus = status && !needsSubject && !outcomes.some((decision) => decision.kind !== 'CONSTITUTIONAL')
+  const impactType = event.eventType ?? (event.category === 'NATIONAL_INCIDENT' ? 'NATIONAL_INCIDENT' : 'HISTORICAL_EVENT')
+  const [positiveHeading, negativeHeading] = impactHeadings[impactType]
+  const perspectiveHeading = event.category === 'PUBLIC_STATEMENT' ? '사회적 반응' : '주요 주장 및 반론'
 
   return (
     <details className="public-event">
@@ -74,24 +103,30 @@ function EventCard({ event }: { event: PresidentEvent }) {
           <DetailField label={quote.text ? '발언 원문' : '발언 요약'}>
             {quote.text && <blockquote>{quote.text}</blockquote>}
             <p>{quote.speaker} · {quote.role} · <EventDate value={quote.date} />{quote.time && ` ${quote.time}`}{quote.place && ` · ${quote.place}`}</p>
-            <p>{quote.context}</p>
             <ExternalLink href={quote.sourceUrl}>{quote.text ? '발언 원문 또는 영상 출처' : '발언 요약 출처'}</ExternalLink>
           </DetailField>
         )}
+        {quote?.context && <DetailField label="발언 배경"><p>{quote.context}</p></DetailField>}
         {background && <DetailField label="발생 배경"><p>{background}</p></DetailField>}
         {verifiedFacts.length > 0 && (
           <DetailField label="확인된 사실"><ul>{verifiedFacts.map((fact) => <li key={fact}>{fact}</li>)}</ul></DetailField>
         )}
-        {perspectives.length > 0 && (
-          <DetailField label={quote ? '관련 논란 및 반응' : '주요 주장 및 해석'}>
+        <SourcedImpacts label="정부 대응" items={event.governmentResponses} sources={sources} />
+        <SourcedImpacts label={positiveHeading} items={event.positiveImpacts} sources={sources} />
+        <SourcedImpacts label={negativeHeading} items={event.negativeImpacts} sources={sources} />
+        {!!perspectives?.length && (
+          <DetailField label={perspectiveHeading}>
             <ul>{perspectives.map(({ speaker, claim, sourceUrl }) => (
-              <li key={`${speaker}:${claim}`}><p><strong>{speaker}</strong> · {claim}</p><ExternalLink href={sourceUrl}>주장 출처</ExternalLink></li>
+              <li key={`${speaker}:${claim}:${sourceUrl}`}>
+                <p><strong>{speaker}</strong> · {claim}</p>
+                <ExternalLink href={sourceUrl}>{sources.find((source) => source.url === sourceUrl)?.title ?? '주장 출처'}</ExternalLink>
+              </li>
             ))}</ul>
           </DetailField>
         )}
         {responsibility && <DetailField label="대통령 및 정부의 관여 범위"><p>{responsibility}</p></DetailField>}
         {legalDecisions.length > 0 && (
-          <DetailField label="사법적 판단 및 판결 이유">
+          <DetailField label="사법적 판단">
             <ul className="public-event-decisions">{legalDecisions.map((decision) => (
               <li key={`${decision.subject}:${decision.issue}:${decision.decidedAt}:${decision.result}`}>
                 <strong>{decision.subject} · <DecisionResult decision={decision} />{!decision.final && ' (미확정)'}</strong>

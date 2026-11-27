@@ -24,8 +24,10 @@ export async function fetchPresidentEvents(id: string, signal: AbortSignal): Pro
   const events: PresidentEvent[] = await response.json()
   if (!Array.isArray(events) || !events.every((event) =>
     typeof event?.id === 'string' && typeof event.occurredAt === 'string'
-    && Array.isArray(event.verifiedFacts) && Array.isArray(event.perspectives)
+    && Array.isArray(event.verifiedFacts)
     && Array.isArray(event.legalDecisions) && Array.isArray(event.sources)
+    && [event.positiveImpacts, event.negativeImpacts, event.governmentResponses, event.perspectives]
+      .every((items) => items == null || Array.isArray(items))
   )) throw new Error('Invalid president events response.')
 
   return events.sort((a, b) => a.occurredAt.localeCompare(b.occurredAt) || a.id.localeCompare(b.id))

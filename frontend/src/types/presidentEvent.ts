@@ -19,18 +19,27 @@ export interface LegalDecision {
   sourceUrl: string
 }
 
+export interface EventImpact {
+  text: string
+  sourceUrl: string
+}
+
 export interface PresidentEvent {
   id: string
   presidentId: string
   title: string
   category: EventCategory
+  eventType?: 'POLICY' | 'DIPLOMATIC' | null
   occurredAt: string
   datePrecision: 'YEAR' | 'MONTH' | 'DAY'
   presidencyPhase: 'BEFORE' | 'DURING' | 'AFTER'
   summary: string
   background: string | null
   verifiedFacts: string[]
-  perspectives: { speaker: string; claim: string; sourceUrl: string }[]
+  positiveImpacts?: EventImpact[] | null
+  negativeImpacts?: EventImpact[] | null
+  governmentResponses?: EventImpact[] | null
+  perspectives?: { speaker: string; claim: string; sourceUrl: string }[] | null
   responsibility: string
   legalStatus: LegalStatus
   legalDecisions: LegalDecision[]
