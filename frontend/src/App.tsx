@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ArchiveLayout } from './components/ArchiveLayout'
+import { ArchiveDataError, ArchiveLoading } from './components/ArchiveDataState'
+import { loadChronology, loadPresident } from './data/presidentApi'
 import { EvaluationPage } from './pages/EvaluationPage'
 import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
@@ -9,11 +11,26 @@ const router = createBrowserRouter([
   {
     Component: ArchiveLayout,
     children: [
-      { index: true, Component: HomePage },
-      { path: 'presidents/:id', Component: PresidentPage },
+      {
+        index: true,
+        loader: loadChronology,
+        Component: HomePage,
+        HydrateFallback: ArchiveLoading,
+        ErrorBoundary: ArchiveDataError,
+      },
+      {
+        id: 'president',
+        path: 'presidents/:id',
+        loader: loadPresident,
+        Component: PresidentPage,
+        HydrateFallback: ArchiveLoading,
+        ErrorBoundary: ArchiveDataError,
+      },
       {
         path: 'presidents/:id/evaluation-methods',
-        HydrateFallback: () => <p role="status">평가 근거를 불러오는 중입니다.</p>,
+        loader: loadPresident,
+        HydrateFallback: ArchiveLoading,
+        ErrorBoundary: ArchiveDataError,
         lazy: async () => {
           const { PresidentEvaluationPage } = await import('./pages/PresidentEvaluationPage')
           return { Component: PresidentEvaluationPage }

@@ -1,10 +1,11 @@
 import { useLayoutEffect, useRef } from 'react'
 import type { KeyboardEvent, RefObject } from 'react'
 import { NavLink, useOutletContext } from 'react-router-dom'
-import { formatPresidentialNumbers, formatRepublics, presidents } from '../data/presidents'
+import { formatPresidentialNumbers, formatRepublics } from '../data/presidents'
+import type { President } from '../types/archive'
 import { PresidentPortrait } from './PresidentPortrait'
 
-export function PresidentChronology() {
+export function PresidentChronology({ presidents }: { presidents: President[] }) {
   const section = useRef<HTMLElement>(null)
   const scrollRegion = useRef<HTMLDivElement>(null)
   const progressBar = useRef<HTMLProgressElement>(null)

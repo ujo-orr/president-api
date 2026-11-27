@@ -9,6 +9,7 @@
 
 node_modules/
 dist/
+/backend/target/
 .idea/
 *.iml
 .DS_Store
