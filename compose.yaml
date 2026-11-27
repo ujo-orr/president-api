@@ -23,7 +23,9 @@ services:
       - ./frontend/tsconfig.json:/app/tsconfig.json
       - ./frontend/eslint.config.js:/app/eslint.config.js
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     init: true
     depends_on:
       mysql:

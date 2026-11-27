@@ -1,7 +1,15 @@
+FROM python:3.13-slim AS archive-data
+WORKDIR /data
+COPY data/ ./
+RUN python -B prepare_presidency_archive.py --sql /tmp/R__sync_presidency_archive.sql
+RUN python -B prepare_public_events.py --sql /tmp/R__sync_public_events.sql
+
 FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /build
-COPY pom.xml .
-COPY src ./src
+COPY backend/pom.xml .
+COPY backend/src ./src
+COPY --from=archive-data /tmp/R__sync_presidency_archive.sql ./src/main/resources/db/migration/
+COPY --from=archive-data /tmp/R__sync_public_events.sql ./src/main/resources/db/migration/
 RUN --mount=type=cache,target=/root/.m2 mvn -B -ntp package
 
 FROM eclipse-temurin:21-jre-alpine
