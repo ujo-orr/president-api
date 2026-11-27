@@ -295,20 +295,31 @@ img { display: block; max-width: 100%; }
 }
 .event-positive { color: #275c4e; }
 .event-negative { color: #a5202e; }
-.event-list { position: relative; display: grid; gap: 10px; margin-top: 16px; padding-inline-start: 20px; }
+.event-list {
+  --event-row-gap: 10px;
+  --event-marker-top: 16px;
+  --event-marker-size: 9px;
+  position: relative;
+  display: grid;
+  gap: var(--event-row-gap);
+  margin-top: 16px;
+  padding-inline-start: 20px;
+}
 .event-list::before { content: ''; position: absolute; inset: 0 auto 0 4px; border-inline-start: 1px solid #b8c0cb; }
 .event-row { position: relative; display: grid; grid-template-columns: 8rem minmax(0, 1fr); align-items: start; gap: 8px; }
 .event-row > time { padding-block: 13px; color: var(--muted); font-size: .82rem; font-variant-numeric: tabular-nums; }
-.event-row::before {
+.event-row::before, .event-progress::after {
   content: '';
   position: absolute;
-  inset: 16px auto auto -20px;
-  width: 9px;
-  height: 9px;
+  inset-block-start: var(--event-marker-top);
+  width: var(--event-marker-size);
+  height: var(--event-marker-size);
   border: 2px solid var(--surface);
   border-radius: 50%;
   background: var(--focus);
 }
+.event-row::before { inset-inline-start: -20px; z-index: 1; }
+.event-progress { display: none; }
 .event-details { min-width: 0; border: 1px solid var(--line); border-radius: 10px; }
 .event-summary {
   display: grid;
@@ -349,6 +360,56 @@ img { display: block; max-width: 100%; }
 .event-bar-negative { justify-content: end; }
 .event-bar-negative > span { background: #a5202e; }
 .event-bar-positive > span { background: #275c4e; }
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .event-list { --event-reveal-timing: 800ms ease-out both; }
+  .event-row:has(.event-summary[data-chart-reveal])::before { background: #b8c0cb; }
+  .event-progress {
+    position: absolute;
+    inset: 0 auto calc(-1 * var(--event-row-gap)) -20px;
+    width: var(--event-marker-size);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .event-progress::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 4px;
+    width: 2px;
+    background: var(--focus);
+  }
+  .event-progress::after { inset-inline-start: 0; }
+  .event-row:last-child > .event-progress { inset-block-end: 0; }
+  .event-row:has(.event-summary[data-chart-reveal]:not([data-chart-reveal="pending"]),
+    ~ .event-row .event-summary[data-chart-reveal]:not([data-chart-reveal="pending"])) > .event-progress {
+    display: block;
+  }
+  .event-row:has(.event-summary[data-chart-reveal="playing"]) > .event-progress {
+    animation: event-reading-progress var(--event-reveal-timing);
+  }
+
+  .event-bar-negative > span { transform-origin: right; }
+  .event-bar-positive > span { transform-origin: left; }
+  .event-summary[data-chart-reveal="pending"] .event-bar > span { transform: scaleX(0); }
+  .event-summary[data-chart-reveal="playing"] .event-bar > span {
+    animation: event-weight-reveal var(--event-reveal-timing);
+  }
+
+  .radar-values { transform-box: view-box; }
+  .presidency-radar[data-chart-reveal="pending"] .radar-values { transform: scale(0); }
+  .presidency-radar[data-chart-reveal="playing"] .radar-values {
+    animation: radar-reveal 1000ms ease-out both;
+  }
+}
+
+@keyframes event-reading-progress {
+  from { clip-path: inset(0 0 100%); }
+  30% { clip-path: inset(0 0 calc(100% - var(--event-marker-top))); }
+  to { clip-path: inset(0); }
+}
+@keyframes event-weight-reveal { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes radar-reveal { from { transform: scale(0); } to { transform: scale(1); } }
+
 .event-body { padding: 8px 12px 12px; border-top: 1px solid var(--line); }
 .detail-panel .event-meta { margin-bottom: 4px; font-size: .78rem; }
 .event-body > ul:not(.event-sources) { padding-inline-start: 1.25em; list-style: disc; font-size: .88rem; line-height: 1.65; }
@@ -396,7 +457,7 @@ img { display: block; max-width: 100%; }
   .evaluation-grid { gap: 10px; }
   .event-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .event-row > time { padding-block: 2px; }
-  .event-row::before { top: 5px; }
+  .event-list { --event-marker-top: 5px; }
 }
 
 @media (max-width: 480px) {

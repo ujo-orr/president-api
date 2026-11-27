@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { getPresidencyScores, maximumScore, scoreAdjustmentConstant } from '../data/presidencyScores'
 import type { RadarScore } from '../data/presidencyScores'
+import { useChartReveal } from '../hooks/useChartReveal'
 import { Arrow } from './ArchiveLayout'
 
 const center = { x: 210, y: 163 }
@@ -32,8 +33,10 @@ function RadarChart({ scores }: { scores: DisplayScore[] }) {
           return <line key={id} x1={center.x} y1={center.y} x2={edge.x} y2={edge.y} />
         })}
       </g>
-      <polygon className="radar-area" points={points.map(({ x, y }) => `${x},${y}`).join(' ')} />
-      {points.map(({ x, y }, index) => <circle className="radar-point" key={scores[index].id} cx={x} cy={y} r={4} />)}
+      <g className="radar-values" style={{ transformOrigin: `${center.x}px ${center.y}px` }}>
+        <polygon className="radar-area" points={points.map(({ x, y }) => `${x},${y}`).join(' ')} />
+        {points.map(({ x, y }, index) => <circle className="radar-point" key={scores[index].id} cx={x} cy={y} r={4} />)}
+      </g>
       {scores.map(({ id, label, score }, index) => {
         const anchor = position(index, 131)
         return (
@@ -48,11 +51,12 @@ function RadarChart({ scores }: { scores: DisplayScore[] }) {
 }
 
 export function PresidencyIndicators({ presidentId }: { presidentId: string }) {
+  const chartRef = useChartReveal<HTMLElement>('.presidency-radar', presidentId)
   const scores = getPresidencyScores(presidentId).map((axis) => ({ ...axis, score: axis.score ?? 0 }))
 
   return (
     <div className="details-middle presidency-indicators">
-      <section className="detail-panel" aria-labelledby="presidency-facts-heading">
+      <section ref={chartRef} className="detail-panel" aria-labelledby="presidency-facts-heading">
         <h2 id="presidency-facts-heading">재임 기간 지표</h2>
         <RadarChart scores={scores} />
         <p>AI가 평가한 역사적 사건의 긍정·부정 가중치와 보정 상수 {scoreAdjustmentConstant}를 적용해 0~10점으로 환산했습니다. 자료가 없어 표시된 0점은 해당 분야의 실패를 의미하지 않습니다.</p>
