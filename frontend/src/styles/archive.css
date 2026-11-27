@@ -219,7 +219,8 @@ img { display: block; max-width: 100%; }
 .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; color: var(--muted); font-size: .88rem; text-decoration: none; }
 .back-link:hover { text-decoration: underline; }
 .back-link .arrow, .detail-panel a .arrow { width: 17px; height: 17px; }
-.details-top, .details-middle { display: grid; gap: 16px; margin-bottom: 16px; }
+.details { --detail-panel-spacing: 16px; }
+.details-top, .details-middle { display: grid; gap: 16px; margin-bottom: var(--detail-panel-spacing); }
 .details-top { grid-template-columns: clamp(160px, 23vw, 248px) minmax(0, 1fr); }
 .profile, .detail-panel {
   border: 1px solid var(--line);
@@ -246,7 +247,7 @@ img { display: block; max-width: 100%; }
 .profile-party-list img { flex: none; width: 22px; height: 22px; object-fit: contain; }
 .profile-quote { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .profile-quote blockquote { margin: 0; font-size: clamp(1rem, 2.05vw, 1.45rem); font-weight: 650; line-height: 1.6; word-break: keep-all; }
-.details-career { margin-bottom: 16px; }
+.details-career { margin-bottom: var(--detail-panel-spacing); }
 .career-list li {
   display: grid;
   grid-template-columns: 8rem minmax(0, 1fr);
@@ -429,6 +430,54 @@ img { display: block; max-width: 100%; }
 .president-evidence .source-list a { word-break: keep-all; overflow-wrap: anywhere; }
 .not-found { display: grid; align-content: start; justify-items: start; gap: 16px; padding-block: 64px; }
 .not-found .error-code { color: var(--muted); font-size: .94rem; font-weight: 700; }
+
+.public-events { margin-block-start: var(--detail-panel-spacing); overflow-wrap: anywhere; }
+.public-event-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 18px; }
+.public-event-filters button, .public-events-error button {
+  min-height: 42px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-size: .86rem;
+  cursor: pointer;
+}
+.public-event-filters button[aria-pressed="true"] { background: var(--surface-muted); border-color: var(--muted); font-weight: 700; }
+.public-event-filters button:hover, .public-events-error button:hover { background: var(--surface-muted); }
+.public-event-list { display: grid; gap: 12px; }
+.public-event { border: 1px solid var(--line); border-radius: 12px; }
+.public-event summary { display: block; position: relative; padding: 14px 42px 14px 16px; cursor: pointer; list-style: none; }
+.public-event summary::-webkit-details-marker { display: none; }
+.public-event summary:hover { background: var(--surface-muted); border-radius: inherit; }
+.public-event summary::after {
+  content: '';
+  position: absolute;
+  inset: 19px 18px auto auto;
+  width: 8px;
+  height: 8px;
+  border: solid var(--muted);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.public-event[open] summary::after { transform: rotate(225deg); }
+.public-event-meta, .public-event-outcomes { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: .8rem; }
+.public-event-outcomes { margin-top: 9px; }
+.public-event-outcomes > span { background: var(--surface-muted); padding: 3px 8px; border-radius: 5px; }
+.public-event [data-phase="DURING"] { color: #49785c; }
+.public-event [data-legal-status="CONVICTED_FINAL"] { color: #a34f59; }
+.public-event [data-legal-status="ACQUITTED_FINAL"] { color: #4c6fa6; }
+.public-event [data-legal-status="UNKNOWN"] { font-weight: 700; }
+.public-event h3 { margin: 5px 0; font-size: 1rem; }
+.public-event p, .public-event h4 { margin: 0; }
+.public-event-body { display: grid; gap: 15px; padding: 16px; border-top: 1px solid var(--line); font-size: .9rem; }
+.public-event-body h4 { margin-bottom: 4px; font-size: .9rem; }
+.public-event-body ul { margin: 0; padding-inline-start: 1.2em; }
+.public-event-body li + li { margin-top: 6px; }
+.public-event-body blockquote { margin: 6px 0 10px; padding: 10px 12px; border-inline-start: 3px solid var(--muted); background: var(--surface-muted); }
+.public-events .public-events-notice { margin: 18px 0 0; font-size: .78rem; }
+.public-events-error button { margin-bottom: 8px; }
 
 @media (max-width: 740px) {
   :root { --header-height: 60px; }
