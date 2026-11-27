@@ -28,4 +28,12 @@ class PresidentController {
         return presidents.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "President not found"));
     }
+
+    @GetMapping("/{id}/events")
+    List<JsonNode> events(@PathVariable String id) {
+        if (!presidents.exists(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "President not found");
+        }
+        return presidents.findEvents(id);
+    }
 }

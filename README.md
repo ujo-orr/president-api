@@ -4,6 +4,8 @@
 
 ## 현재 개발 단계
 
+챕터 9 / 13에서 기존 재임 사건, 평가, 점수와 연간 통계를 검증해 MySQL에 저장했습니다. 확인된 결측 관측은 출처가 있는 별도 계열로 보존합니다.
+
 챕터 8 / 13에서 대통령 13명의 프로필을 MySQL로 옮기고 Spring Boot REST API를 연대기, 상세, 평가 근거 화면에 연결했습니다. 상세 페이지에서 육각형 레이더 차트의 6개 분야 점수와 흥망성쇠 기록을 볼 수 있습니다.
 
 챕터 7 / 13에서 추가한 흥망성쇠 기록과 육각형 레이더 차트의 스크롤 애니메이션도 유지합니다. 화면에 들어온 사건의 긍정·부정 막대는 0.8초간 좌우로 펼쳐지고, 레이더 도형은 1초간 중심에서 각 점수 위치까지 커집니다. 움직임 줄이기를 설정하면 두 그래프를 완성된 상태로 표시합니다.
@@ -49,6 +51,18 @@ docker compose down
 
 Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 포트에서는 [API 목록](http://127.0.0.1:8080/api/presidents)과 [백엔드 상태](http://127.0.0.1:8080/actuator/health)를 직접 확인할 수 있습니다.
 
+## 공공데이터 정합성 검증
+
+Python 3.13에서 아래 검사를 실행할 수 있습니다. 데이터 검증과 MySQL 적재는 Docker 백엔드를 빌드하고 시작할 때도 실행됩니다.
+
+```sh
+python data/calculate_presidency_scores.py --check
+python data/prepare_presidency_archive.py
+docker compose up -d --build --wait backend
+```
+
+`data/annual-context-supplement.chapter-09.json`은 확인한 결측만 별도 관측으로 기록합니다. 기존 통계의 결측과 평가 상태는 각 자료에 그대로 남습니다. Flyway는 입력이 바뀌었을 때 아카이브 자료 전용 테이블을 한 트랜잭션에서 갱신합니다. MySQL 전체 행은 적재 스크립트의 `--export-query`와 `--verify`를 사용해 입력과 대조할 수 있습니다. 화면의 사건과 점수는 검증에 사용한 기존 JSON을 읽습니다.
+
 ## 프로젝트 구조
 
 | 경로 | 역할 |
@@ -58,6 +72,7 @@ Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 �
 | `frontend/src/data` · `frontend/src/types` | REST API 연결, 평가·사건 자료와 데이터 타입 |
 | `frontend/src/styles` | 공통 색상, 카드, 반응형 레이아웃 |
 | `backend` | Java REST API, MySQL 조회, Flyway 마이그레이션 |
+| `data` | 재임 사건, 평가, 원본 통계·보완 관측, 검증 및 적재 코드 |
 | `compose.yaml` | 프론트엔드, 백엔드, MySQL 개발환경 |
 | `docs` · `capture` | 개인 개발 기록과 실행 화면 캡처 |
 

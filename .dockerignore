@@ -10,3 +10,14 @@ data/*
 !data/presidency-scores.stage-2.json
 !data/presidency-assessments.stage-2.json
 !data/historical-events.stage-1.json
+!data/presidency-statistics.stage-2.json
+!data/annual-context-supplement.chapter-09.json
+!data/calculate_presidency_scores.py
+!data/prepare_presidency_archive.py
+!data/public-events.chapter-09.json
+!data/prepare_public_events.py
+!backend/
+!backend/Dockerfile
+!backend/pom.xml
+!backend/src/
+!backend/src/**
