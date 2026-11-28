@@ -16,6 +16,8 @@ data/*
 !data/prepare_presidency_archive.py
 !data/public-events.chapter-09.json
 !data/prepare_public_events.py
+!data/president-related-cases.json
+!data/prepare_related_cases.py
 !backend/
 !backend/Dockerfile
 !backend/pom.xml

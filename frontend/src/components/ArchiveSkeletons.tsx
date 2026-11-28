@@ -127,12 +127,14 @@ export function EvidenceSkeleton() {
   )
 }
 
-export function EventsSkeleton({ filterWidths }: { filterWidths: number[] }) {
+export function EventsSkeleton({ filterWidths = [], label = '주요 사건 및 발언을 불러오는 중입니다.' }: {
+  filterWidths?: number[]; label?: string
+}) {
   return (
-    <Skeleton label="주요 사건 및 발언을 불러오는 중입니다.">
-      <div className="public-event-filters">
+    <Skeleton label={label}>
+      {filterWidths.length > 0 && <div className="public-event-filters">
         {filterWidths.map((width, index) => <Block className="skeleton-control" width={`${width}em`} key={index} />)}
-      </div>
+      </div>}
       <div className="public-event-list">
         {rowSlots.map((slot) => (
           <div className="public-event skeleton-event skeleton-lines" key={slot}>

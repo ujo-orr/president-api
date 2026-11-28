@@ -1,0 +1,1945 @@
+[
+  {
+    "id": "rhee-1960-election",
+    "presidentName": "이승만",
+    "title": "3·15 부정선거와 자유당 핵심 인사",
+    "occurredFrom": "1959-11",
+    "occurredTo": "1960-03",
+    "datePrecision": "MONTH",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "이기붕",
+        "relationship": "이승만의 비서 출신 정치적 측근 및 부통령 후보",
+        "sourceIds": [
+          "r2"
+        ]
+      },
+      {
+        "name": "한희석",
+        "relationship": "자유당 핵심 간부 및 선거 기획 관계자",
+        "sourceIds": [
+          "r1",
+          "r3"
+        ]
+      }
+    ],
+    "summary": "자유당의 정·부통령 후보 당선을 위한 조직적 부정선거가 수사 및 재판 대상이 되었다.",
+    "background": "자유당의 정권 연장 및 부통령 선거 승리 추진",
+    "verifiedFacts": [
+      {
+        "description": "국가기록원에 따르면 선거자금 배포 및 부정 투표가 이루어졌고, 혁명재판소 상소심에서 한희석에게 사형이 선고됐다.",
+        "sourceIds": [
+          "r1",
+          "r3"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "한희석",
+        "charges": [
+          "부정선거 관련 사건"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": "혁명재판소 상소심",
+        "decisionDate": "1961-12-06",
+        "finalizedAt": null,
+        "sentence": "사형",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "r1"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "한희석의 개별 죄명 및 후속 재심 여부 미확인. 이기붕에 대한 별도 형사 처분 미확인. 대통령의 구체적 범행 관여는 확인하지 못함."
+    ],
+    "sources": [
+      {
+        "id": "r1",
+        "organization": "국가기록원",
+        "title": "혁명검찰부의 3차 수사",
+        "url": "https://theme.archives.go.kr/next/history/samilos/sub2_2_3.do",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "r2",
+        "organization": "한국학중앙연구원",
+        "title": "이기붕",
+        "url": "https://encykorea.aks.ac.kr/Article/E0043852",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "r3",
+        "organization": "국가기록원",
+        "title": "3·15부정선거 기획과 시행",
+        "url": "https://theme.archives.go.kr/next/history/samilos/sub1_1_2.do",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "park-1961-four-suspicions",
+    "presidentName": "박정희",
+    "title": "4대 의혹사건과 김종필",
+    "occurredFrom": "1961",
+    "occurredTo": "1963",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "취임 전",
+    "relatedPersons": [
+      {
+        "name": "김종필",
+        "relationship": "군정 핵심 인사 및 초대 중앙정보부장, 박정희의 특사",
+        "sourceIds": [
+          "p2",
+          "p3"
+        ]
+      }
+    ],
+    "summary": "증권파동·워커힐·새나라자동차·회전당구 사건에 대한 중앙정보부 수사.",
+    "background": "군정기 사업 추진 및 정치자금 관련 의혹",
+    "verifiedFacts": [
+      {
+        "description": "1963년 3월 6일 중앙정보부는 증권파동과 워커힐 사건 관련자 15명의 구속 입건을 발표했다. 김종필은 그해 2월 외유했다.",
+        "sourceIds": [
+          "p1",
+          "p2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김종필",
+        "charges": [
+          "4대 의혹 관련"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": null,
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "당시 중앙정보부장은 형사상 관련이 확인되지 않았다는 취지로 발표했다. 최종 처분은 확인되지 않았다.",
+        "caseNumber": null,
+        "sourceIds": [
+          "p1"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "김종필 개인의 범죄 사실, 최종 수사 처분 및 재판 결과 미확인. 대통령 취임 전 군정기로 분류."
+    ],
+    "sources": [
+      {
+        "id": "p1",
+        "organization": "국사편찬위원회",
+        "title": "대한민국사연표: 4대 의혹사건 수사",
+        "url": "https://db.history.go.kr/id/tcct_1963_03_06_0020",
+        "publishedAt": "1963-03-06",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "p2",
+        "organization": "한국학중앙연구원",
+        "title": "사대의혹사건",
+        "url": "https://encykorea.aks.ac.kr/Article/E0025463",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "p3",
+        "organization": "연합뉴스",
+        "title": "JP는 영욕의 한국정치사 그 자체였다",
+        "url": "https://www.yna.co.kr/view/AKR20180623028600001",
+        "publishedAt": "2018-06-23",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "chun-land-tax",
+    "presidentName": "전두환",
+    "title": "전재용·이창석 토지 양도소득세 포탈 사건",
+    "occurredFrom": "2006-12",
+    "occurredTo": null,
+    "datePrecision": "MONTH",
+    "presidencyPhase": "퇴임 후",
+    "relatedPersons": [
+      {
+        "name": "전재용",
+        "relationship": "차남",
+        "sourceIds": [
+          "c3"
+        ]
+      },
+      {
+        "name": "이창석",
+        "relationship": "처남",
+        "sourceIds": [
+          "c3"
+        ]
+      }
+    ],
+    "summary": "친인척 간 토지 거래 관련 양도소득세 포탈 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "대법원은 두 사람의 양도소득세 포탈 관련 유죄 판결을 확정했다.",
+        "sourceIds": [
+          "c3"
+        ]
+      },
+      {
+        "description": "오산시 토지 28필지 매각 과정에서 임목비를 부풀려 세금을 포탈한 사건으로, 공소장 변경 후 포탈액은 약 27억원이었다.",
+        "sourceIds": [
+          "c3"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "전재용",
+        "charges": [
+          "양도소득세 포탈 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2015-08-13",
+        "finalizedAt": "2015-08-13",
+        "sentence": "징역 3년, 집행유예 4년, 벌금 40억원",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "c3"
+        ]
+      },
+      {
+        "personName": "이창석",
+        "charges": [
+          "양도소득세 포탈 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2015-08-13",
+        "finalizedAt": "2015-08-13",
+        "sentence": "징역 2년 6개월, 집행유예 4년, 벌금 40억원",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "c3"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "대통령 비자금 직접 연계 및 판결번호 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "c3",
+        "organization": "연합뉴스",
+        "title": "세금 포탈 전재용·이창석 집행유예·벌금 40억 확정",
+        "url": "https://www.yna.co.kr/view/AKR20150813063400004",
+        "publishedAt": "2015-08-13",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "chun-1980s-saemaul",
+    "presidentName": "전두환",
+    "title": "전경환 새마을운동본부 공금 횡령 사건",
+    "occurredFrom": null,
+    "occurredTo": null,
+    "datePrecision": "UNKNOWN",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "전경환",
+        "relationship": "친동생",
+        "sourceIds": [
+          "c2"
+        ]
+      }
+    ],
+    "summary": "새마을운동본부 운영 과정의 공금 횡령 사건.",
+    "background": "전경환은 새마을운동본부 회장 등을 역임했다.",
+    "verifiedFacts": [
+      {
+        "description": "공금 76억원 횡령 혐의로 재판을 받았고 대법원에서 징역 7년 등이 확정됐다.",
+        "sourceIds": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "전경환",
+        "charges": [
+          "업무상 횡령 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "1989-05-23",
+        "finalizedAt": "1989-05-23",
+        "sentence": "징역 7년, 벌금 22억원, 추징금 9억8000만원",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "정확한 범행 시작·종료일 및 혐의별 판단, 판결번호 미확인.",
+      "1980년대 사건으로 알려졌으나 정확한 시작일 미확인."
+    ],
+    "sources": [
+      {
+        "id": "c1",
+        "organization": "MBC",
+        "title": "전경환씨 7년형 확정",
+        "url": "https://imnews.imbc.com/replay/1989/nwdesk/article/1822468_30389.html",
+        "publishedAt": "1989-05-23",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "c2",
+        "organization": "연합뉴스",
+        "title": "5공 실세 전경환 사망",
+        "url": "https://www.yna.co.kr/view/AKR20211022045001001",
+        "publishedAt": "2021-10-22",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "roh-tae-1990s-funds",
+    "presidentName": "노태우",
+    "title": "노태우 비자금 친인척 위탁 및 추징금 납부",
+    "occurredFrom": "1990",
+    "occurredTo": "2013-09-04",
+    "datePrecision": "MIXED",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "노재우",
+        "relationship": "동생",
+        "sourceIds": [
+          "n1"
+        ]
+      },
+      {
+        "name": "신명수",
+        "relationship": "전 사돈",
+        "sourceIds": [
+          "n1"
+        ]
+      }
+    ],
+    "summary": "노태우 비자금과 관련해 친인척이 미납 추징금을 대신 납부한 사건.",
+    "background": "1997년 노태우의 비자금 사건 확정 이후 추징금 미납 문제가 지속됐다.",
+    "verifiedFacts": [
+      {
+        "description": "2013년 신명수가 80억원, 노재우가 150억4300만원을 납부하여 미납 추징금 문제가 종결됐다.",
+        "sourceIds": [
+          "n1"
+        ]
+      },
+      {
+        "description": "2001년 대법원 추심금 관련 판결에 따라 신명수와 노재우에게 각각 230억원 및 약 120억원 납부 의무가 인정됐다는 검찰 관련 보도가 확인된다. 이는 민사 판단이다.",
+        "sourceIds": [
+          "n1"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "노태우",
+        "charges": [
+          "반란·내란·뇌물 등"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "1997-04-17",
+        "finalizedAt": "1997-04-17",
+        "sentence": "징역 17년, 추징금 2628억9600만원(전체 사건 형량)",
+        "reason": "일부 뇌물 공소사실은 항소심에서 무죄.",
+        "verdictBreakdown": {
+          "guilty": "군사반란·내란 및 재임 중 직무와 관련해 받은 기업 자금 일부",
+          "acquitted": "1991년 9월과 12월 한양 배종열 회장에게서 각각 50억원을 받았다는 혐의 등"
+        },
+        "caseNumber": "96도3376",
+        "sourceIds": [
+          "n1",
+          "n2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "친인척 대납을 친인척 형사 유죄로 해석하면 안 됨. 위탁 시작일 및 친인척의 별도 판결 미확인.",
+      "대통령이 친인척에게 위탁한 구체적 행위에 관한 직접 원문을 충분히 확인하지 못하여 관여 필드는 null 처리."
+    ],
+    "sources": [
+      {
+        "id": "n1",
+        "organization": "연합뉴스",
+        "title": "노태우 추징금 230억원 자진납부…16년만에 종결",
+        "url": "https://www.yna.co.kr/view/AKR20130904074052004",
+        "publishedAt": "2013-09-04",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "n2",
+        "organization": "국가법령정보센터",
+        "title": "서울고법 96노1892 판결",
+        "url": "https://law.go.kr/precInfoP.do?precSeq=188579",
+        "publishedAt": "1996-12-16",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "kim-ys-1990s-hyeoncheol",
+    "presidentName": "김영삼",
+    "title": "김현철 알선수재 및 조세포탈 사건",
+    "occurredFrom": "1993",
+    "occurredTo": "1995",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김현철",
+        "relationship": "차남",
+        "sourceIds": [
+          "y1"
+        ]
+      }
+    ],
+    "summary": "기업인과의 금전 거래 및 탈세 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "파기환송심에서 전 대호건설 사장과 관련한 50억원 계좌의 실명 전환 및 월 5000만원 상당의 금융 편의가 알선수재로 인정됐다.",
+        "sourceIds": [
+          "y1"
+        ]
+      },
+      {
+        "description": "1999년 8월 확정된 징역형의 잔여 집행 면제가 발표됐다.",
+        "sourceIds": [
+          "y2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김현철",
+        "charges": [
+          "알선수재",
+          "조세포탈"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "파기환송심",
+        "decisionDate": "1999-06-23",
+        "finalizedAt": "1999",
+        "sentence": "징역 2년, 벌금 10억5000만원, 추징금 약 5억2000만원",
+        "reason": "일부 차명계좌 거래에서 탈세 의도 인정 부족으로 무죄.",
+        "verdictBreakdown": {
+          "guilty": "기업인들로부터 받은 청탁성 금품에 대한 알선수재와 일부 조세포탈",
+          "acquitted": "일부 차명계좌 관련 조세포탈"
+        },
+        "caseNumber": null,
+        "sourceIds": [
+          "y1",
+          "y2",
+          "y3"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "VERIFIED",
+    "verificationNotes": [
+      "확정일 정확한 일자 미확인(1999년 8월 12일 이전). 2000년 복권 원문 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "y1",
+        "organization": "서울신문",
+        "title": "김현철씨 징역 2년 선고",
+        "url": "https://www.seoul.co.kr/news/1999/06/24/19990624023003",
+        "publishedAt": "1999-06-24",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "y2",
+        "organization": "연합뉴스",
+        "title": "잔형집행면제란",
+        "url": "https://www.yna.co.kr/view/AKR19990812002400004",
+        "publishedAt": "1999-08-12",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "y3",
+        "organization": "SBS",
+        "title": "김현철에 징역 2년 선고",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N0300104868&plink=OLDURL",
+        "publishedAt": "1999-06-23",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "kim-dj-1999-hongil",
+    "presidentName": "김대중",
+    "title": "김홍일 나라종금 인사청탁 사건",
+    "occurredFrom": "1999",
+    "occurredTo": "2001",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김홍일",
+        "relationship": "장남",
+        "sourceIds": [
+          "d2"
+        ]
+      }
+    ],
+    "summary": "나라종금 전 사장에게 인사청탁과 함께 금품을 받은 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "안상태 전 나라종금 사장에게 1억5000만원을 받은 혐의에 유죄가 확정됐다.",
+        "sourceIds": [
+          "d1",
+          "d2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김홍일",
+        "charges": [
+          "알선수재"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2006-09-28",
+        "finalizedAt": "2006-09-28",
+        "sentence": "징역 2년, 집행유예 3년, 추징금 1억5000만원",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "d1",
+          "d2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "VERIFIED",
+    "verificationNotes": [
+      "판결문 및 판결번호 미확보."
+    ],
+    "sources": [
+      {
+        "id": "d1",
+        "organization": "SBS",
+        "title": "대법, 김홍일·박지원 씨 유죄판결 확정",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1000170480&plink=OLDURL",
+        "publishedAt": "2006-09-28",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "d2",
+        "organization": "동아일보",
+        "title": "김홍일의원 의원직 상실…박지원씨 150억 수수 무죄 확정",
+        "url": "https://www.donga.com/news/Society/article/all/20060929/8356366/1",
+        "publishedAt": "2006-09-29",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "kim-dj-hongeop",
+    "presidentName": "김대중",
+    "title": "김홍업 기업 청탁 금품수수 사건",
+    "occurredFrom": null,
+    "occurredTo": null,
+    "datePrecision": "UNKNOWN",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김홍업",
+        "relationship": "차남",
+        "sourceIds": [
+          "d3"
+        ]
+      }
+    ],
+    "summary": "기업 청탁 관련 금품 수수 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "대법원은 성원건설 관련 부분을 제외하고 측근의 청탁성 금품수수 행위에 대한 김홍업의 공범 성립을 인정한 원심을 유지했다.",
+        "sourceIds": [
+          "d3"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김홍업",
+        "charges": [
+          "알선수재 등"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2003-05-30",
+        "finalizedAt": "2003-05-30",
+        "sentence": "징역 2년, 벌금 4억원, 추징금 2억6000만원",
+        "reason": "성원건설 부분 제외; 세부 무죄 이유 미확인.",
+        "verdictBreakdown": {
+          "guilty": "측근이 받은 청탁성 금품에 대한 알선수재 등 공범",
+          "acquitted": "성원건설로부터 3억원을 받았다는 혐의"
+        },
+        "caseNumber": null,
+        "sourceIds": [
+          "d3"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "범행 기간, 혐의별 금액 및 판결문 미확인."
+    ],
+    "sources": [
+      {
+        "id": "d3",
+        "organization": "서울신문",
+        "title": "김홍업씨 징역2년 원심 확정",
+        "url": "https://www.seoul.co.kr/news/2003/05/31/20030531010007",
+        "publishedAt": "2003-05-31",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "kim-dj-honggeol",
+    "presidentName": "김대중",
+    "title": "김홍걸 체육복표 사업자 선정 청탁 사건",
+    "occurredFrom": null,
+    "occurredTo": null,
+    "datePrecision": "UNKNOWN",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김홍걸",
+        "relationship": "삼남",
+        "sourceIds": [
+          "d4"
+        ]
+      }
+    ],
+    "summary": "체육복표 사업 관련 금품수수 및 증여세 포탈 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "2003년 항소심은 김홍걸에게 징역 1년 6개월 및 추징금 1억6000만원을 선고했으며 일부 혐의를 무죄로 판단했다.",
+        "sourceIds": [
+          "d4",
+          "d5"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김홍걸",
+        "charges": [
+          "알선수재",
+          "증여세 포탈"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": "서울고등법원",
+        "decisionDate": "2003-08-12",
+        "finalizedAt": null,
+        "sentence": "징역 1년 6개월, 집행유예(기간 보도 불일치), 추징금 1억6000만원",
+        "reason": "일부 무죄 판단, 세부 이유 미확인.",
+        "caseNumber": null,
+        "sourceIds": [
+          "d4",
+          "d5"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "항소심 이후 확정 여부와 집행유예 기간은 원문 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "d4",
+        "organization": "동아일보",
+        "title": "김홍걸씨 집행유예 3년, 최규선씨는 법정구속",
+        "url": "https://www.donga.com/news/Society/article/all/20030812/7973067/9",
+        "publishedAt": "2003-08-12",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "d5",
+        "organization": "SBS",
+        "title": "김홍걸씨 집유…최규선씨 법정구속",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N0311462481",
+        "publishedAt": "2003-08-12",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "kim-dj-park-jiwon",
+    "presidentName": "김대중",
+    "title": "박지원 기업 금품수수 및 현대 비자금 사건",
+    "occurredFrom": null,
+    "occurredTo": null,
+    "datePrecision": "UNKNOWN",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "박지원",
+        "relationship": "최측근 및 전 문화관광부 장관",
+        "sourceIds": [
+          "d1"
+        ]
+      }
+    ],
+    "summary": "기업 청탁성 금품수수와 현대그룹 비자금 수수 혐의가 재판에서 서로 다른 판단을 받았다.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "SK·아시아나항공 관련 합계 1억원 금품수수 등에 유죄가 확정됐지만 현대그룹 150억원 수수 혐의는 무죄 확정됐다.",
+        "sourceIds": [
+          "d1",
+          "d2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "박지원",
+        "charges": [
+          "기업 금품수수 등",
+          "현대 비자금 150억원 뇌물수수"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2006-09-28",
+        "finalizedAt": "2006-09-28",
+        "sentence": "징역 3년, 추징금 1억원",
+        "reason": "현대 150억원 수수 부분 무죄; 구체적 이유 미확인.",
+        "verdictBreakdown": {
+          "guilty": "SK·아시아나항공 측으로부터 받은 금품 총 1억원 등",
+          "acquitted": "현대그룹 비자금 150억원 수수 혐의"
+        },
+        "caseNumber": null,
+        "sourceIds": [
+          "d1",
+          "d2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "대북송금 관련 다른 죄명 및 사면 여부는 추가 검증 필요."
+    ],
+    "sources": [
+      {
+        "id": "d1",
+        "organization": "SBS",
+        "title": "대법, 김홍일·박지원 씨 유죄판결 확정",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1000170480&plink=OLDURL",
+        "publishedAt": "2006-09-28",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "d2",
+        "organization": "동아일보",
+        "title": "김홍일의원 의원직 상실…박지원씨 150억 수수 무죄 확정",
+        "url": "https://www.donga.com/news/Society/article/all/20060929/8356366/1",
+        "publishedAt": "2006-09-29",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "roh-moo-2004-jeong",
+    "presidentName": "노무현",
+    "title": "정상문 뇌물수수 및 대통령 특수활동비 횡령",
+    "occurredFrom": "2004-11",
+    "occurredTo": "2007-07",
+    "datePrecision": "MONTH",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "정상문",
+        "relationship": "청와대 총무비서관",
+        "sourceIds": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "summary": "박연차 금품수수 및 대통령 특수활동비 횡령 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "박연차에게 상품권 9400만원 상당 및 현금 3억원을 받은 부분과 특수활동비 12억5000만원 횡령이 재판 대상이었다.",
+        "sourceIds": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "정상문",
+        "charges": [
+          "뇌물",
+          "국고손실 및 범죄수익은닉 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2010-05-27",
+        "finalizedAt": "2010-05-27",
+        "sentence": "징역 6년, 추징금 16억4400만원",
+        "reason": "항소심에서 상품권과 현금의 직무 관련성을 인정.",
+        "caseNumber": null,
+        "sourceIds": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "VERIFIED",
+    "verificationNotes": [
+      "대법원 판결번호 및 혐의별 세부 판시 미확인."
+    ],
+    "sources": [
+      {
+        "id": "m1",
+        "organization": "뉴시스",
+        "title": "박연차 리스트 정상문 징역 6년 확정",
+        "url": "https://www.newsis.com/view/NISX20100526_0005290546",
+        "publishedAt": "2010-05-27",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "m2",
+        "organization": "연합뉴스",
+        "title": "정상문 항소심도 징역 6년",
+        "url": "https://www.yna.co.kr/amp/view/AKR20091218117800004",
+        "publishedAt": "2009-12-18",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "roh-moo-2006-sejong",
+    "presidentName": "노무현",
+    "title": "노건평 세종증권 매각 알선수재 사건",
+    "occurredFrom": "2006",
+    "occurredTo": null,
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "노건평",
+        "relationship": "친형",
+        "sourceIds": [
+          "m3"
+        ]
+      }
+    ],
+    "summary": "농협의 세종증권 인수 알선 대가 수수 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "대법원은 정광용·정화삼과 공모하여 세종증권 인수를 알선하고 그 대가로 23억7000만원을 받았다는 판단을 유지했다. 이는 공동 범행 금액이며 노건평 개인의 전액 수수로 볼 수 없다.",
+        "sourceIds": [
+          "m3"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "노건평",
+        "charges": [
+          "알선수재 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2010-01-14",
+        "finalizedAt": "2010-01-14",
+        "sentence": "징역 2년 6개월, 추징금 3억원",
+        "reason": "공모와 알선 대가 수수가 인정됨.",
+        "caseNumber": null,
+        "sourceIds": [
+          "m3"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "사면 및 판결번호 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "m3",
+        "organization": "연합뉴스",
+        "title": "노건평 징역 2년6월 확정",
+        "url": "https://www.yna.co.kr/view/AKR20100114136651004",
+        "publishedAt": "2010-01-14",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "roh-moo-2007-family",
+    "presidentName": "노무현",
+    "title": "박연차의 노무현 일가 관련 금품수수 수사",
+    "occurredFrom": "2007",
+    "occurredTo": "2008",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "권양숙",
+        "relationship": "배우자",
+        "sourceIds": [
+          "m5"
+        ]
+      },
+      {
+        "name": "연철호",
+        "relationship": "조카사위",
+        "sourceIds": [
+          "m5"
+        ]
+      }
+    ],
+    "summary": "박연차의 대통령 일가 관련 자금 제공에 대해 검찰이 수사했으나 대통령 사망으로 해당 부분은 종결됐다.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "검찰은 2009년 6월 12일 대통령 뇌물 의혹 수사를 공소권 없음으로 종결했다고 발표했다.",
+        "sourceIds": [
+          "m4"
+        ]
+      },
+      {
+        "description": "노무현은 홈페이지에서 배우자가 부탁한 돈과 조카사위의 투자금에 관한 해명을 공개했다.",
+        "sourceIds": [
+          "m5"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "검찰은 640만 달러를 대통령 측에 제공한 뇌물로 보았으나 법원의 판단은 없었다.",
+        "sourceIds": [
+          "m4"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "노무현",
+        "charges": [
+          "뇌물수수 의혹"
+        ],
+        "status": "NO_PROSECUTION_RIGHT",
+        "courtLevel": "검찰",
+        "decisionDate": "2009-06-12",
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "사망에 따른 공소권 없음 및 내사종결.",
+        "caseNumber": null,
+        "sourceIds": [
+          "m4"
+        ]
+      },
+      {
+        "personName": "권양숙",
+        "charges": [
+          "참고인 조사"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": "검찰",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "별도 처분 문서 미확인.",
+        "caseNumber": null,
+        "sourceIds": [
+          "m5"
+        ]
+      },
+      {
+        "personName": "연철호",
+        "charges": [
+          "자금 수수 관련 조사"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": "검찰",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "m5"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "가족별 실제 사용처와 법적 성격 미확정. 대통령 범죄 관여로 등록하지 않음."
+    ],
+    "sources": [
+      {
+        "id": "m4",
+        "organization": "연합뉴스",
+        "title": "검찰 노무현 수사내용 비공개…영구보존",
+        "url": "https://www.yna.co.kr/view/AKR20090612165000004",
+        "publishedAt": "2009-06-12",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "m5",
+        "organization": "참여연대",
+        "title": "노무현 전 대통령 관련 수사",
+        "url": "https://watch.peoplepower21.org/WatchPro/case/139/",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "lee-2007-bank",
+    "presidentName": "이명박",
+    "title": "이상득 저축은행 및 코오롱 금품수수 사건",
+    "occurredFrom": "2007",
+    "occurredTo": null,
+    "datePrecision": "YEAR",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "이상득",
+        "relationship": "친형",
+        "sourceIds": [
+          "l1"
+        ]
+      }
+    ],
+    "summary": "대선 전후 저축은행 및 기업 관련 금품수수 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "이상득에게 유죄 및 일부 무죄 판단이 확정됐다. 미래저축은행 김찬경 관련 3억원은 무죄 판단을 받았다.",
+        "sourceIds": [
+          "l1",
+          "l2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "이상득",
+        "charges": [
+          "정치자금법 위반",
+          "알선수재"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2014-06-26",
+        "finalizedAt": "2014-06-26",
+        "sentence": "징역 1년 2개월, 추징금 4억5750만원",
+        "reason": "김찬경 관련 3억원 무죄. 세부 이유 미확인.",
+        "verdictBreakdown": {
+          "guilty": "솔로몬저축은행과 코오롱 측의 불법 정치자금 수수",
+          "acquitted": "미래저축은행 김찬경 회장으로부터 3억원을 받은 알선수재 혐의"
+        },
+        "caseNumber": "2013도9866",
+        "sourceIds": [
+          "l1",
+          "l2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "공소사실의 개별 금액 및 정두언의 환송 후 확정 결과 추가 검증 필요."
+    ],
+    "sources": [
+      {
+        "id": "l1",
+        "organization": "뉴시스",
+        "title": "대법 저축은행 비리 정두언 의원 사건 파기환송",
+        "url": "https://www.newsis.com/view/NISX20140625_0013005629",
+        "publishedAt": "2014-06-26",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "l2",
+        "organization": "참여연대",
+        "title": "저축은행 불법로비 정치인 수사",
+        "url": "https://p.peoplepower21.org/WatchPro/case_detail.php?id=72",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "park-gh-2013-state",
+    "presidentName": "박근혜",
+    "title": "최서원 국정 개입 및 기업 금품수수 사건",
+    "occurredFrom": "2013",
+    "occurredTo": "2016",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "최서원",
+        "relationship": "개인적 측근",
+        "sourceIds": [
+          "g1",
+          "g2"
+        ]
+      },
+      {
+        "name": "안종범",
+        "relationship": "청와대 정책조정수석",
+        "sourceIds": [
+          "g2"
+        ]
+      }
+    ],
+    "summary": "최서원의 국정 개입과 기업 관련 금품수수 및 대통령 권한 행사에 관한 사건.",
+    "background": "미르·케이스포츠 재단 설립 및 청와대 문건 제공 등이 문제됐다.",
+    "verifiedFacts": [
+      {
+        "description": "헌법재판소는 최서원에게 대통령 직무 관련 비밀 문건이 전달되도록 한 행위가 비밀엄수 의무 위반이라고 판단했다.",
+        "sourceIds": [
+          "g1"
+        ]
+      },
+      {
+        "description": "최서원과 안종범의 형사 판결이 2020년 6월 11일 확정됐다.",
+        "sourceIds": [
+          "g2"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "최서원",
+        "charges": [
+          "직권남용권리행사방해",
+          "뇌물 등"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2020-06-11",
+        "finalizedAt": "2020-06-11",
+        "sentence": "징역 18년, 벌금 200억원, 추징금 약 63억원",
+        "reason": null,
+        "verdictBreakdown": {
+          "guilty": "삼성의 말 제공과 관련한 뇌물수수 등",
+          "acquitted": "미르·케이스포츠재단 모금 관련 강요 등 일부 강요·강요미수 혐의"
+        },
+        "caseNumber": "2020도2883",
+        "sourceIds": [
+          "g2",
+          "g3"
+        ]
+      },
+      {
+        "personName": "안종범",
+        "charges": [
+          "직권남용 등"
+        ],
+        "status": "UNKNOWN",
+        "courtLevel": "대법원",
+        "decisionDate": "2020-06-11",
+        "finalizedAt": "2020-06-11",
+        "sentence": "징역 4년, 벌금 6000만원",
+        "reason": "형 확정 사실은 확인되나 전체 혐의별 유무죄 범위 미확인.",
+        "caseNumber": null,
+        "sourceIds": [
+          "g2"
+        ]
+      }
+    ],
+    "presidentInvolvement": {
+      "action": "최서원에게 대통령 일정·외교·인사·정책 관련 비밀 문건이 전달되도록 지시하거나 방치했다.",
+      "evidenceType": "헌법재판소 결정",
+      "sourceIds": [
+        "g1"
+      ],
+      "legalCharacter": "비밀엄수의무 위반 인정; 2017-03-10 파면 결정"
+    },
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "최서원 판결은 대법원 공개 자료에서 확인한 대표 항목을 표기했다."
+    ],
+    "sources": [
+      {
+        "id": "g1",
+        "organization": "헌법재판소",
+        "title": "2016헌나1 대통령(박근혜)탄핵",
+        "url": "https://www.ccourt.go.kr/site/kor/ex/bbs/View.do?bcIdx=941743&cbIdx=1106",
+        "publishedAt": "2017-03-10",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "g2",
+        "organization": "연합뉴스",
+        "title": "최서원 징역 18년·벌금 200억원 최종 확정",
+        "url": "https://www.yna.co.kr/amp/view/AKR20200611068952004",
+        "publishedAt": "2020-06-11",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "g3",
+        "organization": "대법원",
+        "title": "2020도2883 판결 보도자료",
+        "url": "https://jifi.scourt.go.kr/portal/news/NewsViewAction.work?gubun=6&searchOption=&searchWord=&seqnum=1859",
+        "publishedAt": "2020-06-11",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "moon-2018-kim",
+    "presidentName": "문재인",
+    "title": "김정숙 인도 방문 및 샤넬 재킷 의혹 수사",
+    "occurredFrom": "2018",
+    "occurredTo": "2018",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김정숙",
+        "relationship": "배우자",
+        "sourceIds": [
+          "w4"
+        ]
+      }
+    ],
+    "summary": "인도 공식 방문과 프랑스 방문 당시 재킷 대여 관련 수사.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "검찰은 2025년 2월 7일 불기소했다. 재킷은 일시 무상 대여 후 반환된 것으로 조사됐으며 청와대 예산 사용 정황을 확인하지 못했다.",
+        "sourceIds": [
+          "w4"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "김정숙",
+        "charges": [
+          "인도 방문 및 재킷 관련 혐의"
+        ],
+        "status": "NOT_INDICTED",
+        "courtLevel": "검찰",
+        "decisionDate": "2025-02-07",
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "증거 불충분; 재킷 대여 및 반환 확인.",
+        "caseNumber": null,
+        "sourceIds": [
+          "w4"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "별도 의상비 수사와 구분. 불기소 결정서 및 개별 죄명 미확보."
+    ],
+    "sources": [
+      {
+        "id": "w4",
+        "organization": "연합뉴스",
+        "title": "인도 방문·샤넬재킷 의혹 김정숙 여사 무혐의",
+        "url": "https://www.yna.co.kr/view/AKR20250207109351004",
+        "publishedAt": "2025-02-07",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "moon-2018-thai",
+    "presidentName": "문재인",
+    "title": "전 사위 타이이스타젯 취업 관련 수사 및 재판",
+    "occurredFrom": "2018",
+    "occurredTo": "2020",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "문다혜",
+        "relationship": "딸",
+        "sourceIds": [
+          "w1",
+          "w2"
+        ]
+      },
+      {
+        "name": "서모씨",
+        "relationship": "전 사위(공개 원문 표기)",
+        "sourceIds": [
+          "w1",
+          "w2"
+        ]
+      },
+      {
+        "name": "조현옥",
+        "relationship": "전 청와대 인사수석",
+        "sourceIds": [
+          "w1",
+          "w3"
+        ]
+      }
+    ],
+    "summary": "전 사위의 급여 및 주거비를 대통령에 대한 뇌물로 볼 수 있는지에 관한 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "문재인과 이상직은 기소됐으며 2026년 10월 21일 기준 1심 진행 기록이 확인된다. 조현옥은 2026년 1월 28일 무죄 선고 후 검찰이 항소하지 않았다.",
+        "sourceIds": [
+          "w1",
+          "w3"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "검찰은 전 사위 채용에 따른 약 2억원대 급여 및 주거비가 대통령에 대한 경제적 이익이라고 주장한다.",
+        "sourceIds": [
+          "w1",
+          "w2"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "문재인",
+        "charges": [
+          "뇌물수수"
+        ],
+        "status": "TRIAL_IN_PROGRESS",
+        "courtLevel": "1심",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": null,
+        "caseNumber": "2025고합543",
+        "sourceIds": [
+          "w1",
+          "w2"
+        ]
+      },
+      {
+        "personName": "문다혜",
+        "charges": [
+          "뇌물수수 공범 관련"
+        ],
+        "status": "PROSECUTION_DEFERRED",
+        "courtLevel": "검찰",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "참여연대 수사 경과에 기소유예로 기록됨.",
+        "caseNumber": null,
+        "sourceIds": [
+          "w1"
+        ]
+      },
+      {
+        "personName": "서모씨",
+        "charges": [
+          "뇌물수수 공범 관련"
+        ],
+        "status": "PROSECUTION_DEFERRED",
+        "courtLevel": "검찰",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "참여연대 수사 경과에 기소유예로 기록됨.",
+        "caseNumber": null,
+        "sourceIds": [
+          "w1"
+        ]
+      },
+      {
+        "personName": "조현옥",
+        "charges": [
+          "직권남용 관련 이사장 내정"
+        ],
+        "status": "ACQUITTED_FINAL",
+        "courtLevel": "1심",
+        "decisionDate": "2026-01-28",
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": "검찰 항소 포기; 무죄 이유 원문 추가 확인 필요.",
+        "caseNumber": "2024고합1460",
+        "sourceIds": [
+          "w1",
+          "w3"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "기소유예 처분서 및 조현옥 정확한 확정일 미확보. 문재인 관련 2027년 1월 국민참여재판 예정 보도."
+    ],
+    "sources": [
+      {
+        "id": "w1",
+        "organization": "참여연대",
+        "title": "문재인 전 대통령 사위 취업 특혜 의혹 사건 수사",
+        "url": "https://watch.peoplepower21.org/WatchPro/case/316/",
+        "publishedAt": null,
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "w2",
+        "organization": "연합뉴스",
+        "title": "문재인 뇌물 혐의 사건 국민참여재판으로",
+        "url": "https://www.yna.co.kr/view/AKR20260922179900004",
+        "publishedAt": "2026-09-22",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "w3",
+        "organization": "연합뉴스",
+        "title": "검찰 중진공 내정 의혹 조현옥 1심 무죄 항소포기",
+        "url": "https://www.yna.co.kr/view/AKR20260204167400004",
+        "publishedAt": "2026-02-04",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-2010-three",
+    "presidentName": "윤석열",
+    "title": "김건희 도이치모터스·여론조사·통일교 금품수수 병합 사건",
+    "occurredFrom": "2010-10",
+    "occurredTo": "2022-07",
+    "datePrecision": "MONTH",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "김건희",
+        "relationship": "배우자",
+        "sourceIds": [
+          "u2"
+        ]
+      }
+    ],
+    "summary": "세 혐의가 함께 심리된 사건으로 주가조작 일부 유죄, 통일교 알선수재 유죄, 정치자금법 위반 무죄가 확정됐다.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "대법원은 양측 상고를 기각하여 징역 4년과 벌금 5000만원의 원심을 확정했다.",
+        "sourceIds": [
+          "u1",
+          "u2"
+        ]
+      },
+      {
+        "description": "정치자금법 위반에 관해 여론조사 의뢰·합의 및 수수 고의의 입증이 부족하다는 원심 판단을 유지했다.",
+        "sourceIds": [
+          "u1"
+        ]
+      },
+      {
+        "description": "항소심은 2010년 10~11월 20억원이 들어 있는 증권계좌를 제공해 거래를 맡기고 18만주를 매도한 행위를 시세조종 가담으로 인정했다. 통일교 측의 청탁 관련 목걸이 및 가방 수수도 유죄 판단했다.",
+        "sourceIds": [
+          "u2"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "특검 공소사실: 주가조작 부당이득 약 8억1000만원, 여론조사 비용 약 2억7440만원, 통일교 측 목걸이 약 6200만원과 가방 2개 약 2000만원. 공소액 전체를 확정 범죄액으로 해석하지 않는다.",
+        "sourceIds": [
+          "u1",
+          "u2"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "김건희",
+        "charges": [
+          "자본시장법 위반(일부 유죄)",
+          "알선수재(유죄)",
+          "정치자금법 위반(무죄)"
+        ],
+        "status": "PARTIALLY_CONVICTED_FINAL",
+        "courtLevel": "대법원 전원합의체",
+        "decisionDate": "2026-11-19",
+        "finalizedAt": "2026-11-19",
+        "sentence": "징역 4년, 벌금 5000만원(통합 형량)",
+        "reason": "여론조사 비용 부담 합의 및 정치자금 수수 고의 입증 부족. 1심의 주가조작 일부 면소 판단은 2심에서 포괄일죄 판단으로 변경됐다.",
+        "verdictBreakdown": {
+          "guilty": "도이치모터스 주가조작 가담 일부 및 통일교 금품수수에 따른 알선수재",
+          "acquitted": "명태균의 무상 여론조사 제공 관련 정치자금법 위반 혐의"
+        },
+        "caseNumber": "2026도6826",
+        "sourceIds": [
+          "u1",
+          "u2"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "판결문 텍스트 열람 가능, PDF 화면 확인은 방화벽 차단. 주가조작 세부 무죄 범위 및 추징액 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "u1",
+        "organization": "대법원",
+        "title": "2026도6826 판결",
+        "url": "https://www.scourt.go.kr/sjudge/1795159077985_161757.pdf",
+        "publishedAt": "2026-11-19",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "u2",
+        "organization": "연합뉴스",
+        "title": "3대 의혹 김건희 징역 4년 확정",
+        "url": "https://www.yna.co.kr/view/AKR20261119137052004",
+        "publishedAt": "2026-11-19",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-2013-balance",
+    "presidentName": "윤석열",
+    "title": "최은순 잔고증명서 위조 사건",
+    "occurredFrom": "2013",
+    "occurredTo": "2013",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "취임 전",
+    "relatedPersons": [
+      {
+        "name": "최은순",
+        "relationship": "장모",
+        "sourceIds": [
+          "u5"
+        ]
+      }
+    ],
+    "summary": "토지 매입 과정에서 은행 잔고증명서를 위조한 사건.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "성남 도촌동 토지 매입 과정에서 약 349억원이 예치된 것처럼 네 차례 잔고증명서를 위조한 혐의에 유죄가 확정됐다. 실제 예치 또는 수수액을 의미하지 않는다.",
+        "sourceIds": [
+          "u5"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "최은순",
+        "charges": [
+          "사문서위조 등"
+        ],
+        "status": "CONVICTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2023-11-16",
+        "finalizedAt": "2023-11-16",
+        "sentence": "징역 1년",
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "u5"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "판결문과 혐의별 판단 및 가석방 등 후속 사항 미확인. 정치적 생애 중 재판이 진행돼 포함."
+    ],
+    "sources": [
+      {
+        "id": "u5",
+        "organization": "MBC",
+        "title": "대법 윤 장모 징역 1년 확정",
+        "url": "https://imnews.imbc.com/news/2023/society/article/6544149_36127.html",
+        "publishedAt": "2023-11-16",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-2013-hospital",
+    "presidentName": "윤석열",
+    "title": "최은순 요양병원 요양급여 사건",
+    "occurredFrom": "2013",
+    "occurredTo": "2015",
+    "datePrecision": "YEAR",
+    "presidencyPhase": "취임 전",
+    "relatedPersons": [
+      {
+        "name": "최은순",
+        "relationship": "장모",
+        "sourceIds": [
+          "u3",
+          "u4"
+        ]
+      }
+    ],
+    "summary": "요양병원 개설·운영과 요양급여 수급 혐의 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "요양급여 약 22억9000만원 관련 혐의에 대해 1심 실형을 거쳐 최종 무죄가 확정됐다.",
+        "sourceIds": [
+          "u3",
+          "u4"
+        ]
+      }
+    ],
+    "allegations": [],
+    "legalDecisions": [
+      {
+        "personName": "최은순",
+        "charges": [
+          "의료법 위반 및 요양급여 부정수급 관련 혐의"
+        ],
+        "status": "ACQUITTED_FINAL",
+        "courtLevel": "대법원",
+        "decisionDate": "2022-12-15",
+        "finalizedAt": "2022-12-15",
+        "sentence": null,
+        "reason": "동업 계약이 확인되지 않았고 수익 분배 약정을 알았다는 증거도 부족하다는 항소심 판단을 대법원이 유지했다.",
+        "caseNumber": null,
+        "sourceIds": [
+          "u3",
+          "u4"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "VERIFIED",
+    "verificationNotes": [
+      "판결문 및 정확한 종료일 미확보. 정치적 생애 중 재판이 진행돼 포함."
+    ],
+    "sources": [
+      {
+        "id": "u3",
+        "organization": "연합뉴스",
+        "title": "요양급여 불법 수급 혐의 윤 대통령 장모 무죄 확정",
+        "url": "https://www.yna.co.kr/view/AKR20221215067251004",
+        "publishedAt": "2022-12-15",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "u4",
+        "organization": "MBC",
+        "title": "윤 대통령 장모 요양급여 불법수급 무죄 확정",
+        "url": "https://imnews.imbc.com/replay/2022/nw1200/article/6436496_35715.html",
+        "publishedAt": "2022-12-15",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-2022-residence",
+    "presidentName": "윤석열",
+    "title": "김건희 대통령 관저 이전 공사 특혜 관련 재판",
+    "occurredFrom": "2022",
+    "occurredTo": null,
+    "datePrecision": "YEAR",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "김건희",
+        "relationship": "배우자",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "summary": "대통령 관저 이전 공사업체 선정 관련 특혜 혐의 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "2차 종합특검이 기소했으며 2026년 11월 19일 기준 1심 진행 중으로 보도됐다.",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "특검은 관저 이전 과정에 개입하여 친분이 있는 업체 21그램이 공사를 맡게 했다고 주장한다.",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "김건희",
+        "charges": [
+          "관저 이전 관련 혐의"
+        ],
+        "status": "TRIAL_IN_PROGRESS",
+        "courtLevel": "1심",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "정확한 죄명, 기일, 공소장 및 다른 피고인 판결 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "u7",
+        "organization": "연합뉴스",
+        "title": "김건희 남은 재판",
+        "url": "https://www.yna.co.kr/view/AKR20261119152400004",
+        "publishedAt": "2026-11-19",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-2023-unification-party",
+    "presidentName": "윤석열",
+    "title": "김건희 통일교 교인 집단 입당 관련 재판",
+    "occurredFrom": "2023-03",
+    "occurredTo": null,
+    "datePrecision": "MONTH",
+    "presidencyPhase": "재임 중",
+    "relatedPersons": [
+      {
+        "name": "김건희",
+        "relationship": "배우자",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "summary": "통일교 교인들의 정당 집단 입당 관련 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "2026년 11월 19일 기준 1심 진행 중으로 보도됐다.",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "특검은 2023년 전당대회를 앞두고 전성배를 통해 통일교 측에 교인 집단 입당을 요청했다고 주장한다.",
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "김건희",
+        "charges": [
+          "집단 입당 관련 혐의"
+        ],
+        "status": "TRIAL_IN_PROGRESS",
+        "courtLevel": "1심",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": null,
+        "reason": null,
+        "caseNumber": null,
+        "sourceIds": [
+          "u7"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "정확한 발생일, 적용 법조 및 최신 기일 추가 확인 필요."
+    ],
+    "sources": [
+      {
+        "id": "u7",
+        "organization": "연합뉴스",
+        "title": "김건희 남은 재판",
+        "url": "https://www.yna.co.kr/view/AKR20261119152400004",
+        "publishedAt": "2026-11-19",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  },
+  {
+    "id": "yoon-kim-appointments",
+    "presidentName": "윤석열",
+    "title": "김건희 인사·이권 청탁 관련 금품수수 사건",
+    "occurredFrom": null,
+    "occurredTo": null,
+    "datePrecision": "UNKNOWN",
+    "presidencyPhase": "복수 기간",
+    "relatedPersons": [
+      {
+        "name": "김건희",
+        "relationship": "배우자",
+        "sourceIds": [
+          "u6",
+          "u7"
+        ]
+      }
+    ],
+    "summary": "각종 인사·사업 지원 청탁 관련 귀금속 및 가방 수수 혐의에 대한 재판.",
+    "background": null,
+    "verifiedFacts": [
+      {
+        "description": "1심 징역 7년, 2심 징역 5년이 선고됐으며 대법원 선고는 2026년 12월 3일로 예정됐다.",
+        "sourceIds": [
+          "u6"
+        ]
+      }
+    ],
+    "allegations": [
+      {
+        "description": "특검은 서희건설 회장 관련 귀금속 1억380만원, 이배용 관련 금거북이 265만원, 사업가 관련 시계 3990만원, 최재영 관련 가방 등 540만원을 공소사실로 제시했다.",
+        "sourceIds": [
+          "u6"
+        ]
+      }
+    ],
+    "legalDecisions": [
+      {
+        "personName": "김건희",
+        "charges": [
+          "알선수재"
+        ],
+        "status": "TRIAL_IN_PROGRESS",
+        "courtLevel": "대법원 심리 중",
+        "decisionDate": null,
+        "finalizedAt": null,
+        "sentence": "2심 징역 5년(미확정)",
+        "reason": "2심은 시계 수수 부분 등 일부 청탁 대가성이 입증되지 않았다고 판단.",
+        "caseNumber": null,
+        "sourceIds": [
+          "u6"
+        ]
+      }
+    ],
+    "presidentInvolvement": null,
+    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationNotes": [
+      "2026-12-03 선고 결과 확인 필요. 범행 기간 및 혐의별 판결 원문 미확보."
+    ],
+    "sources": [
+      {
+        "id": "u6",
+        "organization": "연합뉴스",
+        "title": "김건희 매관매직 상고심 내달 3일 선고",
+        "url": "https://www.yna.co.kr/view/AKR20261125121900004",
+        "publishedAt": "2026-11-25",
+        "accessedAt": "2026-11-28"
+      },
+      {
+        "id": "u7",
+        "organization": "연합뉴스",
+        "title": "김건희 남은 재판",
+        "url": "https://www.yna.co.kr/view/AKR20261119152400004",
+        "publishedAt": "2026-11-19",
+        "accessedAt": "2026-11-28"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-28"
+  }
+]

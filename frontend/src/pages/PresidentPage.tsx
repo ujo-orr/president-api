@@ -5,6 +5,7 @@ import { DelayedSkeleton, TimelineSkeleton } from '../components/ArchiveSkeleton
 import { PresidentEvents } from '../components/PresidentEvents'
 import { PresidencyIndicators } from '../components/PresidencyIndicators'
 import { PresidentProfile } from '../components/PresidentProfile'
+import { PresidentRelatedCases } from '../components/PresidentRelatedCases'
 import { presidentCareers } from '../data/presidentCareers'
 import type { loadPresident } from '../data/presidentApi'
 import { NotFoundPage } from './NotFoundPage'
@@ -43,6 +44,7 @@ export function PresidentPage() {
         </Suspense>
       </section>
       <PresidentEvents key={person.id} presidentId={person.id} />
+      <PresidentRelatedCases key={`related-${person.id}`} presidentId={person.id} />
     </article>
   )
 }

@@ -49,6 +49,7 @@ docker compose down
 | `GET /api/presidents/{id}` | 대통령 한 명의 프로필. 알 수 없는 ID는 404 |
 | `GET /api/presidents/{id}/events` | 대통령별 주요 사건·발언 배열. 알 수 없는 ID는 404, 자료가 없는 대통령은 빈 배열 |
 | `GET /api/presidents/{id}/archive` | 대통령 프로필과 평가용 사건, 원문 출처, 평가 근거 및 점수. 알 수 없는 ID는 404 |
+| `GET /api/presidents/{id}/related-cases` | 가족·측근 관련 기록 배열. 날짜 미확인 기록은 끝에 위치하며, 자료가 없으면 빈 배열, 알 수 없는 ID는 404 |
 | `GET /actuator/health` | 백엔드와 DB 연결 상태 |
 
 Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 포트에서는 [API 목록](http://127.0.0.1:8080/api/presidents)과 [백엔드 상태](http://127.0.0.1:8080/actuator/health)를 직접 확인할 수 있습니다.
