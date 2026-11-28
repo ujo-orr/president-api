@@ -3071,12 +3071,18 @@
     "category": "PUBLIC_STATEMENT",
     "occurredAt": "2015-08-11",
     "datePrecision": "DAY",
-    "summary": "문재인 대표가 국군수도병원에서 부상 장병을 만나 위로했다.",
+    "summary": "문재인 새정치민주연합 대표가 국군수도병원에서 부상 장병을 위로했다. 병문안 중 짜장면을 예로 들어 개인적인 바람을 물은 발언이 논란이 됐다.",
     "background": null,
     "verifiedFacts": [
       "문재인 대표가 국군수도병원에서 부상 장병을 만나 위로했다."
     ],
-    "perspectives": [],
+    "perspectives": [
+      {
+        "speaker": "권성동 국민의힘 의원",
+        "claim": "2022년 10월 4일 이 발언을 다시 언급하며 부상 장병에게 그런 질문을 한 것은 무례했다고 비판했다.",
+        "sourceUrl": "https://www.inews24.com/view/1524854"
+      }
+    ],
     "legalStatus": "NOT_APPLICABLE",
     "legalDecisions": [],
     "quote": {
@@ -3099,6 +3105,22 @@
       {
         "title": "연합뉴스 · 파주 임진각 현장 최고위원회의 발언",
         "url": "https://www.yna.co.kr/view/AKR20150812074500001"
+      },
+      {
+        "title": "YTN · 병문안 방송 및 공개 대화 기록",
+        "url": "https://www.ytn.co.kr/_ln/0101_201508121355065084"
+      },
+      {
+        "title": "YTN · 말말말줌인 방송 영상",
+        "url": "https://www.youtube.com/watch?v=BRwhAldU_KE"
+      },
+      {
+        "title": "뉴데일리 · 2015년 병문안 발언 논란 보도",
+        "url": "https://www.newdaily.co.kr/site/data/html/2015/09/01/2015090100221.html"
+      },
+      {
+        "title": "아이뉴스24 · 발언 재인용과 권성동 의원의 비판",
+        "url": "https://www.inews24.com/view/1524854"
       }
     ],
     "links": [
@@ -3108,12 +3130,22 @@
         "responsibility": "대통령 취임 전 새정치민주연합 대표로 방문했다."
       }
     ],
-    "lastVerifiedAt": "2026-11-28T10:30:27+09:00",
+    "lastVerifiedAt": "2026-11-28T12:05:01+09:00",
     "positiveImpacts": [],
     "negativeImpacts": [],
-    "verificationStatus": "PARTIALLY_VERIFIED",
-    "verificationNotes": "병문안과 현장 보도에서 확인되는 격려 발언을 기록했다. 이후 유통된 음식 관련 문장의 전체 맥락과 발언 원문은 확인하지 못했다.",
+    "verificationStatus": "VERIFIED",
+    "verificationNotes": "YTN이 공개한 병문안 대화에서 발언과 직후 답변을 확인했다. 인용문의 ‘짜장면’은 아이뉴스24의 표기이며 YTN은 ‘자장면’으로 표기했다.",
     "relatedStatements": [
+      {
+        "speaker": "문재인",
+        "role": "새정치민주연합 대표",
+        "date": "2015-08-11",
+        "time": null,
+        "place": "경기 성남 국군수도병원",
+        "context": "김정원 하사에게 복무 의사와 하재헌 하사와의 연락 여부를 물은 뒤 나온 질문이다. 김 하사는 의료진이 잘 돌봐주고 먹고 싶은 것이 있으면 말하라고 한다고 답했다.",
+        "text": "뭐 짜장면 한 그릇 먹고 싶다든지 그런 소망 없어요?",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0101_201508121355065084"
+      },
       {
         "speaker": "문재인",
         "role": "새정치민주연합 대표",
