@@ -1,15 +1,25 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { fetchPresidentEvents } from '../data/presidentApi'
-import type { EventCategory, EventImpact, LegalDecision, LegalStatus, PresidentEvent } from '../types/presidentEvent'
+import type {
+  EventImpact, EventRecordType, EventStatement, LegalDecision, LegalStatus, PresidentEvent, VerificationStatus,
+} from '../types/presidentEvent'
 import { ExternalLink } from './ExternalLink'
 
-const categories: Record<EventCategory, string> = {
+const categories = {
+  NATIONAL_PROJECT: '국가 사업',
+  POLICY: '정책',
+  ADMINISTRATIVE_REFORM: '행정 및 제도 개편',
   HISTORICAL_EVENT: '역사적 사건',
   POLITICAL_CONTROVERSY: '정치적 논란',
   CRIMINAL_CASE: '형사 사건',
   CONSTITUTIONAL_CASE: '헌법적 사건',
   NATIONAL_INCIDENT: '국가적 사건·사고',
   PUBLIC_STATEMENT: '주요 발언',
+} satisfies Record<Exclude<EventRecordType, 'DIPLOMATIC'>, string>
+
+function filterCategory(event: PresidentEvent) {
+  const type = event.recordType ?? event.eventType ?? event.category
+  return type === 'DIPLOMATIC' ? 'HISTORICAL_EVENT' : type
 }
 
 const phases = { BEFORE: '취임 전', DURING: '재임 중', AFTER: '퇴임 후' }
@@ -23,8 +33,17 @@ const legalLabels: Record<LegalStatus, string> = {
   NOT_INDICTED: '불기소',
   PROSECUTION_DEFERRED: '기소유예',
   NOT_APPLICABLE: '',
-  UNKNOWN: '확인된 자료 부족',
+  UNKNOWN: '사법적 판단 확인 불가',
 }
+
+const verificationLabels: Record<VerificationStatus, string> = {
+  VERIFIED: '사실관계 확인',
+  PARTIALLY_VERIFIED: '일부 사실 확인',
+  DISPUTED: '사실관계에 관한 자료 간 불일치',
+  INSUFFICIENT_EVIDENCE: '확인된 자료 부족',
+}
+
+const stageLabels = { FIRST_INSTANCE: '1심', APPEAL: '항소심', SUPREME_COURT: '상고심' }
 
 function decisionLabel(decision: LegalDecision) {
   if (decision.kind === 'CONSTITUTIONAL') return decision.result
@@ -36,26 +55,20 @@ function EventDate({ value }: { value: string }) {
   return <time dateTime={value}>{year}년{month && ` ${Number(month)}월`}{day && ` ${Number(day)}일`}</time>
 }
 
-function DetailField({ label, children }: { label: string; children: ReactNode }) {
-  return <div><h4>{label}</h4>{children}</div>
+function DetailField({ label, children, className }: { label: string; children: ReactNode; className?: string }) {
+  return <div className={className}><h4>{label}</h4>{children}</div>
 }
 
-const impactHeadings = {
-  POLICY: ['긍정적 효과', '부정적 효과 및 한계'],
-  DIPLOMATIC: ['성과', '한계 및 비판'],
-  NATIONAL_INCIDENT: ['확인된 효과', '대응 과정의 문제점'],
-  HISTORICAL_EVENT: ['역사적 의의', '영향 및 한계'],
-} as const
-
-function SourcedImpacts({ label, items, sources }: {
+function SourcedImpacts({ label, items, sources, tone }: {
   label: string
   items: EventImpact[] | null | undefined
   sources: PresidentEvent['sources']
+  tone?: 'positive' | 'negative'
 }) {
   if (!items?.length) return null
 
   return (
-    <DetailField label={label}>
+    <DetailField label={label} className={tone ? `public-event-effect--${tone}` : undefined}>
       <ul>{items.map(({ text, sourceUrl }) => (
         <li key={`${sourceUrl}:${text}`}>
           <p>{text}</p>
@@ -63,6 +76,19 @@ function SourcedImpacts({ label, items, sources }: {
         </li>
       ))}</ul>
     </DetailField>
+  )
+}
+
+function Statement({ statement }: { statement: EventStatement }) {
+  const { text, summary, context, speaker, role, date, time, place, sourceUrl } = statement
+  return (
+    <div className="public-event-statement">
+      <p>{speaker} · {role} · <EventDate value={date} />{time && ` ${time}`}{place && ` · ${place}`}</p>
+      {text && <blockquote>{text}</blockquote>}
+      {!text && <p><strong>발언 요약</strong>{summary && <> · {summary}</>}</p>}
+      {context && <p><strong>발언 배경</strong> · {context}</p>}
+      <ExternalLink href={sourceUrl}>{text ? '발언 원문 또는 영상 출처' : '발언 요약 출처'}</ExternalLink>
+    </div>
   )
 }
 
@@ -75,45 +101,66 @@ function EventCard({ event }: { event: PresidentEvent }) {
   const status = legalLabels[event.legalStatus]
   const needsSubject = event.legalStatus === 'CONVICTED_FINAL' || event.legalStatus === 'ACQUITTED_FINAL'
   const showStatus = status && !needsSubject && !outcomes.some((decision) => decision.kind !== 'CONSTITUTIONAL')
-  const impactType = event.eventType ?? (event.category === 'NATIONAL_INCIDENT' ? 'NATIONAL_INCIDENT' : 'HISTORICAL_EVENT')
-  const [positiveHeading, negativeHeading] = impactHeadings[impactType]
-  const perspectiveHeading = event.category === 'PUBLIC_STATEMENT' ? '사회적 반응' : '주요 주장 및 반론'
+  const category = filterCategory(event)
+  const showsEffects = category === 'POLICY' || category === 'NATIONAL_PROJECT' || category === 'ADMINISTRATIVE_REFORM'
+  const verification = event.verificationStatus ? verificationLabels[event.verificationStatus] : undefined
+  const hasLegalDetails = legalDecisions.length > 0 || event.legalReviewNotes || event.legalVerifiedAt
+  const perspectiveHeading = quote || event.relatedStatements?.length ? '사회적 반응 및 관련 쟁점' : '주요 주장 및 반론'
 
   return (
     <details className="public-event">
       <summary>
         <div className="public-event-meta">
           <EventDate value={event.occurredAt} />
-          <span>{categories[event.category]}</span>
-          <span data-phase={event.presidencyPhase}>{phases[event.presidencyPhase]}</span>
+          <span>{event.recordType === 'DIPLOMATIC' ? '외교적 사건' : categories[category]}</span>
+          <span>{phases[event.presidencyPhase]}</span>
         </div>
         <h3>{event.title}</h3>
         <p>{event.summary}</p>
-        {(outcomeLabels.size > 0 || showStatus) && (
+        {(verification || outcomeLabels.size > 0 || showStatus) && (
           <div className="public-event-outcomes">
+            {verification && <span data-verification-status={event.verificationStatus}>{verification}</span>}
             {[...outcomeLabels].map(([key, decision]) => (
-              <span key={key}>{decision.subject} · <DecisionResult decision={decision} /></span>
+              <span key={key}>{decision.subject} · {decisionLabel(decision)}</span>
             ))}
             {showStatus && <span data-legal-status={event.legalStatus}>{status}</span>}
           </div>
         )}
       </summary>
       <div className="public-event-body">
+        {event.verificationNotes && <DetailField label="자료 검증 범위"><p>{event.verificationNotes}</p></DetailField>}
         {quote && (
-          <DetailField label={quote.text ? '발언 원문' : '발언 요약'}>
-            {quote.text && <blockquote>{quote.text}</blockquote>}
-            <p>{quote.speaker} · {quote.role} · <EventDate value={quote.date} />{quote.time && ` ${quote.time}`}{quote.place && ` · ${quote.place}`}</p>
-            <ExternalLink href={quote.sourceUrl}>{quote.text ? '발언 원문 또는 영상 출처' : '발언 요약 출처'}</ExternalLink>
+          <DetailField label="발언">
+            <Statement statement={quote} />
           </DetailField>
         )}
-        {quote?.context && <DetailField label="발언 배경"><p>{quote.context}</p></DetailField>}
         {background && <DetailField label="발생 배경"><p>{background}</p></DetailField>}
         {verifiedFacts.length > 0 && (
-          <DetailField label="확인된 사실"><ul>{verifiedFacts.map((fact) => <li key={fact}>{fact}</li>)}</ul></DetailField>
+          <DetailField label="확인된 사실">
+            <ul>{verifiedFacts.map((fact) => (
+              <li key={fact}>
+                <p>{fact}</p>
+                {event.factSources?.filter((item) => item.text === fact).map(({ sourceUrl }) => (
+                  <ExternalLink key={sourceUrl} href={sourceUrl}>{sources.find((source) => source.url === sourceUrl)?.title ?? '사실 근거'}</ExternalLink>
+                ))}
+              </li>
+            ))}</ul>
+          </DetailField>
         )}
         <SourcedImpacts label="정부 대응" items={event.governmentResponses} sources={sources} />
-        <SourcedImpacts label={positiveHeading} items={event.positiveImpacts} sources={sources} />
-        <SourcedImpacts label={negativeHeading} items={event.negativeImpacts} sources={sources} />
+        {showsEffects && <>
+          <SourcedImpacts label="긍정적 효과" items={event.positiveImpacts} sources={sources} tone="positive" />
+          <SourcedImpacts label="부정적 효과" items={event.negativeImpacts} sources={sources} tone="negative" />
+        </>}
+        {!!event.relatedStatements?.length && (
+          <DetailField label="관련 발언">
+            <ul>{event.relatedStatements.map((statement) => (
+              <li key={`${statement.date}:${statement.speaker}:${statement.sourceUrl}:${statement.text ?? statement.summary}`}>
+                <Statement statement={statement} />
+              </li>
+            ))}</ul>
+          </DetailField>
+        )}
         {!!perspectives?.length && (
           <DetailField label={perspectiveHeading}>
             <ul>{perspectives.map(({ speaker, claim, sourceUrl }) => (
@@ -125,18 +172,27 @@ function EventCard({ event }: { event: PresidentEvent }) {
           </DetailField>
         )}
         {responsibility && <DetailField label="대통령 및 정부의 관여 범위"><p>{responsibility}</p></DetailField>}
-        {legalDecisions.length > 0 && (
+        {hasLegalDetails && (
           <DetailField label="사법적 판단">
-            <ul className="public-event-decisions">{legalDecisions.map((decision) => (
+            {legalDecisions.length > 0 && <ul className="public-event-decisions">{legalDecisions.map((decision) => (
               <li key={`${decision.subject}:${decision.issue}:${decision.decidedAt}:${decision.result}`}>
-                <strong>{decision.subject} · <DecisionResult decision={decision} />{!decision.final && ' (미확정)'}</strong>
+                <strong>{decision.subject} · {decisionLabel(decision)}{!decision.final && ' (미확정)'}</strong>
                 <p>{decision.issue}</p>
-                <p>{decision.authority} · <EventDate value={decision.decidedAt} />{decision.caseNumber && ` · ${decision.caseNumber}`}</p>
+                <p>{decision.authority}{decision.kind === 'CONSTITUTIONAL' && ' · 헌법재판'}
+                  {decision.stage && ` · ${stageLabels[decision.stage]}`} · <EventDate value={decision.decidedAt} />{decision.caseNumber && ` · ${decision.caseNumber}`}
+                </p>
                 {decision.sentence && <p>{decision.sentence}</p>}
                 <p>{decision.reason}</p>
+                {decision.finalReportedAt && <p>확정 확인일 <EventDate value={decision.finalReportedAt} /></p>}
+                {!decision.finalReportedAt && decision.final && decision.stage === 'SUPREME_COURT' && (
+                  <p>확정일 <EventDate value={decision.decidedAt} /></p>
+                )}
                 <ExternalLink href={decision.sourceUrl}>판단 출처</ExternalLink>
+                {decision.finalSourceUrl && <ExternalLink href={decision.finalSourceUrl}>확정 근거</ExternalLink>}
               </li>
-            ))}</ul>
+            ))}</ul>}
+            {event.legalReviewNotes && <p>{event.legalReviewNotes}</p>}
+            {event.legalVerifiedAt && <p>사법 상태 확인일 <EventDate value={event.legalVerifiedAt} /></p>}
           </DetailField>
         )}
         {socialImpact && <DetailField label="국가 및 사회에 미친 영향"><p>{socialImpact}</p></DetailField>}
@@ -149,14 +205,6 @@ function EventCard({ event }: { event: PresidentEvent }) {
         )}
       </div>
     </details>
-  )
-}
-
-function DecisionResult({ decision }: { decision: LegalDecision }) {
-  return (
-    <span data-legal-status={decision.kind !== 'CONSTITUTIONAL' ? decision.result : undefined}>
-      {decisionLabel(decision)}
-    </span>
   )
 }
 
@@ -179,7 +227,7 @@ export function PresidentEvents({ presidentId }: { presidentId: string }) {
   }, [presidentId, attempt])
 
   const events = state.status === 'ready' ? state.events : []
-  const shown = filter === 'all' ? events : events.filter((event) => event.category === filter)
+  const shown = filter === 'all' ? events : events.filter((event) => filterCategory(event) === filter)
 
   return (
     <section className="detail-panel public-events" aria-labelledby="public-events-heading">
@@ -209,7 +257,7 @@ export function PresidentEvents({ presidentId }: { presidentId: string }) {
           </div>
         </>
       )}
-      <p className="public-events-notice">본 기록은 대한민국 현대사에 대한 이해를 돕기 위해 작성되었습니다. 확인된 사실, 의혹, 정치적 해석 및 사법적 판단을 구분하여 제공하며, 특정 정치적 입장이나 판단을 강요하지 않습니다.</p>
+      <p className="public-events-notice">본 기록은 대한민국 현대사에 대한 이해를 돕기 위해 작성되었습니다. 정책 및 사업의 효과는 관련 자료를 바탕으로 제공하며, 사건과 발언은 확인된 사실, 의혹, 정치적 해석 및 사법적 판단을 구분하여 제공합니다.</p>
     </section>
   )
 }

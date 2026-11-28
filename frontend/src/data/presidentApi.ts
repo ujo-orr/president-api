@@ -26,7 +26,8 @@ export async function fetchPresidentEvents(id: string, signal: AbortSignal): Pro
     typeof event?.id === 'string' && typeof event.occurredAt === 'string'
     && Array.isArray(event.verifiedFacts)
     && Array.isArray(event.legalDecisions) && Array.isArray(event.sources)
-    && [event.positiveImpacts, event.negativeImpacts, event.governmentResponses, event.perspectives]
+    && [event.positiveImpacts, event.negativeImpacts, event.governmentResponses, event.perspectives,
+      event.factSources, event.relatedStatements]
       .every((items) => items == null || Array.isArray(items))
   )) throw new Error('Invalid president events response.')
 
