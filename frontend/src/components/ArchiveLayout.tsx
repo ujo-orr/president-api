@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { Link, Outlet, useLocation, useRouteLoaderData, useViewTransitionState } from 'react-router-dom'
+import { Link, matchPath, Outlet, useLocation, useRouteLoaderData, useViewTransitionState, type Location } from 'react-router-dom'
 import type { loadPresident } from '../data/presidentApi'
+import { useDelayedSkeleton } from '../hooks/useDelayedSkeleton'
+import { ChronologySkeleton, EvidenceSkeleton, PresidentPageSkeleton } from './ArchiveSkeletons'
 import { PresidentSources } from './PresidentSources'
 
 export const archiveNotice = '본 웹 페이지의 평가는 공공데이터와 역사적 기록을 바탕으로 AI를 활용하여 산출하였으며, 평가 기준과 자료의 선정에 따라 해석이 달라질 수 있습니다.'
@@ -49,9 +51,17 @@ export function ArchiveHeader({ activePage, isPresidentDetail }: {
   )
 }
 
-export function ArchiveLayout() {
+export function ArchiveLayout({ pendingLocation }: { pendingLocation: Location | undefined }) {
   const { pathname, hash } = useLocation()
-  const president = useRouteLoaderData<typeof loadPresident>('president')
+  const destination = pendingLocation?.pathname
+  const pendingRequest = destination !== pathname ? pendingLocation?.key ?? null : null
+  const showPendingSkeleton = useDelayedSkeleton(pendingRequest)
+  const PendingSkeleton = showPendingSkeleton && destination
+    ? destination === '/' ? ChronologySkeleton
+      : matchPath('/presidents/:id/evaluation-methods', destination) ? EvidenceSkeleton
+        : matchPath('/presidents/:id', destination) ? PresidentPageSkeleton : null
+    : null
+  const president = useRouteLoaderData<typeof loadPresident>('president')?.person
   const isHome = pathname === '/'
   const isChronology = isHome && hash === '#chronology'
   const isEvaluation = pathname === '/evaluation-methods'
@@ -89,7 +99,10 @@ export function ArchiveLayout() {
       }}>본문 바로가기</a>
       {!isHome && <ArchiveHeader activePage={isEvaluation ? 'evaluation' : undefined} isPresidentDetail={Boolean(president)} />}
       <main className={isHome ? 'site-main site-main--home' : 'container site-main'} id="main" ref={main} tabIndex={-1}>
-        <Outlet context={chronologyPosition} />
+        <div className="archive-route-content" inert={Boolean(PendingSkeleton)}>
+          <Outlet context={chronologyPosition} />
+        </div>
+        {PendingSkeleton && <div className="archive-route-pending"><PendingSkeleton /></div>}
       </main>
       <footer className="site-footer container">
         <div className="site-footer-copy">

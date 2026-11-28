@@ -36,4 +36,10 @@ class PresidentController {
         }
         return presidents.findEvents(id);
     }
+
+    @GetMapping("/{id}/archive")
+    PresidentRepository.Archive archive(@PathVariable String id) {
+        return presidents.findArchive(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "President not found"));
+    }
 }

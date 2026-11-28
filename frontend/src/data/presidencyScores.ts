@@ -1,6 +1,6 @@
-import scoreData from '../../../data/presidency-scores.stage-2.json'
+import { categories, scoreAdjustmentConstant } from '../../../data/presidency-scores.stage-2.json'
 
-type ScoreAxisId = keyof typeof scoreData.categories
+type ScoreAxisId = keyof typeof categories
 
 const axisOrder: readonly ScoreAxisId[] = [
   'economy',
@@ -12,23 +12,11 @@ const axisOrder: readonly ScoreAxisId[] = [
 ]
 
 export const maximumScore = 10
-export const scoreAdjustmentConstant = scoreData.scoreAdjustmentConstant
-export const scoreCategories = axisOrder.map((id) => ({ id, label: scoreData.categories[id] }))
+export { scoreAdjustmentConstant }
+export const scoreCategories = axisOrder.map((id) => ({ id, label: categories[id] }))
 
 export interface RadarScore {
-  id: ScoreAxisId
+  id: string
   label: string
   score: number | null
-}
-
-type PresidentScoreRecord = { axes: Record<ScoreAxisId, { score: number | null }> }
-
-const scoresByPresident: Partial<Record<string, PresidentScoreRecord>> = scoreData.presidents
-
-export function getPresidencyScores(presidentId: string): RadarScore[] {
-  const entry = scoresByPresident[presidentId]
-  return scoreCategories.map((category) => ({
-    ...category,
-    score: entry?.axes[category.id].score ?? null,
-  }))
 }

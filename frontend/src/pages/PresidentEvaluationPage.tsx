@@ -1,22 +1,19 @@
 import { useLoaderData } from 'react-router-dom'
-import historicalEvents from '../../../data/historical-events.stage-1.json'
-import evaluationData from '../../../data/presidency-assessments.stage-2.json'
 import { EvaluationBackLink } from '../components/EvaluationBackLink'
 import { ExternalLink } from '../components/ExternalLink'
 import type { loadPresident } from '../data/presidentApi'
-import { getPresidencyScores } from '../data/presidencyScores'
 import { NotFoundPage } from './NotFoundPage'
 
-const eventsById = new Map(historicalEvents.events.map((event) => [event.id, event]))
-
 export function PresidentEvaluationPage() {
-  const person = useLoaderData<typeof loadPresident>()
+  const archive = useLoaderData<typeof loadPresident>()
 
-  if (!person) return <NotFoundPage presidentMissing />
+  if (!archive) return <NotFoundPage presidentMissing />
 
-  const evidence = evaluationData.assessments.flatMap((assessment) => {
+  const { person, scores, events, assessments } = archive
+  const eventsById = new Map(events.map((event) => [event.id, event]))
+  const evidence = assessments.flatMap((assessment) => {
     const event = eventsById.get(assessment.eventId)
-    if (!event || event.president !== person.name || assessment.weight === null) return []
+    if (!event || assessment.weight === null) return []
     return [{ assessment, event }]
   })
 
@@ -25,7 +22,7 @@ export function PresidentEvaluationPage() {
       <EvaluationBackLink fallback={`/presidents/${person.id}`} />
       <h1>{person.name} 평가 근거</h1>
       <div className="evaluation-grid president-evidence">
-        {getPresidencyScores(person.id).map(({ id: axisId, label, score }) => {
+        {scores.map(({ id: axisId, label, score, status }) => {
           const entries = evidence.filter(({ assessment }) => assessment.axisId === axisId)
           const byEvent = new Map<(typeof entries)[number]['event'], (typeof entries)[number]['assessment'][]>()
           for (const { event, assessment } of entries) {
@@ -37,7 +34,9 @@ export function PresidentEvaluationPage() {
             <section key={axisId}>
               <h2>{label} <span className="evidence-score">{score ?? 0}점</span></h2>
               {entries.length === 0 ? (
-                <p>점수에 반영된 자료가 없습니다.</p>
+                <p>{status === 'RESEARCH_PENDING' ? '추가 조사를 기다리는 분야입니다.'
+                  : status === 'UNASSESSED' ? '평가가 확정되지 않은 분야입니다.'
+                    : '점수에 반영된 자료가 없습니다.'}</p>
               ) : (
                 <ul className="source-list">
                   {Array.from(byEvent, ([event, impacts]) => (

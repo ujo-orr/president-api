@@ -1,11 +1,12 @@
+import type { ReactNode } from 'react'
 import { Link, useLoaderData, useLocation } from 'react-router-dom'
 import { ArchiveHeader, Arrow } from '../components/ArchiveLayout'
+import { ChronologySkeleton, DelayedSkeleton } from '../components/ArchiveSkeletons'
 import { PresidentChronology } from '../components/PresidentChronology'
 import { TaegeukgiBackdrop } from '../components/TaegeukgiBackdrop'
 import type { loadChronology } from '../data/presidentApi'
 
-export function HomePage() {
-  const presidents = useLoaderData<typeof loadChronology>()
+function HomeScreens({ children }: { children: ReactNode }) {
   const { hash } = useLocation()
   const isChronology = hash === '#chronology'
 
@@ -21,8 +22,18 @@ export function HomePage() {
       </section>
       <div className="home-screen home-screen--chronology" inert={!isChronology}>
         <ArchiveHeader activePage="chronology" />
-        <PresidentChronology presidents={presidents} />
+        {children}
       </div>
     </div>
   )
+}
+
+export function HomePage() {
+  const presidents = useLoaderData<typeof loadChronology>()
+  return <HomeScreens><PresidentChronology presidents={presidents} /></HomeScreens>
+}
+
+export function HomeLoading({ delayed = false }: { delayed?: boolean }) {
+  const skeleton = <ChronologySkeleton />
+  return <HomeScreens>{delayed ? <DelayedSkeleton>{skeleton}</DelayedSkeleton> : skeleton}</HomeScreens>
 }
