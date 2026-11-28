@@ -42,4 +42,12 @@ class PresidentController {
         return presidents.findArchive(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "President not found"));
     }
+
+    @GetMapping("/{id}/related-cases")
+    List<JsonNode> relatedCases(@PathVariable String id) {
+        if (!presidents.exists(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "President not found");
+        }
+        return presidents.findRelatedCases(id);
+    }
 }

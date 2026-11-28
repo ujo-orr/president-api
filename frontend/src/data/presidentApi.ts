@@ -2,9 +2,23 @@ import type { LoaderFunctionArgs } from 'react-router-dom'
 import type { President } from '../types/archive'
 import type { PresidentArchive } from '../types/presidentArchive'
 import type { PresidentEvent } from '../types/presidentEvent'
+import type { PresidentRelatedCase } from '../types/presidentRelatedCase'
 import { scoreCategories } from './presidencyScores'
 
 const presidentsUrl = '/api/presidents'
+
+export async function fetchPresidentRelatedCases(id: string, signal: AbortSignal): Promise<PresidentRelatedCase[]> {
+  const response = await fetch(`${presidentsUrl}/${encodeURIComponent(id)}/related-cases`, { signal })
+  if (!response.ok) throw new Error('President related cases request failed.')
+  const cases: PresidentRelatedCase[] = await response.json()
+  if (!Array.isArray(cases) || !cases.every((entry) => entry?.presidentId === id
+      && typeof entry.id === 'string' && Array.isArray(entry.relatedPersons)
+      && Array.isArray(entry.legalDecisions) && Array.isArray(entry.sources)
+      && Array.isArray(entry.verifiedFacts) && Array.isArray(entry.allegations))) {
+    throw new Error('Invalid president related cases response.')
+  }
+  return cases
+}
 
 export async function loadChronology({ request }: LoaderFunctionArgs): Promise<President[]> {
   const response = await fetch(presidentsUrl, { signal: request.signal })

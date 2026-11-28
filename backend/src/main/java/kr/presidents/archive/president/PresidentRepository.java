@@ -50,6 +50,15 @@ class PresidentRepository {
                 .query((row, index) -> readDocument(row.getString(1))).list();
     }
 
+    List<JsonNode> findRelatedCases(String id) {
+        return jdbc.sql("""
+                SELECT JSON_SET(c.document, '$.presidentId', c.president_id, '$.publicEventId', c.public_event_id)
+                FROM president_related_case c
+                WHERE c.president_id = :id
+                ORDER BY c.occurred_from IS NULL, c.occurred_from, c.id
+                """).param("id", id).query((row, index) -> readDocument(row.getString(1))).list();
+    }
+
     record Axis(String id, String label, Integer score, String status) {}
 
     record Archive(JsonNode person, List<Axis> scores, List<JsonNode> events, List<JsonNode> assessments,
