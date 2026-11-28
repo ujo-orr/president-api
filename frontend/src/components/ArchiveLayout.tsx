@@ -3,6 +3,7 @@ import { Link, matchPath, Outlet, useLocation, useRouteLoaderData, useViewTransi
 import type { loadPresident } from '../data/presidentApi'
 import { useDelayedSkeleton } from '../hooks/useDelayedSkeleton'
 import { ChronologySkeleton, EvidenceSkeleton, PresidentPageSkeleton } from './ArchiveSkeletons'
+import { ArchivePresence } from './ArchivePresence'
 import { PresidentSources } from './PresidentSources'
 
 export const archiveNotice = '본 웹 페이지의 평가는 공공데이터와 역사적 기록을 바탕으로 AI를 활용하여 산출하였으며, 평가 기준과 자료의 선정에 따라 해석이 달라질 수 있습니다.'
@@ -106,7 +107,10 @@ export function ArchiveLayout({ pendingLocation }: { pendingLocation: Location |
       </main>
       <footer className="site-footer container">
         <div className="site-footer-copy">
-          <p>{archiveNotice}</p>
+          <div className="site-footer-row">
+            <p>{archiveNotice}</p>
+            <ArchivePresence hidden={isHome && !isChronology} />
+          </div>
           {president && <PresidentSources person={president} />}
         </div>
       </footer>
