@@ -465,14 +465,14 @@ img { display: block; max-width: 100%; }
 .public-event-meta, .public-event-outcomes { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: .8rem; }
 .public-event-outcomes { margin-top: 9px; }
 .public-event-outcomes > span { background: var(--surface-muted); padding: 3px 8px; border-radius: 5px; }
-.public-event [data-phase="DURING"] { color: #49785c; }
-.public-event [data-legal-status="CONVICTED_FINAL"] { color: #a34f59; }
-.public-event [data-legal-status="ACQUITTED_FINAL"] { color: #4c6fa6; }
-.public-event [data-legal-status="UNKNOWN"] { font-weight: 700; }
+.public-event [data-verification-status="INSUFFICIENT_EVIDENCE"] { font-weight: 700; }
 .public-event h3 { margin: 5px 0; font-size: 1rem; }
 .public-event p, .public-event h4 { margin: 0; }
 .public-event-body { display: grid; gap: 15px; padding: 16px; border-top: 1px solid var(--line); font-size: .9rem; }
 .public-event-body h4 { margin-bottom: 4px; font-size: .9rem; }
+.public-event-effect--positive h4, .public-event-effect--positive p { color: #286343; }
+.public-event-effect--negative h4, .public-event-effect--negative p { color: #9c3544; }
+.public-event-decisions a + a { margin-inline-start: 12px; }
 .public-event-body ul { margin: 0; padding-inline-start: 1.2em; }
 .public-event-body li + li { margin-top: 6px; }
 .public-event-body blockquote { margin: 6px 0 10px; padding: 10px 12px; border-inline-start: 3px solid var(--muted); background: var(--surface-muted); }
