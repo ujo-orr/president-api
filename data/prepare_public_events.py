@@ -13,7 +13,38 @@ CATEGORIES = {"HISTORICAL_EVENT", "POLITICAL_CONTROVERSY", "CRIMINAL_CASE",
 STATUSES = {"CONVICTED_FINAL", "ACQUITTED_FINAL", "TRIAL_IN_PROGRESS", "UNDER_INVESTIGATION",
             "NO_PROSECUTION_RIGHT", "NOT_INDICTED", "PROSECUTION_DEFERRED", "NOT_APPLICABLE", "UNKNOWN"}
 EVENT_TYPES = {"POLICY", "DIPLOMATIC"}
-IMPACT_FIELDS = ("positiveImpacts", "negativeImpacts", "governmentResponses")
+EFFECT_TYPES = {"POLICY", "NATIONAL_PROJECT", "ADMINISTRATIVE_REFORM"}
+HISTORICAL_TYPES = EFFECT_TYPES | {"DIPLOMATIC", "HISTORICAL_EVENT"}
+VERIFICATION_STATUSES = {"VERIFIED", "PARTIALLY_VERIFIED", "DISPUTED", "INSUFFICIENT_EVIDENCE"}
+SOURCED_FIELDS = ("positiveImpacts", "negativeImpacts", "governmentResponses", "factSources")
+
+
+def validate_evidence(doc, urls, eid):
+    # 자료 검증 상태와 사법 상태의 독립 검증
+    verification = doc["verificationStatus"]
+    require(verification in VERIFICATION_STATUSES, f"{eid}: verificationStatus")
+    if verification != "VERIFIED":
+        require(doc["verificationNotes"] and doc["verificationNotes"].strip(), f"{eid}: verificationNotes")
+    record_type = doc["recordType"]
+    require(record_type in (HISTORICAL_TYPES if doc["category"] == "HISTORICAL_EVENT" else {doc["category"]}),
+            f"{eid}: recordType")
+    for field in SOURCED_FIELDS:
+        items = doc.get(field, []) if field == "governmentResponses" else doc[field]
+        require(isinstance(items, list), f"{eid}: {field}")
+        for item in items:
+            require(isinstance(item["text"], str) and item["text"].strip()
+                    and item["sourceUrl"] in urls, f"{eid}: {field}")
+    if doc["positiveImpacts"] or doc["negativeImpacts"]:
+        require(record_type in EFFECT_TYPES, f"{eid}: policy effects")
+    if doc.get("governmentResponses"):
+        require(record_type == "NATIONAL_INCIDENT", f"{eid}: governmentResponses")
+    require({item["text"] for item in doc["factSources"]} == set(doc["verifiedFacts"]), f"{eid}: factSources")
+    require(isinstance(doc["relatedStatements"], list), f"{eid}: relatedStatements")
+    for statement in doc["relatedStatements"]:
+        date.fromisoformat(statement["date"])
+        require(statement["speaker"] and statement["role"] and statement["context"]
+                and (statement["text"] or statement.get("summary"))
+                and statement["sourceUrl"] in urls, f"{eid}: relatedStatements")
 
 
 def prepare(events):
@@ -37,23 +68,27 @@ def prepare(events):
         require(event_type is None or (
             doc["category"] == "HISTORICAL_EVENT" and event_type in EVENT_TYPES
         ), f"{eid}: eventType")
-        for field in IMPACT_FIELDS:
-            items = doc.get(field, []) if field == "governmentResponses" else doc[field]
-            require(isinstance(items, list), f"{eid}: {field}")
-            if field == "governmentResponses" and items:
-                require(doc["category"] == "NATIONAL_INCIDENT", f"{eid}: {field}")
-            for item in items:
-                require(isinstance(item["text"], str) and item["text"].strip()
-                        and item["sourceUrl"] in urls, f"{eid}: {field}")
+        validate_evidence(doc, urls, eid)
+        if doc["legalVerifiedAt"]:
+            date.fromisoformat(doc["legalVerifiedAt"])
+        if doc["legalStatus"] == "UNKNOWN":
+            require(doc["legalReviewNotes"], f"{eid}: legalReviewNotes")
         for perspective in doc["perspectives"]:
             require(perspective["speaker"].strip() and perspective["claim"].strip(), eid)
         for item in doc["perspectives"] + doc["legalDecisions"]:
             require(item["sourceUrl"] in urls, eid)
         for ruling in doc["legalDecisions"]:
             require(ruling["subject"] and ruling["issue"] and ruling["reason"], eid)
-            date.fromisoformat(ruling["decidedAt"])
+            decided_at = date.fromisoformat(ruling["decidedAt"])
+            if ruling.get("finalReportedAt"):
+                require(ruling["final"] and date.fromisoformat(ruling["finalReportedAt"]) >= decided_at
+                        and ruling["finalSourceUrl"] in urls, eid)
             if ruling["result"] == "CONVICTED_FINAL":
                 require(ruling["final"] and ruling["sentence"], eid)
+            if ruling["result"] == "ACQUITTED_FINAL":
+                require(ruling["final"], eid)
+            if ruling["result"] in {"1심 유죄", "TRIAL_IN_PROGRESS"}:
+                require(not ruling["final"], eid)
         quote = doc["quote"]
         require((quote is not None) == (doc["category"] == "PUBLIC_STATEMENT"), eid)
         if quote:
