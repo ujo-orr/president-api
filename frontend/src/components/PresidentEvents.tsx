@@ -50,6 +50,32 @@ function decisionLabel(decision: LegalDecision) {
   return legalLabels[decision.result as LegalStatus] ?? decision.result
 }
 
+function Verdict({ decision }: { decision: LegalDecision }) {
+  const label = decisionLabel(decision)
+  const verdict = decision.kind === 'CRIMINAL' ? label.match(/(?:^|\s)(유죄|무죄)(?:$|\s)/)?.[1] : undefined
+  return <span data-verdict={verdict}>{label}</span>
+}
+
+function groupDecisions(decisions: LegalDecision[]) {
+  // 동일 피고인·선고별 혐의 묶음
+  const groups = new Map<string, LegalDecision[]>()
+  for (const decision of decisions) {
+    const key = JSON.stringify([
+      decision.kind, decision.subject, decision.authority, decision.stage ?? null, decision.decidedAt,
+      decision.caseNumber || decision.sourceUrl,
+    ])
+    const group = groups.get(key)
+    if (group) group.push(decision)
+    else groups.set(key, [decision])
+  }
+  return [...groups].sort(([, [a]], [, [b]]) => a.decidedAt.localeCompare(b.decidedAt))
+}
+
+function hasMixedFinalOutcomes(group: LegalDecision[]) {
+  return group.some(({ result }) => result === 'CONVICTED_FINAL')
+    && group.some(({ result }) => result === 'ACQUITTED_FINAL')
+}
+
 function EventDate({ value }: { value: string }) {
   const [year, month, day] = value.split('-')
   return <time dateTime={value}>{year}년{month && ` ${Number(month)}월`}{day && ` ${Number(day)}일`}</time>
@@ -92,9 +118,49 @@ function Statement({ statement }: { statement: EventStatement }) {
   )
 }
 
+function JudgmentGroups({ groups }: { groups: ReturnType<typeof groupDecisions> }) {
+  return (
+    <ul className="public-event-judgments">
+      {groups.map(([key, group]) => {
+        const [first] = group
+        return (
+          <li key={key}>
+            <h5>{first.subject}</h5>
+            <p>
+              {first.authority}{first.kind === 'CONSTITUTIONAL' && ' · 헌법재판'}
+              {first.stage && ` · ${stageLabels[first.stage]}`} · <EventDate value={first.decidedAt} />
+              {first.caseNumber && ` · ${first.caseNumber}`}
+            </p>
+            {hasMixedFinalOutcomes(group) && <p className="public-event-judgment-note">같은 판결에서 혐의별로 유죄와 무죄가 각각 확정됐습니다.</p>}
+            <ul className="public-event-decisions">
+              {group.map((decision) => (
+                <li key={`${decision.issue}:${decision.result}`}>
+                  <strong>{decision.issue}</strong>
+                  <p><Verdict decision={decision} />{!decision.final && ' (미확정)'}</p>
+                  {decision.sentence && <p>형량 · {decision.sentence}</p>}
+                  <p>{decision.reason}</p>
+                  {decision.finalReportedAt && <p>확정 확인일 <EventDate value={decision.finalReportedAt} /></p>}
+                  {!decision.finalReportedAt && decision.final && decision.stage === 'SUPREME_COURT' && (
+                    <p>확정일 <EventDate value={decision.decidedAt} /></p>
+                  )}
+                  <ExternalLink href={decision.sourceUrl}>판단 출처</ExternalLink>
+                  {decision.finalSourceUrl && <ExternalLink href={decision.finalSourceUrl}>확정 근거</ExternalLink>}
+                </li>
+              ))}
+            </ul>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
 function EventCard({ event }: { event: PresidentEvent }) {
   const { background, verifiedFacts, perspectives, responsibility, legalDecisions, quote, socialImpact, followUp, sources } = event
-  const outcomes = legalDecisions.filter((decision) => decision.kind === 'CONSTITUTIONAL' || decision.result === event.legalStatus)
+  const judgmentGroups = groupDecisions(legalDecisions)
+  const mixedSubjects = new Set(judgmentGroups.filter(([, group]) => hasMixedFinalOutcomes(group)).map(([, [decision]]) => decision.subject))
+  const outcomes = legalDecisions.filter((decision) => decision.kind === 'CONSTITUTIONAL'
+    || (decision.result === event.legalStatus && !mixedSubjects.has(decision.subject)))
   const outcomeLabels = new Map(outcomes.map((decision) => [
     `${decision.subject} · ${decisionLabel(decision)}`, decision,
   ]))
@@ -117,11 +183,12 @@ function EventCard({ event }: { event: PresidentEvent }) {
         </div>
         <h3>{event.title}</h3>
         <p>{event.summary}</p>
-        {(verification || outcomeLabels.size > 0 || showStatus) && (
+        {(verification || mixedSubjects.size > 0 || outcomeLabels.size > 0 || showStatus) && (
           <div className="public-event-outcomes">
             {verification && <span data-verification-status={event.verificationStatus}>{verification}</span>}
+            {[...mixedSubjects].map((subject) => <span key={subject}>{subject} · 혐의별 유·무죄 확정</span>)}
             {[...outcomeLabels].map(([key, decision]) => (
-              <span key={key}>{decision.subject} · {decisionLabel(decision)}</span>
+              <span key={key}>{decision.subject} · <Verdict decision={decision} /></span>
             ))}
             {showStatus && <span data-legal-status={event.legalStatus}>{status}</span>}
           </div>
@@ -174,23 +241,7 @@ function EventCard({ event }: { event: PresidentEvent }) {
         {responsibility && <DetailField label="대통령 및 정부의 관여 범위"><p>{responsibility}</p></DetailField>}
         {hasLegalDetails && (
           <DetailField label="사법적 판단">
-            {legalDecisions.length > 0 && <ul className="public-event-decisions">{legalDecisions.map((decision) => (
-              <li key={`${decision.subject}:${decision.issue}:${decision.decidedAt}:${decision.result}`}>
-                <strong>{decision.subject} · {decisionLabel(decision)}{!decision.final && ' (미확정)'}</strong>
-                <p>{decision.issue}</p>
-                <p>{decision.authority}{decision.kind === 'CONSTITUTIONAL' && ' · 헌법재판'}
-                  {decision.stage && ` · ${stageLabels[decision.stage]}`} · <EventDate value={decision.decidedAt} />{decision.caseNumber && ` · ${decision.caseNumber}`}
-                </p>
-                {decision.sentence && <p>{decision.sentence}</p>}
-                <p>{decision.reason}</p>
-                {decision.finalReportedAt && <p>확정 확인일 <EventDate value={decision.finalReportedAt} /></p>}
-                {!decision.finalReportedAt && decision.final && decision.stage === 'SUPREME_COURT' && (
-                  <p>확정일 <EventDate value={decision.decidedAt} /></p>
-                )}
-                <ExternalLink href={decision.sourceUrl}>판단 출처</ExternalLink>
-                {decision.finalSourceUrl && <ExternalLink href={decision.finalSourceUrl}>확정 근거</ExternalLink>}
-              </li>
-            ))}</ul>}
+            {judgmentGroups.length > 0 && <JudgmentGroups groups={judgmentGroups} />}
             {event.legalReviewNotes && <p>{event.legalReviewNotes}</p>}
             {event.legalVerifiedAt && <p>사법 상태 확인일 <EventDate value={event.legalVerifiedAt} /></p>}
           </DetailField>
@@ -200,7 +251,7 @@ function EventCard({ event }: { event: PresidentEvent }) {
         {sources.length > 0 && (
           <DetailField label="원문 출처">
             <ul>{sources.map(({ title, url }) => <li key={url}><ExternalLink href={url}>{title}</ExternalLink></li>)}</ul>
-            <p>자료 확인일 <EventDate value={event.lastVerifiedAt.slice(0, 10)} /></p>
+            <p className="public-event-source-date">자료 확인일 <EventDate value={event.lastVerifiedAt.slice(0, 10)} /></p>
           </DetailField>
         )}
       </div>

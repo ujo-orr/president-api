@@ -47,9 +47,39 @@ docker compose down
 | --- | --- |
 | `GET /api/presidents` | 첫 취임순 대통령 프로필 13건 |
 | `GET /api/presidents/{id}` | 대통령 한 명의 프로필. 알 수 없는 ID는 404 |
+| `GET /api/presidents/{id}/events` | 대통령별 주요 사건·발언 배열. 알 수 없는 ID는 404, 자료가 없는 대통령은 빈 배열 |
 | `GET /actuator/health` | 백엔드와 DB 연결 상태 |
 
 Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 포트에서는 [API 목록](http://127.0.0.1:8080/api/presidents)과 [백엔드 상태](http://127.0.0.1:8080/actuator/health)를 직접 확인할 수 있습니다.
+
+### 주요 사건 API 연동
+
+사건은 발생 날짜와 ID 순으로 반환합니다. `category`는 기존 화면 필터 값이고, `recordType`은 기존 여섯 분류 및 `POLICY`, `NATIONAL_PROJECT`, `ADMINISTRATIVE_REFORM`, `DIPLOMATIC`을 사용하는 세부 유형입니다. 기존 `eventType`은 `POLICY` 또는 `DIPLOMATIC`이며, 해당하지 않는 경우 필드를 생략하거나 null을 반환합니다. 국가 사업과 행정 개편은 기존 화면 호환을 위해 `eventType`에서 `POLICY`로 제공됩니다.
+
+| 필드 | 형식과 해석 |
+| --- | --- |
+| `verificationStatus` | 필수. `VERIFIED` · `PARTIALLY_VERIFIED` · `DISPUTED` · `INSUFFICIENT_EVIDENCE` |
+| `verificationNotes` | 문자열 또는 null. 일부 확인, 자료 불일치, 근거 부족의 대상과 범위 |
+| `legalStatus` | `CONVICTED_FINAL` · `ACQUITTED_FINAL` · `TRIAL_IN_PROGRESS` · `UNDER_INVESTIGATION` · `NO_PROSECUTION_RIGHT` · `NOT_INDICTED` · `PROSECUTION_DEFERRED` · `NOT_APPLICABLE` · `UNKNOWN`. `UNKNOWN`은 사법적 판단 확인 불가를 뜻합니다. 자료 확인 여부에는 `verificationStatus`를 사용합니다. |
+| `legalVerifiedAt`, `legalReviewNotes` | 각각 날짜(YYYY-MM-DD) 또는 null, 검토 범위 문자열 또는 null |
+| `factSources` | `{ text, sourceUrl }[]`. 개별 근거를 연결한 사실은 `verifiedFacts`에도 포함됩니다. |
+| `positiveImpacts`, `negativeImpacts` | `{ text, sourceUrl }[]`. 시행한 정책·국가 사업·행정 개편의 효과와 한계. 다른 유형과 확인된 효과가 없는 사건은 빈 배열. |
+| `relatedStatements` | 관련 발언 배열. 기존 `quote`와 같은 필드에 원문이 없을 때의 요약 `summary?`(문자열)를 추가합니다. `text`, `time`, `place`는 null을 허용합니다. |
+| `legalDecisions` | 피고인·혐의별 결과. 신규 항목은 심급 `stage?`와 별도 확정 확인 정보 `finalReportedAt?`, `finalSourceUrl?`를 포함할 수 있습니다. `decidedAt`은 선고 또는 절차 날짜, `final`은 확정 여부입니다. |
+
+아래는 박종철 사건 응답에서 이 두 상태를 발췌한 예입니다. [전두환 사건 API](http://127.0.0.1:8080/api/presidents/chun-doo-hwan/events)
+
+```json
+{
+  "id": "park-jong-cheol",
+  "recordType": "NATIONAL_INCIDENT",
+  "verificationStatus": "VERIFIED",
+  "verificationNotes": null,
+  "legalStatus": "UNKNOWN",
+  "positiveImpacts": [],
+  "negativeImpacts": []
+}
+```
 
 ## 공공데이터 정합성 검증
 
