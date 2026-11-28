@@ -48,9 +48,14 @@ docker compose down
 | `GET /api/presidents` | 첫 취임순 대통령 프로필 13건 |
 | `GET /api/presidents/{id}` | 대통령 한 명의 프로필. 알 수 없는 ID는 404 |
 | `GET /api/presidents/{id}/events` | 대통령별 주요 사건·발언 배열. 알 수 없는 ID는 404, 자료가 없는 대통령은 빈 배열 |
+| `GET /api/presidents/{id}/archive` | 대통령 프로필과 평가용 사건, 원문 출처, 평가 근거 및 점수. 알 수 없는 ID는 404 |
 | `GET /actuator/health` | 백엔드와 DB 연결 상태 |
 
 Vite는 같은 주소의 `/api` 요청을 백엔드에 전달합니다. 기본 포트에서는 [API 목록](http://127.0.0.1:8080/api/presidents)과 [백엔드 상태](http://127.0.0.1:8080/actuator/health)를 직접 확인할 수 있습니다.
+
+`/archive`는 `person`, `scores`, `events`, `assessments`, `scoreAdjustmentConstant`, `timelineWeightLimit`을 반환합니다. 점수별 `status`는 계산 결과, 조사로 확인된 자료 부재, 미평가, 조사 대기를 구분합니다. 근거는 `eventId`로 사건 및 원문 출처와 연결됩니다. 평가용 사건과 공개 사건·발언은 각각 `/archive`와 `/events`에서 제공됩니다.
+
+Docker Compose 실행 후 `python data/verify_presidency_archive_api.py`로 대통령 13명의 점수, 사건, 출처, 근거와 저장된 산식 설정을 원본과 대조할 수 있습니다.
 
 ### 주요 사건 API 연동
 

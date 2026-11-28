@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { getPresidencyScores, maximumScore, scoreAdjustmentConstant } from '../data/presidencyScores'
+import { maximumScore } from '../data/presidencyScores'
 import type { RadarScore } from '../data/presidencyScores'
+import type { PresidentArchive } from '../types/presidentArchive'
 import { useChartReveal } from '../hooks/useChartReveal'
 import { Arrow } from './ArchiveLayout'
 
@@ -50,9 +51,10 @@ function RadarChart({ scores }: { scores: DisplayScore[] }) {
   )
 }
 
-export function PresidencyIndicators({ presidentId }: { presidentId: string }) {
+export function PresidencyIndicators({ archive }: { archive: PresidentArchive }) {
+  const { person: { id: presidentId }, scoreAdjustmentConstant } = archive
   const chartRef = useChartReveal<HTMLElement>('.presidency-radar', presidentId)
-  const scores = getPresidencyScores(presidentId).map((axis) => ({ ...axis, score: axis.score ?? 0 }))
+  const scores = archive.scores.map((axis) => ({ ...axis, score: axis.score ?? 0 }))
 
   return (
     <div className="details-middle presidency-indicators">

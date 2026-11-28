@@ -1,8 +1,10 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { fetchPresidentEvents } from '../data/presidentApi'
+import { useDelayedSkeleton } from '../hooks/useDelayedSkeleton'
 import type {
   EventImpact, EventRecordType, EventStatement, LegalDecision, LegalStatus, PresidentEvent, VerificationStatus,
 } from '../types/presidentEvent'
+import { EventsSkeleton } from './ArchiveSkeletons'
 import { ExternalLink } from './ExternalLink'
 
 const categories = {
@@ -261,11 +263,13 @@ function EventCard({ event }: { event: PresidentEvent }) {
 
 type EventsState = { status: 'loading' | 'error' } | { status: 'ready'; events: PresidentEvent[] }
 const filters = [['all', '전체'], ...Object.entries(categories)] as const
+const filterWidths = filters.map(([, label]) => label.length * .84 + 1.85)
 
 export function PresidentEvents({ presidentId }: { presidentId: string }) {
   const [state, setState] = useState<EventsState>({ status: 'loading' })
   const [attempt, setAttempt] = useState(0)
   const [filter, setFilter] = useState('all')
+  const showSkeleton = useDelayedSkeleton(state.status === 'loading' ? attempt : null)
 
   useEffect(() => {
     // 페이지 이동 및 재시도 시 이전 요청 취소
@@ -284,7 +288,7 @@ export function PresidentEvents({ presidentId }: { presidentId: string }) {
     <section className="detail-panel public-events" aria-labelledby="public-events-heading">
       <h2 id="public-events-heading">주요 사건 및 발언</h2>
       <p>해당 대통령과 관련된 주요 역사적 사건, 사법적 판단 및 발언을 확인할 수 있습니다.</p>
-      {state.status === 'loading' && <p role="status">주요 사건 및 발언을 불러오는 중입니다.</p>}
+      {showSkeleton && <EventsSkeleton filterWidths={filterWidths} />}
       {state.status === 'error' && (
         <div className="public-events-error">
           <p role="alert">주요 사건 및 발언을 불러오지 못했습니다.</p>

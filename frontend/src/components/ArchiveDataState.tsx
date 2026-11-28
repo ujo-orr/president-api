@@ -1,11 +1,16 @@
-import { useRevalidator } from 'react-router-dom'
-
-export function ArchiveLoading() {
-  return <p className="container inner-page" role="status">대통령 기록을 불러오는 중입니다.</p>
-}
+import { useLocation, useRevalidator } from 'react-router-dom'
+import { useDelayedSkeleton } from '../hooks/useDelayedSkeleton'
+import { HomeLoading } from '../pages/HomePage'
+import { EvidenceSkeleton, PresidentPageSkeleton } from './ArchiveSkeletons'
 
 export function ArchiveDataError() {
   const { revalidate, state } = useRevalidator()
+  const { pathname } = useLocation()
+  const showSkeleton = useDelayedSkeleton(state === 'loading' ? pathname : null)
+  if (showSkeleton) {
+    if (pathname === '/') return <HomeLoading />
+    return pathname.endsWith('/evaluation-methods') ? <EvidenceSkeleton /> : <PresidentPageSkeleton />
+  }
 
   return (
     <section className="container inner-page not-found" aria-labelledby="archive-error-heading">

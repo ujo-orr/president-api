@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 class PresidentRepository {
@@ -47,6 +48,44 @@ class PresidentRepository {
                 """)
                 .param("id", id)
                 .query((row, index) -> readDocument(row.getString(1))).list();
+    }
+
+    record Axis(String id, String label, Integer score, String status) {}
+
+    record Archive(JsonNode person, List<Axis> scores, List<JsonNode> events, List<JsonNode> assessments,
+                   int scoreAdjustmentConstant, int timelineWeightLimit) {}
+
+    // 프로필과 평가 자료의 동일 트랜잭션 조회
+    @Transactional(readOnly = true)
+    public Optional<Archive> findArchive(String id) {
+        return findById(id).map(person -> {
+            List<Axis> scores = jdbc.sql("""
+                    SELECT c.id, c.label, s.score, s.status
+                    FROM archive_score s JOIN archive_category c ON c.id = s.category_id
+                    WHERE s.president_id = :id ORDER BY c.id
+                    """).param("id", id).query((row, index) -> new Axis(
+                            row.getString("id"), row.getString("label"),
+                            row.getObject("score", Integer.class), row.getString("status"))).list();
+            List<JsonNode> events = jdbc.sql("""
+                    SELECT payload FROM archive_event
+                    WHERE president_id = :id ORDER BY event_date, id
+                    """).param("id", id).query((row, index) -> readDocument(row.getString(1))).list();
+            List<JsonNode> assessments = jdbc.sql("""
+                    SELECT a.payload FROM archive_assessment a JOIN archive_event e ON e.id = a.event_id
+                    WHERE e.president_id = :id ORDER BY a.source_order
+                    """).param("id", id).query((row, index) -> readDocument(row.getString(1))).list();
+            int adjustment = jdbc.sql("""
+                    SELECT JSON_EXTRACT(metadata, '$.scoreAdjustmentConstant')
+                    FROM archive_source_snapshot WHERE filename = 'presidency-scores.stage-2.json'
+                    """).query(Integer.class).single();
+            int limit = jdbc.sql("""
+                    SELECT COALESCE(MAX(total), 1) FROM (
+                        SELECT SUM(weight) AS total FROM archive_assessment
+                        WHERE weight IS NOT NULL GROUP BY event_id, classification
+                    ) weights
+                    """).query(Integer.class).single();
+            return new Archive(person, scores, events, assessments, adjustment, Math.max(1, limit));
+        });
     }
 
     private JsonNode readDocument(String profile) {

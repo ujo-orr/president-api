@@ -1,7 +1,7 @@
 import { useId, useState } from 'react'
-import { scoreCategories } from '../data/presidencyScores'
-import { getPresidencyTimeline, timelineWeightLimit } from '../data/presidencyTimeline'
+import { getPresidencyTimeline } from '../data/presidencyTimeline'
 import { useChartReveal } from '../hooks/useChartReveal'
+import type { PresidentArchive } from '../types/presidentArchive'
 import { ExternalLink } from './ExternalLink'
 
 function formatEventDate(value: string) {
@@ -15,12 +15,13 @@ function finishEventReveal(summary: Element | null) {
   }
 }
 
-export default function PresidentTimeline({ presidentName }: { presidentName: string }) {
+export default function PresidentTimeline({ archive }: { archive: PresidentArchive }) {
+  const { scores: scoreCategories, timelineWeightLimit } = archive
   const [axisId, setAxisId] = useState('')
   const chartRef = useChartReveal<HTMLDivElement>('.event-summary', axisId)
   const filterId = useId()
   const category = scoreCategories.find(({ id }) => id === axisId)
-  const events = getPresidencyTimeline(presidentName, axisId, category?.label)
+  const events = getPresidencyTimeline(archive, axisId, category?.label)
 
   return (
     <div className="event-chart" ref={chartRef}>
