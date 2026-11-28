@@ -82,7 +82,7 @@ function RelatedCaseCard({ record }: { record: PresidentRelatedCase }) {
           ))}</ul></div>)}
         {legalDecisions.length > 0 && <div>
           <h4>사법적 판단</h4>
-          <ul className="public-event-judgments">{legalDecisions.map((decision, index) => (
+          <ul className="public-event-judgments related-case-judgments">{legalDecisions.map((decision, index) => (
             <li key={index}>
               <h5>{decision.personName}{legalLabels[decision.status] && <> · <VerdictLabel status={decision.status} /></>}</h5>
               <ul className="related-case-charges">{decision.verdictBreakdown ? (

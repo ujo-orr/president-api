@@ -3,6 +3,7 @@ import { defineConfig, searchForWorkspaceRoot } from 'vite'
 import react from '@vitejs/plugin-react'
 
 const frontendRoot = fileURLToPath(new URL('.', import.meta.url))
+const apiTarget = process.env.PRESIDENT_API_TARGET || 'http://127.0.0.1:8080'
 const dataFiles = [
   'presidency-scores.stage-2.json',
   'presidency-assessments.stage-2.json',
@@ -15,7 +16,10 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 5173,
     strictPort: true,
-    proxy: { '/api': process.env.PRESIDENT_API_TARGET || 'http://127.0.0.1:8080' },
+    proxy: {
+      '/api': apiTarget,
+      '/ws/presence': { target: apiTarget, ws: true },
+    },
     fs: { allow: [searchForWorkspaceRoot(frontendRoot), ...dataFiles] },
     watch: process.env.VITE_USE_POLLING === 'true' ? { usePolling: true } : undefined,
   },

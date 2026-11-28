@@ -213,7 +213,10 @@ img { display: block; max-width: 100%; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 16px 21px; }
 .site-shell--home .site-footer { flex: none; padding-block: 8px 10px; }
 .site-footer-copy { min-width: 0; }
+.site-footer-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .site-footer-copy p { color: var(--muted); font-size: .78rem; line-height: 1.65; word-break: keep-all; }
+.archive-presence { flex: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.archive-presence strong { color: #a74400; font-weight: 700; }
 .president-sources {
   display: flex;
   align-items: baseline;
@@ -513,7 +516,10 @@ img { display: block; max-width: 100%; }
 .public-events .public-events-notice { margin: 18px 0 0; font-size: .78rem; }
 .public-events-error button { margin-bottom: 8px; }
 .public-event-body .related-case-sources { padding-inline-start: 0; }
-.related-case-charges { margin-block: 6px; }
+.related-case-judgments h5 { line-height: 1.55; }
+.public-event-body .related-case-charges { margin-block: 8px; }
+.related-case-charges li + li { margin-top: 8px; }
+.related-case-judgments > li > p + p { margin-top: 2px; }
 
 .skeleton-block {
   position: relative;
